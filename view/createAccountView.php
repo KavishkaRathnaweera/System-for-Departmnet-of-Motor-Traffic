@@ -1,3 +1,5 @@
+<?php include("includes/createAccount.inc.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +18,10 @@
     <h1>Create new account</h1>
     <br>
     
-    <form id="userDetails" class="userform" onsubmit="return false">
+    <form action="createAccountView.php" id="userDetails" class="userform" method="post">
         <p>
             <label for="">ID no : </label>
-            <input type="text" name="id_no" required>
+            <input type="text" name="id_no" id="a" required>
         </p>
         <p>
             <label for="">Surname : </label>
@@ -108,24 +110,31 @@
         </p>
         <p>
             <label for="">&nbsp;</label>
-            <button id = "sub" type="submit" name="submit" onclick="Validate()">save</button>
+            <button type="button" name="subt" onclick="Validate()" >save</button>
+            <button type="button" id='id2'  onclick='UpdateDetails()' disabled >Update Details</button>
+            <button type="submit" name="submit" id="id1" disabled>create account</button>
+        </p>
+        <p>
+        
+        
         </p>
 
-
+        <!--<button type="submit" class="btn btn-primary" name="update" onclick='return confirm("Are You Sure?");'>Update Password</button>--onclick="Validate()"-->
 
     </form>
     
 
     
+    <!--<button  id ="sub" name="subt" onclick="Validate()" >save</button>
+    <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     
-    <button id='id1' onclick='UpdateDetails()' disabled>Update Details</button>
-    <button id='id2'  disabled>Create Account</button>
     <br>
     <pre>
-    <div id ="demo"></div>
+    <div id ="demo">
+    </div>
     </pre>
 
-    <?php include("includes/header.php");  ?>
+    <?php include("includes/footer.php");  ?>
 
 </body>
 </html>

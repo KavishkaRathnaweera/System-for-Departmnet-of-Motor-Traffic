@@ -2,7 +2,7 @@
 
 include("../model/CreateAccountDB.php");
 
-class UserAccount extends CreateAccountDB{
+class createAccount extends CreateAccountDB{
     private $nic;
     private $surname;
     private $other;
@@ -17,74 +17,66 @@ class UserAccount extends CreateAccountDB{
     private $phone;
     private $email;
     private $passwd;
-    private $verified;
+    private $verified="No";
     private $registerDate;
-    private $examStatus;
-    private $trailStatus;
-    private $licenedDate;
+    private $examStatus="No";
+    private $trailStatus="No";
+    private $licenedDate="No";
 
-    public function __constructor()
-    {
-        $verified="No";
-        $registerDate=null;
-        $examStatus="No";
-        $trailStatus="No";
-        $licenedDate="No";
-    }
 
-    public function setnic($nic){
-        $this->nic;
+    public function setnic($ni){
+        $this->nic=$ni;
     }
-    public function setSurname($surname){
-        $this->surname;
+    public function setSurname($surnam){
+        $this->surname=$surnam;
     }
-    public function setOther($other){
-        $this->other;
+    public function setOther($othe){
+        $this->other=$othe;
     }
-    public function setFname($fullName){
-        $this->fullName;
+    public function setFname($fullNam){
+        $this->fullName=$fullNam;
     }
-    public function setGender($gender){
-        $this->$gender;
+    public function setGender($gende){
+        $this->gender=$gende;
     }
-    public function setBirth($birth){
-        $this->birth;
+    public function setBirth($birt){
+        $this->birth=$birt;
     }
-    public function setAge($age){
-        $this->age;
+    public function setAge($ag){
+        $this->age=$ag;
     }
-    public function setheight($height){
-        $this->height;
+    public function setheight($heigh){
+        $this->height=$heigh;
     }
-    public function setblood($blood){
-        $this->blood;
+    public function setblood($bloo){
+        $this->blood=$bloo;
     }
-    public function setvehicle($vehicle){
-        $this->vehicle;
+    public function setvehicle($vehicl){
+        $this->vehicle=$vehicl;
     }
-    public function setAddrs($adress){
-        $this->adress;
+    public function setAddrs($adres){
+        $this->adress=$adres;
     }
-    public function setPhone($phone){
-        $this->phone;
+    public function setPhone($phon){
+        $this->phone=$phon;
     }
-    public function setEmail($email){
-        $this->email;
+    public function setEmail($emai){
+        $this->email=$emai;
     }
-    public function setPasswd($passwd){
-        $this->passwd;
+    public function setPasswd($passw){
+        $this->passwd=$passw;
     }
-    public function setVerified($verified){
-        $this->verified;
+    public function setVerified($verifie){
+        $this->verified=$verifie;
     }
-    public function setExam($examStatus){
-        $this->examStatus;
+    public function setExam($examStatu){
+        $this->examStatus=$examStatu;
     }
-    public function setTrail($trailStatus){
-        $this->trailStatus;
+    public function setTrail($trailStatu){
+        $this->trailStatus=$trailStatu;
     }
-    public function setLicense($licenedDate){
-        $this->licenedDate;
+    public function setLicense($licenedDat){
+        $this->licenedDate=$licenedDat;
     }
 
 
@@ -144,7 +136,7 @@ class UserAccount extends CreateAccountDB{
     }
 
     public function addToDataBase(){
-        $this->saveUser($this->nic,$this->dsurname,$this->other,$this->fullName,$this->gender,$this->birth,$this->age,$this->height,$this->blood,$this->vehicle,$this->adress,$this->phone,$this->email,$this->passwd,$this->verified,$this->examStatus,$this->trailStatus);
+        $this->saveUser($this->nic,$this->surname,$this->other,$this->fullName,$this->gender,$this->birth,$this->age,$this->height,$this->blood,$this->vehicle,$this->adress,$this->phone,$this->email,$this->passwd,$this->verified,$this->examStatus,$this->trailStatus);
     }
 
 

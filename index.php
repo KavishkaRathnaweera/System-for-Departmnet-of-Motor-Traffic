@@ -5,11 +5,16 @@
     <meta name="description" content="This website to renew your licence or get a new licence and office uses only."/>
     <meta name="keywords" content="Department of Motor traffic in Sri Lanka"/>
     <link rel="icon" href="view/images/3.png">
-    <link rel="stylesheet" href="view/home.css">
+    <link rel="stylesheet" href="view/css/home.css">
  </Head>
    
  <Body>
-   <?php include("view/includes/header.php"); ?>
+ <header>
+      <img src="view/images/6.jpg" width="100%" alt ="motor traffic department picture." >    
+</header>
+
+
+
    
    <select id="gh" name="offctype" onchange="la(this.value)">
     <option value="home.html">Customer</option>
@@ -29,8 +34,8 @@
 
    <H1>Home Page</H1> 
    <hr/>
-   <img src="../images/4.jpg" width="200px" height="120px" alt ="log in" usemap="#map0"/> ...................OR.....................               
-   <img src="../images/5.jpg" width="200px" height="120px" alt ="sign up" usemap="#map1"/>
+   <img src="view/images/4.jpg" width="200px" height="120px" alt ="log in" usemap="#map0"/> ...................OR.....................               
+   <img src="view/images/5.jpg" width="200px" height="120px" alt ="sign up" usemap="#map1"/>
   
  
 
