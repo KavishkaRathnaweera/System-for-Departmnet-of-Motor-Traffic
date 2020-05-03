@@ -2,6 +2,7 @@
 session_start();
 
 include("../control/createAccount.class.php");
+include("../control/EmailSend.php");
 //include("../createAccount.class.php");
 
 if(isset($_POST["submit"])){
@@ -23,6 +24,16 @@ if(isset($_POST["submit"])){
 
     //echo($_POST["grp1"]);
     $account->addToDataBase();
+
+    $email = new EmailSend();
+    $body='1)Applicant should be present in person.
+    2)Should bring the national identity card or the valid passport with the national identity card number.
+    3)In obtaining theservice from offices where online method is available producing photographs is not required and the relevant 
+    photographs are taken during the computer process. For offices where offline method is used two passport size  black and white 
+    photographs with white background are required.
+    4)In obtaining a driving license for the first time, original of the birth certificate should be produced.';
+    
+    $email->sendmail('Information for License applicant',$body,$_POST["email"]);
 
 
 }
