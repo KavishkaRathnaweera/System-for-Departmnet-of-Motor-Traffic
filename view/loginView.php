@@ -1,4 +1,4 @@
-<?php include("includes/createAccount.inc.php"); ?>
+<?php include("includes/loginView.inc.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,21 +18,21 @@
     <h1>User Login</h1>
     <br>
     
-    <form action="createAccountView.php" id="userDetails" class="userform" method="post">
+    <form action="loginView.php" id="loginDetail" class="loginForm" method="post">
         <p>
             <label for="">User ID : </label>
             <input type="text" name="id_no" id="a" required>
         </p>
         <p>
             <label for="">Password : </label>
-            <input type="text" name="surname" required>
+            <input type="text" name="password" required>
         </p>
       
         <p>
             <label for="">&nbsp;</label>
-            <button type="button" name="login" onclick="Validate()" >LogIn</button>
-            <button type="button" id='fogotPW'  onclick='UpdateDetails()' >Forgot Password</button>
-            <button type="submit" name="cancel" id="id1">Cancel</button>
+            <button type="submit" name="login">LogIn</button>
+            <button type="button" id='fogotPW' >Forgot Password</button>
+            <button type="button" name="cancel" id="id1">Cancel</button>
         </p>
         <p>
         
