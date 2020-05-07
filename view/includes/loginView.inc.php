@@ -27,7 +27,7 @@ if(isset($_POST["login"])){
         $result = $obj->selectUserByusername($_POST["id_no"]);
         
 
-        if(true) {
+        if(!empty($result)) {
 			if($password==$result[0]['passwrd']){
                 $_SESSION['userId'] = $userID;
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
