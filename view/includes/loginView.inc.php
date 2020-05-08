@@ -38,9 +38,7 @@ if(isset($_POST["login"])){
 			$errors[] = "UserID doesnot exists";
 		}
     }
-    if(isset($errors[0])){
-        print($errors[0]);
-    }
+    
     
 }
 

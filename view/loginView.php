@@ -49,10 +49,11 @@
     <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     
     <br>
-    <pre>
-    <div id ="demo">
-    </div>
-    </pre>
+    <div id ="demo"> <?php 
+    if(isset($errors[0])){
+        print($errors[0]);
+    }
+    ?> </div>
 
     <?php include("includes/footer.php");  ?>
 
