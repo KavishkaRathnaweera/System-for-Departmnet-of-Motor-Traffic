@@ -26,11 +26,15 @@ if(isset($_POST["submit"])){
     $account->addToDataBase();
 
     $email = new EmailSend();
-    $body='1)Applicant should be present in person.
-    2)Should bring the national identity card or the valid passport with the national identity card number.
+    $body='
+    1)Applicant should be present in person.<br><br>
+    
+    2)Should bring the national identity card or the valid passport with the national identity card number.<br><br>
+
     3)In obtaining theservice from offices where online method is available producing photographs is not required and the relevant 
     photographs are taken during the computer process. For offices where offline method is used two passport size  black and white 
-    photographs with white background are required.
+    photographs with white background are required.<br><br>
+
     4)In obtaining a driving license for the first time, original of the birth certificate should be produced.';
 
     $email->sendmail('Information for License applicant',$body,$_POST["email"]);

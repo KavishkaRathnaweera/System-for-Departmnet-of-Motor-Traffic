@@ -19,6 +19,7 @@
     <br>
     
     <form action="loginView.php" id="loginDetail" class="loginForm" method="post">
+    <fieldset>
         <p>
             <label for="">User ID : </label>
             <input type="text" name="id_no" id="a" required>
@@ -34,10 +35,7 @@
             <button type="button" id='fogotPW' >Forgot Password</button>
             <button type="button" name="cancel" id="id1">Cancel</button>
         </p>
-        <p>
-        
-        
-        </p>
+        </fieldset>
 
         <!--<button type="submit" class="btn btn-primary" name="update" onclick='return confirm("Are You Sure?");'>Update Password</button>--onclick="Validate()"-->
 
