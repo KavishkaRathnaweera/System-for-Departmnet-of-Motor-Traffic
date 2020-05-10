@@ -14,7 +14,7 @@
  
 </head>
 <body>
-    <?php include("includes/header.php");  ?>
+    <?php include("AllPageIncludes/header.php");  ?>
     <h1>Create new account</h1>
     <br>
     
@@ -134,7 +134,7 @@
     </div>
     </pre>
 
-    <?php include("includes/footer.php");  ?>
+    <?php include("AllPageIncludes/footer.php");  ?>
 
 </body>
 </html>

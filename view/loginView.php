@@ -14,7 +14,7 @@
  
 </head>
 <body>
-    <?php include("includes/header.php");  ?>
+    <?php include("AllPageIncludes/header.php");  ?>
     <h1>User Login</h1>
     <br>
     
@@ -48,12 +48,12 @@
     
     <br>
     <div id ="demo"> <?php 
-    if(isset($errors[0])){
-        print($errors[0]);
+    if(isset($errorArray[0])){
+        print($errorArray[0]);
     }
     ?> </div>
 
-    <?php include("includes/footer.php");  ?>
+    <?php include("AllPageIncludes/footer.php");  ?>
 
 </body>
 </html>

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="view/css/home.css">
 </head>
 <body>
-
+<?php include("AllPageIncludes/header.php");  ?>
 <h1>Login Successful!</h1>
-
+<?php include("AllPageIncludes/footer.php");  ?>
 
 </body>
 </html>

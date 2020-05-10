@@ -1,7 +1,7 @@
 <?php
-include("../model/DataList.php");
+include("../model/AdminDB.php");
 
-class Admin extends DataList{
+class Admin extends AdminDB{
 
   
     // public function __construct()
@@ -85,6 +85,8 @@ class Admin extends DataList{
                 break;
         }
     }
+
+    
 }
 
 

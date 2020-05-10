@@ -139,6 +139,35 @@ class UserAccount extends UserAccountDB{
         $this->saveUser($this->nic,$this->surname,$this->other,$this->fullName,$this->gender,$this->birth,$this->age,$this->height,$this->blood,$this->vehicle,$this->adress,$this->phone,$this->email,$this->passwd,$this->verified,$this->examStatus,$this->trailStatus);
     }
 
+    public Function checkUser($userID,$password){
+        $error = array();
+
+        if(empty($userID) || empty($password)){
+            if($userID == ""){
+                $error[] = "userID is required";
+            }
+
+            if($password == "") {
+                $error[] = "Password is required";
+            }
+        }else{
+            $result = $this->selectUserByusername($userID);
+            
+
+            if(!empty($result)) {
+                if($password==$result[0]['passwrd']){
+                    // $_SESSION['userId'] = $userID;
+                    // header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
+                }else{
+                    $error[] = "Password is incorrect!";
+                }
+            } else {		
+                $error[] = "UserID doesnot exists";
+            }
+        }
+        return($error);
+    }
+
 
 
 

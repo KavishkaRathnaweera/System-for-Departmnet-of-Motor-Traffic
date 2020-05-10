@@ -51,7 +51,7 @@
     <ol><li>Get a new driving licence</li><li>Renew driving licence</li></ol>
    </p>
 
-   <?php include("view/includes/footer.php"); ?>
+   <?php include("view/AllPageIncludes/footer.php"); ?>
 
    <map name="map0">
     <area shape="rect" coords="0,0,200,120" href="view/loginView.php"/>

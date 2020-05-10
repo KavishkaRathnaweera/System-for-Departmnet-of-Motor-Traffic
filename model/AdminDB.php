@@ -2,7 +2,7 @@
 
 include("DBconnection.php");
 
-class DataList extends DBconnection{
+class AdminDB extends DBconnection{
     private static $limitexam = 200;
     private static $limitwait = 200;
     private static $countexam = 0;
@@ -49,4 +49,6 @@ class DataList extends DBconnection{
 		$data = $stmt->fetchAll();
 		return $data;
     }
+
+    
 }
