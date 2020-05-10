@@ -10,6 +10,7 @@
 <body>
 <?php include("AllPageIncludes/header.php");  ?>
 <h1>Login Successful!</h1>
+
 <?php include("AllPageIncludes/footer.php");  ?>
 
 </body>
