@@ -16,7 +16,7 @@
 
 
    
-   <select id="gh" name="offctype" onchange="la(this.value)">
+   <select id="gh" name="offctype" onchange="la('view/officeLoginView.php')">
     <option value="home.html">Customer</option>
     <option value="counter1.html">Counter 1</option>
     <option value="counter2.html">Counter 2</option>
@@ -24,6 +24,7 @@
     <option value="examinar.html">Examinar</option>
     <option value="licence_counter.html">licence counter</option>
     <option value="permit_counter.html">Permit counter</option>
+    <option value="AdminView.html">Admin</option>
 </select> 
 
 <script>function la(src)

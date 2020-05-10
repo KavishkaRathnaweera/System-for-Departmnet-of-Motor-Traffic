@@ -41,4 +41,12 @@ class DataList extends DBconnection{
     {
         return self::$limitexam;
     }
+    public function selectOfficerById($id)
+    {
+        $sql = 'SELECT * FROM officer WHERE id= ?';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$id]);
+		$data = $stmt->fetchAll();
+		return $data;
+    }
 }
