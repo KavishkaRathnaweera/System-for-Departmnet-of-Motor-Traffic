@@ -1,8 +1,8 @@
 <?php
 
-include("../model/CreateAccountDB.php");
+include("../model/UserAccountDB.php");
 
-class createAccount extends CreateAccountDB{
+class UserAccount extends UserAccountDB{
     private $nic;
     private $surname;
     private $other;

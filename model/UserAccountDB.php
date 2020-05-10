@@ -1,7 +1,7 @@
 <?php
 include("DBconnection.php");
 
-class CreateAccountDB extends DBconnection {
+class UserAccountDB extends DBconnection {
 
 
     protected function saveUser($nic,$dsurname,$other,$fname,$gender,$birth,$age,$height,$blood,$vehicle,$addrs,$phone,$email,$psswd,$verified,$exam,$trail){

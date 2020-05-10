@@ -1,12 +1,12 @@
 <?php 
 session_start();
 
-include("../control/createAccount.class.php");
+include("../control/UserAccount.class.php");
 include("../control/EmailSend.php");
 //include("../createAccount.class.php");
 
 if(isset($_POST["submit"])){
-    $account = new createAccount();
+    $account = new UserAccount();
     $account->setnic($_POST["id_no"]);
     $account->setSurname($_POST["surname"]);
     $account->setOther($_POST["other_names"]);
