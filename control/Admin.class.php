@@ -10,10 +10,25 @@ class Admin extends AdminDB{
     //   //  $wait=new WaitList();
     // }
 
-    public function addDate($date){
-
+    public function addDate($date,$limits){
+        $check1=$this->checkDate($date);
+        if($check1==null){
+            $this->addToWaitlist($date,$limits);
+        }
+        else{
+            return "No";
+        }
+       
     }
-
+    public function addDateExam($date,$limits){
+        $check2=$this->checkDateE($date);
+        if($check2==null){
+            $this->addToExamtlist($date,$limits);
+        }
+        else{
+            return "No";
+        }
+    }
     public function changewaitLimit($limit){
         self::changeLimitWait($limit);
     }

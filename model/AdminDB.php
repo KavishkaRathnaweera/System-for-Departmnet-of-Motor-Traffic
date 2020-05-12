@@ -5,25 +5,52 @@ include("DBconnection.php");
 class AdminDB extends DBconnection{
     private static $limitexam = 200;
     private static $limitwait = 200;
-    private static $countexam = 0;
-    private static $countwait = 0;
+    // private static $countexam = 0;
+    // private static $countwait = 0;
 
 
 
-    public function addToWaitlist($date)
+    public function addToWaitlist($date,$limits)
     {
 
-        $sql = 'INSERT INTO waitlist(dates,counts) VALUES (?,?)';
+        $sql = 'INSERT INTO limitwait(dates,limits) VALUES (?,?)';
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute($date,$limitwait);
+		$stmt->execute([$date,$limits]);
     }
-    public function addToExamtlist($date)
+
+    public function addToExamtlist($date,$limits)
     {
 
-        $sql = 'INSERT INTO waitlist(dates,counts) VALUES (?,?)';
+        $sql = 'INSERT INTO limitexam(dates,limits) VALUES (?,?)';
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute($date,$limitexam);
+		$stmt->execute([$date,$limits]);
     }
+
+    public function checkDate($date)
+    {
+        $sql='SELECT * FROM limitwait WHERE dates=?';
+        $stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$date]);
+        $data = $stmt->fetchAll();
+        return $data;
+    }
+    public function checkDateE($date)
+    {
+        $sql='SELECT * FROM limitexam WHERE dates=?';
+        $stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$date]);
+        $data = $stmt->fetchAll();
+        return $data;
+    }
+
+    // private function getlast(){
+
+    //     $sql = 'SELECT "counts" FROM waitlist ORDER BY "num" DESC LIMIT 1';
+    //     $stmt = $this->connection()->query($sql);
+    //     $data = $stmt->fetchAll();
+    //     return $data[0];
+
+    // }
     
     public static function changeLimitExam($limits)
     {
