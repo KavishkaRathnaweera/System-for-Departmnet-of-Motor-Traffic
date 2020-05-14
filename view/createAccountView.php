@@ -110,9 +110,9 @@
         </p>
         <p>
             <label for="">&nbsp;</label>
-            <button type='button' id='subt' onclick="Validate()" >save</button>
-            <button type='button' id='id2'  onclick='UpdateDetails()' disabled >Update Details</button>
-            <button type='submit' name="submit" id="id1" disabled>create account</button>
+            <button type="button" name="subt" onclick="Validate()" >save</button>
+            <button type="button" id='id2'  onclick='UpdateDetails()' disabled >Update Details</button>
+            <button type="submit" name="submit" id="id1" disabled>create account</button>
             
         </p>
         <p>
