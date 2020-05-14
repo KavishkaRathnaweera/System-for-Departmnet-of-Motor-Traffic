@@ -10,7 +10,7 @@
     <title>Admin</title>
     <link rel="icon" href="images/3.png">
     <link rel="stylesheet" href="css/createAccount.css">
-    <script type="text/javascript" src="js/createAccountjs.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
  
 </head>
 <body>
@@ -24,12 +24,13 @@
                 <legend><h1>Wait List</h1></legend>
                 <p>
                     <label for="">Date :</label>
-                    <input type="Date" name="date1" placeholder="Enter Date">
-                    <button type="button" name="datebtn1">Add Date</button>
+                    <input type="Date" name="date1" id="date11" placeholder="Enter Date" value="<?php if(isset($_SESSION['inpdate'])){echo($_SESSION['inpdate']); }?>">
+                    <button type="sumit" name="datebtn1" >Add Date</button>
+                    <h4><?php if($checkdateW=="No"){echo("Date Already existes");} ?></h4>
                 </p>
                 <p>
                     <label for=""> Set Limit :</label>
-                    <input type="text" name="limit1" placeholder="Enter preson limit">
+                    <input type="number" name="limit1" placeholder="Enter preson limit">
                     <button type="submit" name="limitbtn1">save</button>
                 </p>
                 <p>
@@ -50,12 +51,13 @@
                 <legend><h1>Exam List</h1></legend>
                 <p>
                     <label for="">Date :</label>
-                    <input type="Date" name="date2" placeholder="date">
+                    <input type="Date" name="date2" placeholder="date" value="<?php if(isset($_SESSION['inpdate'])){echo($_SESSION['inpdate1']); }?>">
                     <button name="datebtn2">Add</button>
+                    <h4><?php if($checkdateE=="No"){echo("Date Already existes");} ?></h4>
                 </p>
                 <p>
                     <label for="">Set Limit :</label>
-                    <input type="text" name="limit2" placeholder="Enter Person Limit">
+                    <input type="number" name="limit2" placeholder="Enter Person Limit">
                     <button name="limitbtn2">save</button>
                 </p>
                 <p>
@@ -72,8 +74,15 @@
     
     
     <br>
-    <div id ="demo"> <?php 
-    ?> </div>
+    <div id =""><?php 
+    // if(isset($_GET["idate"])){
+    //     echo ($_GET["idate"]);
+    // }
+    // else{
+    //     echo("sdsdsd");
+    // }
+    ?>
+    </div>
 
     <?php include("AllPageIncludes/footer.php");  ?>
 

@@ -26,7 +26,7 @@
         </div>
 
         <div class="button_box">
-            <input type="text" id="message" disabled value="<?php echo " kkkajjd djnhdb"?>"><br>
+            <input type="text" id="message" disabled value="<?php echo " Please Connect FingerPrint Scanner"?>"><br>
             <button id="back_btn" onclick="backButton()">back</button>
             <button id="take_btn" onclick="takeButton()">take</button>
             <button id="save_btn" onclick="saveButton()">save</button>

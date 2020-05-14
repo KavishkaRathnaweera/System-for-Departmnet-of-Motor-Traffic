@@ -110,11 +110,13 @@
         </p>
         <p>
             <label for="">&nbsp;</label>
-            <button type="button" name="subt" onclick="Validate()" >save</button>
-            <button type="button" id='id2'  onclick='UpdateDetails()' disabled >Update Details</button>
-            <button type="submit" name="submit" id="id1" disabled>create account</button>
+            <button type='button' id='subt' onclick="Validate()" >save</button>
+            <button type='button' id='id2'  onclick='UpdateDetails()' disabled >Update Details</button>
+            <button type='submit' name="submit" id="id1" disabled>create account</button>
+            
         </p>
         <p>
+       
         
         
         </p>
@@ -124,7 +126,12 @@
     </form>
     
 
-    
+    <button type="button" id="logout" onclick="la('../index.php')">Back</button>
+    <script>function la(src)
+    {
+     window.location=src;
+    }
+</script>
     <!--<button  id ="sub" name="subt" onclick="Validate()" >save</button>
     <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     

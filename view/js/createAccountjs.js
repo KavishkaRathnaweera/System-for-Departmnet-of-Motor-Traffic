@@ -57,7 +57,7 @@ function Validate(){
         else{
             document.getElementById("id1").disabled = false;
             document.getElementById("id2").disabled = false;
-            document.getElementById("sub").disabled = true;
+            document.getElementById("subt").disabled = true;
             //document.getElementById("demo").innerHTML="<button id='id2' onclick='fn2()'>create account</button>";
             //document.getElementById("demo1").innerHTML="<button id='id1' onclick='fn3()'>Update Details</button>";
             document.getElementById("userDetails").elements[0].disabled = true;
@@ -103,10 +103,12 @@ function UpdateDetails(){
     document.getElementById("userDetails").elements[15].disabled = false;
     document.getElementById("id1").disabled = true;
     document.getElementById("id2").disabled = true;
-    document.getElementById("sub").disabled = false;
+    document.getElementById("subt").disabled = false;
     // document.getElementById("demo").innerHTML="";
     // document.getElementById("demo1").innerHTML="";
 }
+
+
 
 // function addToDatabse(){
 //     //alert(name+" "+surname+" "+other+" "+fullName+" "+gender+" "+birth+" "+age+" "+height+" "+blood+" "+adress+" "+phone+" "+email+" "+passwd);
