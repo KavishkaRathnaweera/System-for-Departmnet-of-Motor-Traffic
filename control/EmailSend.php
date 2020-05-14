@@ -1,5 +1,5 @@
 <?php
-require_once('lib/PHPMailer.master/PHPMailerAutoload.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/lib/PHPMailer.master/PHPMailerAutoload.php');
 
 class EmailSend extends PHPMailer{
 

@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="view/css/home.css">
 </head>
 <body>
-<?php include("AllPageIncludes/header.php");  ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
 <h1>Login Successful!</h1>
-
-<?php include("AllPageIncludes/footer.php");  ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 
 </body>
 </html>

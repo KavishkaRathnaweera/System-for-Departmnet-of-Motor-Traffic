@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php include("../AllPageIncludes/counter2Viewheader.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <main class="container">
         <div class="applicant_id_box">
             <label>Applicant ID:</label>
@@ -39,7 +39,7 @@
 
 
 
-    <?php include("../AllPageIncludes/footer.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
     <script type="text/javascript" src="../js/counter2.js"></script>
 </body>
 

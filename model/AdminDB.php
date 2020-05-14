@@ -1,6 +1,6 @@
 <?php
 
-include("DBconnection.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
 
 class AdminDB extends DBconnection{
     private static $limitexam = 200;

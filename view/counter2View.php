@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-	 include '../control/counter2.class.php';
+	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/counter2.class.php');
     //check for search
     $_SESSION["error"]="";
     $_SESSION["nic"]="";
@@ -46,7 +46,7 @@ session_start();
 </head>
 
 <body>
-    <?php include("AllPageIncludes/header.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <button type="button" id="logout" onclick="CounterTwoLogout()">LOGOUT</button>
    
     <main class="container">
@@ -81,7 +81,7 @@ session_start();
 
 
 
-    <?php include("AllPageIncludes/footer.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
     <script type="text/javascript" src="js/counter2.js"></script>
 </body>
 

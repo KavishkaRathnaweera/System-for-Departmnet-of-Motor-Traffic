@@ -1,4 +1,4 @@
-<?php include("includes/office.inc.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/office.inc.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
  
 </head>
 <body>
-    <?php include("AllPageIncludes/header.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <h1>Office Login</h1>
     <br>
     
@@ -51,7 +51,7 @@
     }
     ?> </div>
 
-    <?php include("AllPageIncludes/footer.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-include("../model/AdminDB.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/AdminDB.php');
 
 class Admin extends AdminDB{
 

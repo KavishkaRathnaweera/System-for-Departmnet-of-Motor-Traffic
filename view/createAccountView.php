@@ -1,4 +1,4 @@
-<?php include("includes/createAccount.inc.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/createAccount.inc.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
  
 </head>
 <body>
-    <?php include("AllPageIncludes/header.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <h1>Create new account</h1>
     <br>
     
@@ -134,7 +134,7 @@
     </div>
     </pre>
 
-    <?php include("AllPageIncludes/footer.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 
 </body>
 </html>

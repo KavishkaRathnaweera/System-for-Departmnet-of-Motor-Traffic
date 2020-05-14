@@ -19,9 +19,6 @@ if(isset($_POST["login"])){
         header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
     }
 
-    
-    
-    
 }
 
 ?>

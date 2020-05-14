@@ -9,9 +9,7 @@
  </Head>
    
  <Body>
- <header>
-      <img src="view/images/6.jpg" width="100%" alt ="motor traffic department picture." >    
-</header>
+ <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php'); ?>
 
 
 
@@ -51,7 +49,7 @@
     <ol><li>Get a new driving licence</li><li>Renew driving licence</li></ol>
    </p>
 
-   <?php include("view/AllPageIncludes/footer.php"); ?>
+   <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php'); ?>
 
    <map name="map0">
     <area shape="rect" coords="0,0,200,120" href="view/loginView.php"/>

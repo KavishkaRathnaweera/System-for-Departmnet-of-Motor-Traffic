@@ -1,6 +1,6 @@
 <?php 
 
-include '../model/counter2DB.php';
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/counter2DB.php');
 
 class counter2 extends counter2DB{
 	private $out;

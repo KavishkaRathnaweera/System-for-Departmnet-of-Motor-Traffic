@@ -1,6 +1,6 @@
 <?php
 
-include("../model/UserAccountDB.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/UserAccountDB.php');
 
 class UserAccount extends UserAccountDB{
     private $nic;
@@ -167,6 +167,19 @@ class UserAccount extends UserAccountDB{
         }
         return($error);
     }
+
+    public function isCorrectEmail($email){
+        $result=$this->selectEmailByGivenEmail($email);
+        if(count($result) == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+
+
 
 
 
