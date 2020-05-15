@@ -8,14 +8,16 @@
     <meta name="description" content="This page is for creating new driving licence or renew your current licence "/>
     <meta name="keywords" content="motor traffic,sri lanka"/>
     <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css?v=<?php echo time(); ?>">
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/createAccount.css">
     <script type="text/javascript" src="js/admin.js"></script>
+  
  
 </head>
 <body>
     <?php include("AllPageIncludes/header.php");  ?>
-    <h1>ADMIN</h1>
+    <button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+    <h1 class="head">ADMIN</h1>
     <br>
     
     <form action="AdminView.php" id="wait" class="wait" method="post">
@@ -83,6 +85,12 @@
     // }
     ?>
     </div>
+    
+    <script>function la(src)
+    {
+     window.location=src;
+    }
+    </script>
 
     <?php include("AllPageIncludes/footer.php");  ?>
 

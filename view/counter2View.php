@@ -40,7 +40,7 @@ session_start();
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Counter 2</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/counter2.css">
+    <link rel="stylesheet" href="css/counter2.css?v=<?php echo time(); ?>">
 
 
 </head>

@@ -9,31 +9,34 @@
     <meta name="keywords" content="motor traffic,sri lanka"/>
     <title>Create New Account</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/createAccount.css">
+    <link rel="stylesheet" type="text/css" href="css/createAccount.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="js/createAccountjs.js"></script>
  
 </head>
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
+    <button type="button" class="button1" onclick="la('../index.php')">Back</button>
     <h1>Create new account</h1>
     <br>
-    
+    <div>
+        <h2><?php if(isset($_POST["submit"])){echo("You have successfully created your Account. Please refer Email to further details");} ?></h2>
+    </div>
     <form action="createAccountView.php" id="userDetails" class="userform" method="post">
         <p>
             <label for="">ID no : </label>
-            <input type="text" name="id_no" id="a" required>
+            <input type="text" name="id_no" id="a" placeholder="id or passport number...." required>
         </p>
         <p>
-            <label for="">Surname : </label>
-            <input type="text" name="surname" required>
+            <label for="">Surname: </label>
+            <input type="text" name="surname" placeholder="surname...." required>
         </p>
         <p>
             <label for="">Other Names(optional) : </label>
-            <input type="text" name="other_names">
+            <input type="text" name="other_names" placeholder="other names....">
         </p>
         <p>
             <label for="">Full name : </label>
-            <input type="text" name="full_name" required>
+            <input type="text" name="full_name" placeholder="full name...." required>
         </p>
         <p>
             <label for="">Sex : </label>
@@ -42,15 +45,15 @@
         </p>
         <p>
             <label for="">Date of Birth : </label>
-            <input type="date" name="date" required>
+            <input type="date" name="date" placeholder="birthday...." required>
         </p>
         <p>
             <label for="">Age : </label>
-            <input type="text" name="age" required>
+            <input type="text" name="age" placeholder="age...." required>
         </p>
         <p>
             <label for="">Height(cm) : </label>
-            <input type="text" name="height" required>
+            <input type="text" name="height" placeholder="height...." required>
         </p>
         <p>
             <label for="">Blood Group : </label>
@@ -90,23 +93,23 @@
         </p>
         <p>
             <label for="">Permanent Address : </label>
-            <input type="text" name="address" required>
+            <input type="text" name="address" placeholder="address...." required>
         </p>
         <p>
             <label for="">Phone Number : </label>
-            <input type="text" name="phone_number" required >
+            <input type="text" name="phone_number" placeholder="phone number...." required >
         </p>
         <p>
             <label for="">Email Address : </label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" placeholder="email address...." required>
         </p>
         <p>
             <label for="">New Password : </label>
-            <input type="text" name="password" required>
+            <input type="text" name="password" placeholder="new password.." required>
         </p>
         <p>
             <label for="">Re-type New Password : </label>
-            <input type="text" name="passwrdr" required>
+            <input type="text" name="passwrdr" placeholder="retype password...." required>
         </p>
         <p>
             <label for="">&nbsp;</label>
@@ -126,7 +129,7 @@
     </form>
     
 
-    <button type="button" id="logout" onclick="la('../index.php')">Back</button>
+   
     <script>function la(src)
     {
      window.location=src;
