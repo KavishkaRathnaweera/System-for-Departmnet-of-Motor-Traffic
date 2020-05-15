@@ -1,6 +1,6 @@
 <?php
 
-include("../control/Admin.class.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Admin.class.php');
 session_start();
 
 $admin = new Admin();

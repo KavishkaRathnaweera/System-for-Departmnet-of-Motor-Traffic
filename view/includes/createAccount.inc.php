@@ -1,8 +1,8 @@
 <?php 
 session_start();
 
-include("../control/UserAccount.class.php");
-include("../control/EmailSend.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 //include("../createAccount.class.php");
 
 if(isset($_POST["submit"])){

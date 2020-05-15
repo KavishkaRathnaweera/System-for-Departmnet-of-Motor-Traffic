@@ -10,7 +10,7 @@
     <title>Create New Account</title>
     <link rel="icon" href="images/3.png">
     <link rel="stylesheet" href="css/createAccount.css">
-    <script type="text/javascript" src="js/createAccountjs.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
  
 </head>
 <body>

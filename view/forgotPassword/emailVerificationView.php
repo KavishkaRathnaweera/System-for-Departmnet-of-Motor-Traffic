@@ -21,7 +21,14 @@ if(!(isset($_GET['code']))){
 			";
 
             $mail->sendmail($subject,$body,$to);
-            echo "Please click on the link which is sent to your email. This link valid till next 5 minutes.";
+            echo "
+                <br>
+                <div id ="demo"> 
+                        <p>Please click on the link which is sent to your email. This link valid till next 5 minutes.</p>
+                </div>
+            ";
+
+            
 
         }
         else{
@@ -63,6 +70,9 @@ if(isset($_GET['code'])){
         <input type="text" name="EMAIL" id="email">
         <button type="submit" name="submit" id="search_btn">Submit</button>
     </form>
+
+    
+
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 </body>
 </html>

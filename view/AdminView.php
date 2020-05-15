@@ -1,4 +1,4 @@
-<?php include("includes/admin.inc.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/admin.inc.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +10,11 @@
     <title>Admin</title>
     <link rel="icon" href="images/3.png">
     <link rel="stylesheet" href="css/createAccount.css">
-    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/createaccountjs.js"></script>
  
 </head>
 <body>
-    <?php include("AllPageIncludes/header.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <h1>ADMIN</h1>
     <br>
     
@@ -84,7 +84,7 @@
     ?>
     </div>
 
-    <?php include("AllPageIncludes/footer.php");  ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 
 </body>
 </html>
