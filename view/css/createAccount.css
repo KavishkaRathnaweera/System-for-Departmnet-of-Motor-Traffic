@@ -15,7 +15,7 @@ li {
 {color:green
 }
 
-input[type=text],input[type=date],input[type=email], select {
+input[type=text],input[type=date],input[type=email],input[type=number], select {
     width: 40%;
     padding: 6px 20px;
     margin: 6px 0;
@@ -30,6 +30,9 @@ input[type=date]:focus {
     background-color: rgb(214, 214, 214);
 }
 input[type=email]:focus {
+    background-color: rgb(214, 214, 214);
+}
+input[type=number]:focus {
     background-color: rgb(214, 214, 214);
 }
 select:focus {
