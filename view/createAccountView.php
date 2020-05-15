@@ -24,19 +24,19 @@
     <form action="createAccountView.php" id="userDetails" class="userform" method="post">
         <p>
             <label for="">ID no : </label>
-            <input type="text" name="id_no" id="a" placeholder="id or passport number...." required>
+            <input type="text" name="id_no" id="a" placeholder="Enter id or passport number" required>
         </p>
         <p>
             <label for="">Surname: </label>
-            <input type="text" name="surname" placeholder="surname...." required>
+            <input type="text" name="surname" placeholder="Enter surname in Capital block letters" required>
         </p>
         <p>
             <label for="">Other Names(optional) : </label>
-            <input type="text" name="other_names" placeholder="other names....">
+            <input type="text" name="other_names" placeholder="Enter other names in Capital block letters">
         </p>
         <p>
             <label for="">Full name : </label>
-            <input type="text" name="full_name" placeholder="full name...." required>
+            <input type="text" name="full_name" placeholder="Enter Full name in Capital block letters" required>
         </p>
         <p>
             <label for="">Sex : </label>
@@ -45,15 +45,15 @@
         </p>
         <p>
             <label for="">Date of Birth : </label>
-            <input type="date" name="date" placeholder="birthday...." required>
+            <input type="date" name="date" placeholder="Enter birthday" required>
         </p>
         <p>
             <label for="">Age : </label>
-            <input type="text" name="age" placeholder="age...." required>
+            <input type="number" min="18" max="65" name="age" placeholder="Enter age" required>
         </p>
         <p>
             <label for="">Height(cm) : </label>
-            <input type="text" name="height" placeholder="height...." required>
+            <input type="number" name="height" placeholder="Enter height" required>
         </p>
         <p>
             <label for="">Blood Group : </label>
@@ -93,23 +93,23 @@
         </p>
         <p>
             <label for="">Permanent Address : </label>
-            <input type="text" name="address" placeholder="address...." required>
+            <input type="text" name="address" placeholder="Enter valid address" required>
         </p>
         <p>
             <label for="">Phone Number : </label>
-            <input type="text" name="phone_number" placeholder="phone number...." required >
+            <input type="number" name="phone_number" placeholder="Enter phone number" required >
         </p>
         <p>
             <label for="">Email Address : </label>
-            <input type="email" name="email" placeholder="email address...." required>
+            <input type="email" name="email" placeholder="Enter valid email address" required>
         </p>
         <p>
             <label for="">New Password : </label>
-            <input type="text" name="password" placeholder="new password.." required>
+            <input type="text" name="password" placeholder="Enter new password" required>
         </p>
         <p>
-            <label for="">Re-type New Password : </label>
-            <input type="text" name="passwrdr" placeholder="retype password...." required>
+            <label for="">Password Confirmation : </label>
+            <input type="text" name="passwrdr" placeholder="Retype new password" required>
         </p>
         <p>
             <label for="">&nbsp;</label>
