@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 09:54 PM
+-- Generation Time: May 15, 2020 at 05:41 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -25,46 +25,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `examlist`
+-- Table structure for table `triallimit`
 --
 
-CREATE TABLE `examlist` (
+CREATE TABLE `triallimit` (
   `num` int(11) NOT NULL,
-  `nic` varchar(100) NOT NULL,
-  `fullname` varchar(100) NOT NULL,
   `dates` date NOT NULL,
-  `count` int(11) NOT NULL,
-  `examlimit` int(11) NOT NULL,
-  `attendance` varchar(100) NOT NULL
+  `limits` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `examlist`
+-- Dumping data for table `triallimit`
 --
 
-INSERT INTO `examlist` (`num`, `nic`, `fullname`, `dates`, `count`, `examlimit`, `attendance`) VALUES
-(1, '990122164V', 'Kavishka Rathnaweera', '2020-05-15', 10, 100, '');
+INSERT INTO `triallimit` (`num`, `dates`, `limits`) VALUES
+(1, '2020-05-16', 3),
+(2, '2020-05-17', 2),
+(3, '2020-05-25', 5);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `examlist`
+-- Indexes for table `triallimit`
 --
-ALTER TABLE `examlist`
-  ADD PRIMARY KEY (`nic`),
-  ADD UNIQUE KEY `num` (`num`);
+ALTER TABLE `triallimit`
+  ADD PRIMARY KEY (`num`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `examlist`
+-- AUTO_INCREMENT for table `triallimit`
 --
-ALTER TABLE `examlist`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `triallimit`
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
