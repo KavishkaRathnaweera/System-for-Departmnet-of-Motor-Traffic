@@ -64,8 +64,8 @@ class permitCounter extends permitCounterDB{
         return $out;
     }
 
-	public function addToTrialList($nic, $date, $count, $triallimit){
-		$this->addToTrialListDB($nic, $date, $count, $triallimit);
+	public function addToTrialList($nic, $fullname, $date, $count, $triallimit){
+		$this->addToTrialListDB($nic, $fullname, $date, $count, $triallimit);
 	}
 }
  ?>

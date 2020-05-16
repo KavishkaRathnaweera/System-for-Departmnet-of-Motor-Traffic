@@ -56,10 +56,10 @@ protected function getNextTrialDateAndLimit($num){
 }
 
 
-protected function addToTrialListDB($nic, $date, $count, $triallimit){
-    $sql = "INSERT INTO triallist(nic, date, count, triallimit) VALUES (?,?,?,?)";
+protected function addToTrialListDB($nic, $fullname, $date, $count, $triallimit){
+    $sql = "INSERT INTO triallist(nic, fullname, date, count, triallimit) VALUES (?,?,?,?,?)";
     $stmt = $this->connection()->prepare($sql);
-    $stmt->execute([$nic, $date, $count, $triallimit]);
+    $stmt->execute([$nic, $fullname, $date, $count, $triallimit]);
 }
 
 
