@@ -13,7 +13,7 @@ session_start();
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
-		$counter2Ctrl = new counter2($id);
+		$counter2Ctrl = new counter2();
         $details = $counter2Ctrl->show_userDetails($id);
         
         if(!isset($details["error"])){

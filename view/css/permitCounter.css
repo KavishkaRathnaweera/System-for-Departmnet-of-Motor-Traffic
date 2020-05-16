@@ -1,0 +1,118 @@
+body {
+    background:rgb(170, 162, 162);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;min-width: 1000px;
+}
+.container{
+    position: relative;
+    height:600px;
+    min-width: fit-content;
+    border:2px solid black;
+    background:rgb(116, 88, 88);
+
+}
+.container *{
+    position: absolute;
+    
+}
+.search_box{
+    height: 46px;
+    left:7.5%;
+    right: 7.5%;
+    top:20px;
+    padding:10px;
+    color: black;
+    background:rgb(170, 162, 162);
+    text-align: center;
+    
+    
+}
+.search_box *{
+    position: relative;
+    font-size: 35px;
+}
+.search_box input{
+    border:2px solid black;
+}
+.search_box #search_btn{
+    border-radius: 10px;
+    color: gold;
+    border: 2px solid black;
+    background-color: rgb(153, 18, 18);
+}
+.search_box #search_btn:active{
+    color: rgb(153, 18, 18);
+    background-color:gold;
+    
+}
+.search_box #search_btn:hover{
+    cursor: pointer;
+    
+}
+.applicantDetails_box{
+
+    
+    height: 400px;
+    left:7.5%;
+    right: 7.5%;
+    top:90px;
+    padding: 10px 50px;
+    color: black;
+    border:10px solid rgb(170, 162, 162);
+    border-radius: 10px;
+}
+.applicantDetails_box *{
+    position: relative;
+    left:20%;
+    border: none;
+}
+.applicantDetails_box h1{
+      left:0px;
+}
+.applicantDetails_box input{
+    font-size: 15px;
+    color: black;
+    background-color:rgb(170, 162, 162) ;
+}
+.applicantDetails_box #messagebar1{
+    position: absolute;
+    left: 30%;
+    text-align: center;
+    background-color:transparent ;
+}
+.applicantDetails_box #messagebar2{
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    text-align: center;
+    background-color:transparent ;
+}
+.button_box{
+    height: 100px;
+    left:7.5%;
+    right: 7.5%;
+    bottom: 20px;
+    background:rgb(170, 162, 162);
+    
+}
+
+.button_box form{
+    width: 100%;
+}
+.button_box form *{
+    position: relative;
+    width: 24%;
+    height: 50px;
+    font-size: 20px;
+    top: 20px;
+    left: 1%;
+    color: gold;
+    border: 2px solid black;
+    background-color: rgb(153, 18, 18);
+    border-radius: 10px;
+    cursor: pointer; 
+}
+#logout{
+    position: absolute;
+    top: 20px;
+    right: 1.5%;
+}
+
