@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 09:54 PM
+-- Generation Time: May 16, 2020 at 09:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -25,46 +25,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `examlist`
+-- Table structure for table `failtable`
 --
 
-CREATE TABLE `examlist` (
-  `num` int(11) NOT NULL,
+CREATE TABLE `failtable` (
   `nic` varchar(100) NOT NULL,
-  `fullname` varchar(100) NOT NULL,
-  `dates` date NOT NULL,
-  `count` int(11) NOT NULL,
-  `examlimit` int(11) NOT NULL,
-  `attendance` varchar(100) NOT NULL
+  `examfail` int(11) DEFAULT NULL,
+  `trialfail` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `examlist`
---
-
-INSERT INTO `examlist` (`num`, `nic`, `fullname`, `dates`, `count`, `examlimit`, `attendance`) VALUES
-(1, '990122164V', 'Kavishka Rathnaweera', '2020-05-15', 10, 100, '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `examlist`
+-- Indexes for table `failtable`
 --
-ALTER TABLE `examlist`
-  ADD PRIMARY KEY (`nic`),
-  ADD UNIQUE KEY `num` (`num`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `examlist`
---
-ALTER TABLE `examlist`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `failtable`
+  ADD PRIMARY KEY (`nic`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
