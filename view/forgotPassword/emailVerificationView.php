@@ -2,8 +2,8 @@
 SESSION_START();
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
-
 $person = new UserAccount();
+$mail_state="2";
 if(!(isset($_GET['code']))){
     if(isset($_POST['submit'])){
         $email=$_POST['EMAIL'];
@@ -21,18 +21,13 @@ if(!(isset($_GET['code']))){
 			";
 
             $mail->sendmail($subject,$body,$to);
-            echo "
-                <br>
-                <div id ="demo"> 
-                        <p>Please click on the link which is sent to your email. This link valid till next 5 minutes.</p>
-                </div>
-            ";
+            $mail_state="1";
 
             
-
         }
         else{
-            echo "Email doesn't match...!";
+            $mail_state="0";
+            //echo "Email doesn't match...!";
         }
     }
 }
@@ -61,17 +56,34 @@ if(isset($_GET['code'])){
     <meta name="description" content="This page is for email verification in fogotpassword option " />
     <meta name="keywords" content="motor traffic,sri lanka" />
     <link rel="icon" href="../images/3.png">
+    <link rel="stylesheet" href="../css/emailVerification.css?v=<?php echo time(); ?>">
     <title>Email Verify</title>
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-    <form action="emailVerificationView.php" method="post">
-        <lable>INPUT EMAIL: </lable>
-        <input type="text" name="EMAIL" id="email">
-        <button type="submit" name="submit" id="search_btn">Submit</button>
-    </form>
+
+<main class="container">
+    <div class="search_box">
+        <form action="emailVerificationView.php" method="post">
+            <lable>INPUT EMAIL: </lable>
+            <input type="text" name="EMAIL" id="email">
+            <button type="submit" name="submit" id="search_btn">Submit</button>
+        </form>
+    </div>
+
+    <br><br><br>
 
     
+
+    <div class ="popup"> <?php
+    if($mail_state=="1"){
+        print("Please click on the link which is sent to your email. This link valid till next 5 minutes.");
+    }
+    elseif($mail_state=="0"){
+        print("Email doesn't match...!");
+    }
+    ?> </div>
+<main>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 </body>

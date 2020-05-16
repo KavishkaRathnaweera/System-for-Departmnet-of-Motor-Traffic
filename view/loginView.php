@@ -9,7 +9,7 @@
     <meta name="keywords" content="motor traffic,sri lanka"/>
     <title>User Login</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/createAccount.css">
+    <link rel="stylesheet" href="css/login.css">
  
 </head>
 <body>
@@ -25,7 +25,7 @@
         </p>
         <p>
             <label for="">Password : </label>
-            <input type="text" name="password" required>
+            <input type="password" name="password" required>
         </p>
       
         <p>
