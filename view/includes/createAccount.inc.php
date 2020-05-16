@@ -1,8 +1,8 @@
 <?php 
 session_start();
 
-include("../control/UserAccount.class.php");
-include("../control/EmailSend.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 //include("../createAccount.class.php");
 
 if(isset($_POST["submit"])){
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
     $account->addToDataBase();
 
     $email = new EmailSend();
-    $body='
+    $body="Dear ".$_POST["full_name"].'..<br><br>'.'
     1)Applicant should be present in person.<br><br>
     
     2)Should bring the national identity card or the valid passport with the national identity card number.<br><br>

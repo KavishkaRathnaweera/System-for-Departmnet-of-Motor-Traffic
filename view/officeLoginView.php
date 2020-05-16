@@ -8,7 +8,7 @@
     <meta name="keywords" content="motor traffic,sri lanka"/>
     <title>Office Login</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/createAccount.css">
+    <link rel="stylesheet" href="css/login.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="js/createAccountjs.js"></script>
  
 </head>

@@ -1,6 +1,6 @@
 <?php
 
-include("../control/UserAccount.class.php");
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
 session_start();
 
 $adm = new UserAccount();

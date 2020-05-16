@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2020 at 09:05 AM
+-- Generation Time: May 15, 2020 at 09:41 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -56,13 +56,12 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`nic`, `surname`, `otherNames`, `fullName`, `gender`, `birthday`, `age`, `height`, `bloodGroup`, `vehicle`, `addrss`, `phone`, `email`, `passwrd`, `registerDate`, `verified`, `exam`, `trail`, `license`, `recover_code`) VALUES
-('12135465V', 'Rathnaweera', '', 'shehan perera', 'Female', '2020-05-12', '21', '34', 'O Negative', 'Motor cycle(Auto)', 'Sooriyapaluwa', '0714373382', 'kyasinrathnaweera@gmail.com', '123', '2020-05-01 20:35:32', 'No', 'No', 'No', NULL, NULL),
+('12135465V', 'Rathnaweera', '', 'shehan perera', 'Female', '2020-05-12', '21', '34', 'O Negative', 'Motor cycle(Auto)', 'Sooriyapaluwa', '0714373382', 'kyasinrathnaweera@gmail.com', '123', '2020-05-01 20:35:32', 'yes', 'No', 'No', NULL, NULL),
 ('12345', 'perera', 'ghj', 'WEERAPPULIGE AKSHEN MADUMADA JAYAMANNA', 'Female', '2020-05-05', '20', '187', 'O Negative', 'Motor cycle(Auto)', 'bnm,.', '3456789', 'official.cyberspacetechnologies@gmail.com', 'jj', '2020-05-10 13:37:20', 'No', 'No', 'No', NULL, NULL),
-('20001234567', 'perera', 'hiroon', 'Davatage hiroon Madhranga perera', 'Male', '2000-10-12', '20', '170', 'O Negative', 'Motor Tricycle,Motor Vehicle(Auto)', '185/1,kopihena weliveriya', '09876543', 'shehanxperera@gmail.com', '12345', '2020-05-10 18:32:25', 'No', 'No', 'No', NULL, 14880),
 ('3245273', 'perera', 'ghj', 'WEERAPPULIGE AKSHEN MADUMADA JAYAMANNA', 'Male', '2020-05-12', '33', '333', 'O Negative', 'Motor cycle(Auto)', 'fds', '09876543', 'official.cyberspacetechnologies@gmail.com', 'jkl', '2020-05-12 17:01:10', 'No', 'No', 'No', NULL, NULL),
 ('34567', '345678', '46789', '4567', 'Female', '2020-05-18', '567', '567', 'O Negative', 'Motor cycle(Auto)', '456789ijb', 'ghjk', 'hiroonperera@gmail.com', 'df', '2020-05-12 17:52:38', 'No', 'No', 'No', NULL, NULL),
 ('67890', 'dfgh', 'ds', 'dsaasd', 'Female', '2020-05-11', '33', '43', 'O Negative', 'Motor cycle(Auto)', 'fds', '34', 'fghj@fg', 'fd', '2020-05-10 17:24:08', 'No', 'No', 'No', NULL, NULL),
-('971921323v', 'perera', 'anda', 'DAVATAGE SHEHAN MADHUSANKA PERERA', 'Male', '1997-05-11', '20', '187', 'O Negative', 'Motor cycle(Auto)', 'rtyuiolkjh', '3456789', 'shehanxperera@gmail.com', 'asdfghjkl', '2020-05-07 12:49:50', 'yes', 'No', 'No', NULL, 14880),
+('971921323v', 'perera', 'shehan', 'DAVATAGE SHEHAN MADHUSANKA PERERA', 'Male', '1997-10-07', '11', '111', 'O Negative', 'Motor cycle(Auto)', 'aaa', '111111111111', 'shehanxperera@gmail.com', '11', '2020-05-15 09:31:20', 'No', 'No', 'No', NULL, NULL),
 ('990122164V', 'Rathnaweera', '', 'sadun perera', 'Male', '2020-05-19', '21', '34', 'O Negative', 'Motor cycle(Auto)', 'Sooriyapaluwa', '0714373382', 'kyasinrathnaweera@gmail.com', '123', '2020-05-03 18:47:27', 'No', 'No', 'No', NULL, NULL);
 
 --

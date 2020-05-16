@@ -5,7 +5,7 @@
     <meta name="description" content="This website to renew your licence or get a new licence and office uses only."/>
     <meta name="keywords" content="Department of Motor traffic in Sri Lanka"/>
     <link rel="icon" href="view/images/3.png">
-    <link rel="stylesheet" href="view/css/home.css">
+    <link rel="stylesheet" href="view/css/home.css?v=<?php echo time(); ?>">
  </Head>
    
  <Body>
@@ -14,7 +14,7 @@
 
 
    
-   <select id="gh" name="offctype" onchange="la('view/officeLoginView.php')">
+   <select class="office" name="offctype" onchange="la('view/officeLoginView.php')">
     <option value="home.html">Customer</option>
     <option value="counter1.html">Counter 1</option>
     <option value="counter2.html">Counter 2</option>
@@ -31,7 +31,7 @@
 }
 </script>
 
-   <H1>Home Page</H1> 
+   <H1>Welcome</H1> 
    <hr/>
    <img src="view/images/4.jpg" width="200px" height="120px" alt ="log in" usemap="#map0"/> ...................OR.....................               
    <img src="view/images/5.jpg" width="200px" height="120px" alt ="sign up" usemap="#map1"/>
