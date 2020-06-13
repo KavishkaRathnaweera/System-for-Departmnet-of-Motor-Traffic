@@ -65,7 +65,7 @@ if (isset($_SESSION["trialDate"]) && $_SESSION["trialDate"] != "") {
     }
 
     if (isset($_POST["sendEmail"])) {
-        $mail = new EmailSend();
+        $mail = EmailSend::getInstance();
 
         $to = $_SESSION["email"];
         $subject = "Trial date";

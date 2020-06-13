@@ -10,7 +10,7 @@ if(!(isset($_GET['code']))){
         if($person->isCorrectEmail($email)){
             $code = rand(10000,99999);
             $person->updateCodeDB($email,$code);
-            $mail = new EmailSend();
+            $mail = EmailSend::getInstance();
 
             $to = $email;
 			$subject = "Password Reset";

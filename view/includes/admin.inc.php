@@ -3,7 +3,7 @@
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Admin.class.php');
 session_start();
 
-$admin = new Admin();
+$admin = Admin::getInstance();
 $checkdateW="";
 $checkdateE="";
 if(isset($_POST["limitbtn1"])){

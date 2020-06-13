@@ -25,7 +25,7 @@ if(isset($_POST["submit"])){
     //echo($_POST["grp1"]);
     $account->addToDataBase();
 
-    $email = new EmailSend();
+    $email = EmailSend::getInstance();
     $body="Dear ".$_POST["full_name"].'..<br><br>'.'
     1)Applicant should be present in person.<br><br>
     
