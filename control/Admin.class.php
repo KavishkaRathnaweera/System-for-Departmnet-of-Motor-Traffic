@@ -3,12 +3,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 
 class Admin extends AdminDB{
 
-  
-    // public function __construct()
-    // {
-    //   //  $exam=new ExamList();
-    //   //  $wait=new WaitList();
-    // }
+    private static Admin $instance;
+    private function __construct()
+    {
+      //  $exam=new ExamList();
+      //  $wait=new WaitList();
+    }
 
     public function addDate($date,$limits){
         $check1=$this->checkDate($date);
@@ -100,6 +100,12 @@ class Admin extends AdminDB{
                 break;
         }
     }
+    public static function getInstance():Admin{
+		if(!isset(self::$instance)){
+			self::$instance=new Admin();
+		}
+		return self::$instance;
+	}
 
     
 }

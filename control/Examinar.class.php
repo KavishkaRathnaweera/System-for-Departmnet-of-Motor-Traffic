@@ -4,8 +4,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 
 class Examinar extends ExaminarDB{
 
+    private static Examinar $instance;
     private $details;
-    public function  __construct()
+    private function  __construct()
 	{
 		$details=array();
 	}
@@ -75,6 +76,12 @@ class Examinar extends ExaminarDB{
     {
         $this->addQdatabase($question,$a1,$a2,$a3,$a4,$correct);
     }
+    public static function getInstance():Examinar{
+		if(!isset(self::$instance)){
+			self::$instance=new Examinar();
+		}
+		return self::$instance;
+	}
 
 }
 

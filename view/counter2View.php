@@ -33,11 +33,11 @@
             
             <h1>Applicant Details</h1>
             <label>Applicant ID: </label>
-            <input type="text" value="<?php echo $_SESSION["nic"]?>" size="50" disabled><br><br>
+            <input type="text" value="<?php if(isset($_SESSION["nic"])){echo $_SESSION["nic"];}?>" size="50" disabled><br><br>
             <label>Applicant Name: </label>
-            <input type="text" value="<?php echo $_SESSION["fullname"]?>"  size="50" disabled><br><br>
+            <input type="text" value="<?php if(isset($_SESSION["fullname"])){echo $_SESSION["fullname"];}?>"  size="50" disabled><br><br>
             <label>Verified: </label>
-            <input type="text" value="<?php echo $_SESSION["verified"]?>" size="50" disabled>
+            <input type="text" value="<?php if(isset($_SESSION["verified"])){echo $_SESSION["verified"];}?>" size="50" disabled>
             
         </div>
         <div class="button_box">

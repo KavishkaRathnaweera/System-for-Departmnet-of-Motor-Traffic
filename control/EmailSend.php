@@ -2,7 +2,10 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/lib/PHPMailer.master/PHPMailerAutoload.php');
 
 class EmailSend extends PHPMailer{
-
+    private static EmailSend $instance;
+	private function  __construct()
+	{
+	}
 
 public function sendmail($subject,$body,$address){
     try{
@@ -27,6 +30,12 @@ public function sendmail($subject,$body,$address){
         echo $e->getMessage();
     }
     }
+    public static function getInstance():EmailSend{
+		if(!isset(self::$instance)){
+			self::$instance=new EmailSend();
+		}
+		return self::$instance;
+	}
 
 
 }

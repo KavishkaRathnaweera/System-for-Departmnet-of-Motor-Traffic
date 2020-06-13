@@ -2,10 +2,11 @@
 
 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/counter2DB.php');
 
-class counter2 extends counter2DB{
+class Counter2 extends Counter2DB{
 	private $out;
 	private $details;
-	public function  __construct()
+	private static Counter2 $instance;
+	private function  __construct()
 	{
 		$out=null;
 		$details=array();
@@ -27,6 +28,12 @@ class counter2 extends counter2DB{
 			$details["error"]="please enter id";
 		}
 		return $details;	
+	}
+	public static function getInstance():Counter2{
+		if(!isset(self::$instance)){
+			self::$instance=new Counter2();
+		}
+		return self::$instance;
 	}
 }
  ?>

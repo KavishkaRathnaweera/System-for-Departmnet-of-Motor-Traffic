@@ -2,7 +2,7 @@
 
 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
 
-class permitCounterDB extends DBconnection{
+class PermitCounterDB extends DBconnection{
 
 	
 
