@@ -44,4 +44,10 @@ class UserAccountDB extends DBconnection {
 		$stmt->execute([$email]);
 
 }
+	protected function accessWaitlistDB(){
+// return 
+	}
+	protected function accessLimtwaitDB(){
+
+	}
 }

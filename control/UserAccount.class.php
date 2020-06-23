@@ -177,10 +177,31 @@ class UserAccount extends UserAccountDB{
             return true;
         }
     }
+    public function getRegistrationDate(){
+        $out=$this->getLastRowOFwaitList();
+		if(empty($out)){
+			$dateNlimit=$this->getFirstTriallimitRow();
+			$out["count"]=1;
+			$out["date"]=$dateNlimit["dates"];
+            $out["triallimit"]=$dateNlimit["limits"];
+
+		}
+        elseif($out["count"]==$out["triallimit"]){
+            $dateNlimit=$this->getNextTrialDateAndLimit(($this->getLastTrialDateNum($out["date"]))["num"]+1);
+            $out["count"]=1;
+            $out["date"]=$dateNlimit["dates"];
+            $out["triallimit"]=$dateNlimit["limits"];
 
 
+        }
+        else{
+            $out["count"]=$out["count"]+1;
+            
 
-
+        }
+        return $out;
+        //return date and add to waitlist
+    }
 
 
 
