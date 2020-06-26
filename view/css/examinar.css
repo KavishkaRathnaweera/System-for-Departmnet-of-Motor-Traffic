@@ -54,3 +54,49 @@ button {
 button:hover {
   background-color: #3f0000;
 }
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%; 
+}
+td,th,tr{
+  border: 1px solid;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+ 
+}
+.tableQ{
+   max-width: 100%;
+}
+tr:hover {background-color:rgb(197, 195, 195);}
+th {
+  background-color: rgb(71, 69, 69);
+  color: rgb(255, 255, 255);
+}
+.button1 {
+  background-color: rgb(202, 78, 78); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid rgb(202, 78, 78);
+  position: absolute;
+  top: 20px;
+  right: 1.5%;
+}
+
+.button1:hover {
+  background-color: rgb(170, 162, 162);
+  color: rgb(255, 255, 255);
+}
+.searchUpdate {
+  width: 10%;
+  padding: 4px 20px;
+  margin: 6px 0;
+  border: 1px solid rgb(170, 162, 162);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.searchUpdate:focus {
+  background-color: rgb(214, 214, 214);
+}
+
+

@@ -4,10 +4,17 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 class Admin extends AdminDB{
 
     private static Admin $instance;
-    private function __construct()
+    private function __construct(){}
+    // {
+    //   //  $exam=new ExamList();
+    //   //  $wait=new WaitList();
+    // }
+    public static function getInstance():Admin
     {
-      //  $exam=new ExamList();
-      //  $wait=new WaitList();
+        if(!isset(self::$instance)){
+            self::$instance = new Admin();
+        }
+        return self::$instance;
     }
 
     public function addDate($date,$limits){
@@ -16,25 +23,43 @@ class Admin extends AdminDB{
             $this->addToWaitlist($date,$limits);
         }
         else{
+            $this->updateWaitList($date,$limits);
             return "No";
-        }
-       
+        }  
     }
+
     public function addDateExam($date,$limits){
         $check2=$this->checkDateE($date);
         if($check2==null){
             $this->addToExamtlist($date,$limits);
         }
         else{
+            $this->updateExamList($date,$limits);
             return "No";
         }
     }
+
+    public function addDateTrial($date,$limits){
+        $check2=$this->checkDateT($date);
+        if($check2==null){
+            $this->addToTriallist($date,$limits);
+        }
+        else{
+            $this->updateTrialList($date,$limits);
+            return "No";
+        }
+    }
+
     public function changewaitLimit($limit){
         self::changeLimitWait($limit);
     }
     
     public function changeexamLimit($limit){
         self::changeLimitExam($limit);
+    }
+
+    public function changetrialLimit($limit){
+        self::changeLimitTrial($limit);
     }
 
     public function getlimitwait1()
@@ -44,6 +69,10 @@ class Admin extends AdminDB{
     public function getlimitexam1()
     {
         return self::getlimitexam();
+    }
+    public function getlimittrial1()
+    {
+        return self::getlimittrial();
     }
 
     public function checkOfficer($userID,$password)
@@ -100,12 +129,6 @@ class Admin extends AdminDB{
                 break;
         }
     }
-    public static function getInstance():Admin{
-		if(!isset(self::$instance)){
-			self::$instance=new Admin();
-		}
-		return self::$instance;
-	}
 
     
 }
