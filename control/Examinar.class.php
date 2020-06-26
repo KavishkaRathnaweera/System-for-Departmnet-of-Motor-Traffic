@@ -7,9 +7,13 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
     private static Examinar $instance;
     private $details;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private $questionArray;
     private int $currentIndex = 0;
     public function  __construct()
+=======
+    private function  __construct()
+>>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
 =======
     private function  __construct()
 >>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
@@ -89,6 +93,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
 		}
 		return self::$instance;
 	}
+<<<<<<< HEAD
 
     public function count(): int
     {
@@ -152,6 +157,8 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         $this->updatequestionData($question,$a1,$a2,$a3,$a4,$correct,$idnum);
     }
 
+=======
+>>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
 
 }
 

@@ -4,6 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 class Admin extends AdminDB{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static Admin $ins;
     private function __construct(){}
     // {
@@ -17,11 +18,16 @@ class Admin extends AdminDB{
         }
         return self::$ins;
 =======
+=======
+>>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
     private static Admin $instance;
     private function __construct()
     {
       //  $exam=new ExamList();
       //  $wait=new WaitList();
+<<<<<<< HEAD
+>>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
+=======
 >>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
     }
 
