@@ -4,7 +4,7 @@
 session_start();
 	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
    
-    $examinarCtrl1 = new Examinar();
+    $examinarCtrl1 = Examinar::getInstance();
 	
 
 ?>

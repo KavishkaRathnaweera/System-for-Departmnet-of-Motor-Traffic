@@ -11,7 +11,7 @@ session_start();
     $_SESSION["answer4"]="";
     //$_SESSION["idnum"]="qq";
     $_SESSION["notype"]="";
-    $examinarCtrl2 = new Examinar();
+    $examinarCtrl2 = Examinar::getInstance();
 	if (isset($_POST["searchQ"])) {
         
 		$id = $_POST["qnum"];

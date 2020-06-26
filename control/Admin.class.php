@@ -3,32 +3,18 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 
 class Admin extends AdminDB{
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private static Admin $ins;
+    private static Admin $instance;
     private function __construct(){}
     // {
     //   //  $exam=new ExamList();
     //   //  $wait=new WaitList();
     // }
-    public static function getIns():Admin
+    public static function getInstance():Admin
     {
-        if(!isset(self::$ins)){
-            self::$ins = new Admin();
+        if(!isset(self::$instance)){
+            self::$instance = new Admin();
         }
-        return self::$ins;
-=======
-=======
->>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
-    private static Admin $instance;
-    private function __construct()
-    {
-      //  $exam=new ExamList();
-      //  $wait=new WaitList();
-<<<<<<< HEAD
->>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
-=======
->>>>>>> 2baa2f14581d41e294d9be10633a14a13113341a
+        return self::$instance;
     }
 
     public function addDate($date,$limits){
@@ -143,12 +129,6 @@ class Admin extends AdminDB{
                 break;
         }
     }
-    public static function getInstance():Admin{
-		if(!isset(self::$instance)){
-			self::$instance=new Admin();
-		}
-		return self::$instance;
-	}
 
     
 }
