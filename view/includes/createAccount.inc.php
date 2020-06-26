@@ -25,7 +25,8 @@ if(isset($_POST["submit"])){
     //echo($_POST["grp1"]);
     $account->addToDataBase();
 
-    $email = new EmailSend();
+    $email = EmailSend::getInstance();
+    $regDate=$account->getRegistrationDate($_POST["id_no"]);
     $body="Dear ".$_POST["full_name"].'..<br><br>'.'
     1)Applicant should be present in person.<br><br>
     
@@ -35,7 +36,8 @@ if(isset($_POST["submit"])){
     photographs are taken during the computer process. For offices where offline method is used two passport size  black and white 
     photographs with white background are required.<br><br>
 
-    4)In obtaining a driving license for the first time, original of the birth certificate should be produced.';
+    4)In obtaining a driving license for the first time, original of the birth certificate should be produced.<br><br>
+    your registration date: '.$regDate;
 
     $email->sendmail('Information for License applicant',$body,$_POST["email"]);
 

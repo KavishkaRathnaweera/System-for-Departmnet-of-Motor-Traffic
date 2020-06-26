@@ -5,6 +5,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 class AdminDB extends DBconnection{
     private static $limitexam = 200;
     private static $limitwait = 200;
+    private static $limittrial = 400;
+
     // private static $countexam = 0;
     // private static $countwait = 0;
 
@@ -18,12 +20,41 @@ class AdminDB extends DBconnection{
 		$stmt->execute([$date,$limits]);
     }
 
+    public function updateWaitList($date,$limits)
+    {
+        $sql = "UPDATE limitwait SET limits=? WHERE dates=?";
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$limits,$date]);
+    }
+
     public function addToExamtlist($date,$limits)
     {
 
         $sql = 'INSERT INTO limitexam(dates,limits) VALUES (?,?)';
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$date,$limits]);
+    }
+
+    public function updateExamList($date,$limits)
+    {
+        $sql = "UPDATE limitexam SET limits=? WHERE dates=?";
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$limits,$date]);
+    }
+
+    public function addToTriallist($date,$limits)
+    {
+
+        $sql = 'INSERT INTO triallimit(dates,limits) VALUES (?,?)';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$date,$limits]);
+    }
+
+    public function updateTrialList($date,$limits)
+    {
+        $sql = "UPDATE triallimit SET limits=? WHERE dates=?";
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$limits,$date]);
     }
 
     public function checkDate($date)
@@ -42,6 +73,15 @@ class AdminDB extends DBconnection{
         $data = $stmt->fetchAll();
         return $data;
     }
+    public function checkDateT($date)
+    {
+        $sql='SELECT * FROM triallimit WHERE dates=?';
+        $stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$date]);
+        $data = $stmt->fetchAll();
+        return $data;
+    }
+
 
     // private function getlast(){
 
@@ -60,6 +100,11 @@ class AdminDB extends DBconnection{
     {
         self::$limitwait = $limits;    
     }
+    public static function changeLimitTrial($limits) 
+    {
+        self::$limittrial = $limits;    
+    }
+
     public static function getlimitwait()
     {
         return self::$limitwait;
@@ -68,6 +113,11 @@ class AdminDB extends DBconnection{
     {
         return self::$limitexam;
     }
+    public static function getlimittrial()
+    {
+        return self::$limittrial;
+    }
+
     public function selectOfficerById($id)
     {
         $sql = 'SELECT * FROM officer WHERE id= ?';

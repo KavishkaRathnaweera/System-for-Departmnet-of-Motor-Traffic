@@ -41,14 +41,14 @@ class ExaminarDB extends DBconnection{
         $count=1;
         $sql = 'INSERT INTO failtable(nic,trialfail) VALUES (?,?)';
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute([$date,$count]);
+		$stmt->execute([$nic,$count]);
     }
 
     public function updateTrialfail($nic,$count)
     {
         $sql = "UPDATE failtable SET trialfail=? WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute([$nic,$count]);
+		$stmt->execute([$count,$nic]);
     }
 
     public function searchFailtrial($nic)
@@ -65,5 +65,29 @@ class ExaminarDB extends DBconnection{
         $sql = 'INSERT INTO exampaper(question,answere1,answere2,answere3,answere4,correct) VALUES (?,?,?,?,?,?)';
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$question,$a1,$a2,$a3,$a4,$correct]);
+    }
+    public function getQ()
+    {
+        $sql = 'SELECT * FROM exampaper';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute();
+		$data = $stmt->fetchAll();
+		return $data;
+    }
+    public function getQuestionFromExm($number)
+    {
+        $sql = 'SELECT * FROM exampaper WHERE idnumber= ?';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$number]);
+		$data = $stmt->fetchAll();
+		return $data;
+    }
+    public function updatequestionData($question,$a1,$a2,$a3,$a4,$correct,$idnum)
+    {
+        $sql = "UPDATE exampaper SET question=?,answere1=?,answere2=?,answere3=?,answere4=?,correct=? WHERE idnumber=?";
+		$stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$question,$a1,$a2,$a3,$a4,$correct,$idnum]);
+
+       // echo($question);
     }
 }

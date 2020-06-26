@@ -4,12 +4,12 @@ use function PHPSTORM_META\type;
 
 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/permitCounterDB.php');
 
-class permitCounter extends permitCounterDB{
+class PermitCounter extends PermitCounterDB{
 	private $out;
 	private $details;
 	private $trialDate;
-
-	public function  __construct()
+	private static PermitCounter $instance;
+	private function  __construct()
 	{
 		$out=null;
 		$trialDate=array();
@@ -66,6 +66,12 @@ class permitCounter extends permitCounterDB{
 
 	public function addToTrialList($nic, $fullname, $date, $count, $triallimit){
 		$this->addToTrialListDB($nic, $fullname, $date, $count, $triallimit);
+	}
+	public static function getInstance():PermitCounter{
+		if(!isset(self::$instance)){
+			self::$instance=new PermitCounter();
+		}
+		return self::$instance;
 	}
 }
  ?>

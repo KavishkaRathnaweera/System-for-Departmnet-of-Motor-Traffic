@@ -8,7 +8,7 @@ session_start();
     // $_SESSION["tnic"]="";
     // $_SESSION["tfullname"]="";
    
-    $examinarCtrl = new Examinar();
+    $examinarCtrl = Examinar::getInstance();
 	if (isset($_POST["submitQ"])) {
         
         //$id = $_POST["ID"];

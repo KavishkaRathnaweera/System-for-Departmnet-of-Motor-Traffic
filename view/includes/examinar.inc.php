@@ -9,7 +9,7 @@ session_start();
     $_SESSION["nic"]="";
     $_SESSION["fullname"]="";
    
-    $examinarCtrl = new Examinar();
+    $examinarCtrl = Examinar::getInstance();
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];

@@ -32,7 +32,7 @@
             <label for="">&nbsp;</label>
             <button type="submit" name="login">LogIn</button>
             <button type="button" name='fogotPW' onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/view/forgotPassword/emailVerificationView.php'" >Forgot Password</button>
-            <button type="button" name="cancel" id="id1">Cancel</button>
+            <button type="button" name="cancel" id="id1" onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php'">Cancel</button>
         </p>
         </fieldset>
 

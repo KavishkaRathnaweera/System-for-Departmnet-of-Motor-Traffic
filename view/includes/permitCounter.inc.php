@@ -2,15 +2,15 @@
 
 session_start();
 
-include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/permitCounter.class.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/PermitCounter.class.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 
-$permitCounterCtrl = new permitCounter();
+
 //check for search
 if (isset($_POST["search"])) {
 
     $id = $_POST["ID"];
-
+    $permitCounterCtrl = PermitCounter::getInstance();
     $details = $permitCounterCtrl->show_userDetails($id);
 
     if (!isset($details["error"])) {
@@ -65,7 +65,7 @@ if (isset($_SESSION["trialDate"]) && $_SESSION["trialDate"] != "") {
     }
 
     if (isset($_POST["sendEmail"])) {
-        $mail = new EmailSend();
+        $mail = EmailSend::getInstance();
 
         $to = $_SESSION["email"];
         $subject = "Trial date";

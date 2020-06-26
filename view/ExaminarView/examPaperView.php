@@ -16,17 +16,24 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
+<button type="button" class="button1" onclick="la('../../index.php')">LOGOUT</button>
+<script>function la(src)
+    {
+     window.location=src;
+    }
+    </script>
 <div class="navbar">
 
-  <a href='../examinarView.php'>Mark Attendance</a>
+  <a href='../examinarView.php'>Mark Exam Attendance</a>
+ <!-- <a href='ExamMarkView.php'>Mark Exam Marks</a>-->
   <a href="trialView.php">Record Trial</a>
   <a href="#here">Make Exam Question</a>
-  <a href="#here">View Created Question</a>
-  <a href="#here">Update Questions</a>
+  <a href="questionSet.php">View Created Question</a>
+  <a href="updateQuestion.php">Update Questions</a>
 
 </div>
 
-<h1 class="head">Examinar</h1>
+<h1 class="head">Examinar-Add Question</h1>
 
 <form action="examPaperView.php" id="userDetails" class="question" method="post">
         <p>
