@@ -30,7 +30,7 @@ class UserAccountDB extends DBconnection {
 	public function updateCodeDB($email,$code){
 		$sql = "UPDATE useraccount SET recover_code='$code' WHERE email=?";
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute([$email]);
+		$stmt->execute([$email]); 
 	}
 
 	public function updatePasswordDB($email,$password){
@@ -45,10 +45,37 @@ class UserAccountDB extends DBconnection {
 		$stmt->execute([$email]);
 
 }
-	protected function accessWaitlistDB(){
-// return 
-	}
-	protected function accessLimtwaitDB(){
-
-	}
+protected function getLastRowOFwaitList(){
+	$sql = "SELECT dates,counts,maxlimit FROM waitlist  ORDER BY num DESC LIMIT 1";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute();
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getFirstRowOFlimitWait(){
+	$sql = "SELECT dates,limits FROM limitwait LIMIT 1";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute();
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getDateNumOFlimtWait($date){
+	$sql = "SELECT num FROM limitwait  WHERE dates = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$date]);
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getNextDateAndLimit($num){
+	$sql = "SELECT dates, limits FROM limitwait  WHERE num = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$num]);
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function addToWaitlist($nic, $date, $count, $maxlimit){
+	$sql = "INSERT INTO waitlist(nic, dates, counts, maxlimit) VALUES (?,?,?,?)";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$nic, $date, $count, $maxlimit]);
+}
 }
