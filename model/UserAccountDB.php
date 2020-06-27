@@ -78,4 +78,11 @@ protected function addToWaitlist($nic, $date, $count, $maxlimit){
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute([$nic, $date, $count, $maxlimit]);
 }
+public function getUserRow($nic){
+	$sql = 'SELECT * FROM examlist WHERE nic= ?';
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$nic]);
+	$data = $stmt->fetchAll();
+	return $data;
+}
 }
