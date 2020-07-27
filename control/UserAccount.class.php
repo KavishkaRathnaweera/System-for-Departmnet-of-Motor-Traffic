@@ -201,7 +201,26 @@ class UserAccount extends UserAccountDB{
         return $out["dates"];
         //return date and add to waitlist
     }
+    public Function checkUserForWriteExam($ID,$date){
+        $err = array();
+        $details=$this->getUserRow($ID);
+        $correctDate=$detais[0]['date'];
+        if(!empty($details)) {
+            if($date==$correctDate){
+                // $_SESSION['userId'] = $userID;
+                // header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
+            }else{
+                $error[] = "Your Exam Day is {$correctDate} You are not eligible for write exam now!" ;
+            }
+        } else {		
+            $error[] = "You cannot write exam. Whether you already wrote the exam or not yet came to the department.";
+        }
+    }
 
+
+    public Function showUserDetails($ID){
+        return($this->selectUserByUserName($ID));
+    }
 
 
 
