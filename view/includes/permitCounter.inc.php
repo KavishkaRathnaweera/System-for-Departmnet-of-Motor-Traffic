@@ -6,11 +6,11 @@ include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/con
 include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 
 
-//check for search
+//check for search 
+$permitCounterCtrl = PermitCounter::getInstance();
 if (isset($_POST["search"])) {
 
     $id = $_POST["ID"];
-    $permitCounterCtrl = PermitCounter::getInstance();
     $details = $permitCounterCtrl->show_userDetails($id);
 
     if (!isset($details["error"])) {
