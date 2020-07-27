@@ -46,14 +46,21 @@ class UserAccountDB extends DBconnection {
 
 }
 protected function getLastRowOFwaitList(){
-	$sql = "SELECT dates,counts,maxlimit FROM waitlist  ORDER BY num DESC LIMIT 1";
+	$sql = "SELECT dates,counts FROM waitlist  ORDER BY num DESC LIMIT 1";
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute();
 	$data = $stmt->fetch();
 	return $data;
 }
+protected function getLimit($date){
+	$sql = "SELECT limits FROM limitwait  WHERE dates = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$date]);
+	$data = $stmt->fetch();
+	return $data;
+}
 protected function getFirstRowOFlimitWait(){
-	$sql = "SELECT dates,limits FROM limitwait LIMIT 1";
+	$sql = "SELECT dates FROM limitwait LIMIT 1";
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute();
 	$data = $stmt->fetch();
@@ -66,16 +73,16 @@ protected function getDateNumOFlimtWait($date){
 	$data = $stmt->fetch();
 	return $data;
 }
-protected function getNextDateAndLimit($num){
-	$sql = "SELECT dates, limits FROM limitwait  WHERE num = ?";
+protected function getNextDate($num){
+	$sql = "SELECT dates FROM limitwait  WHERE num = ?";
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute([$num]);
 	$data = $stmt->fetch();
 	return $data;
 }
-protected function addToWaitlist($nic, $date, $count, $maxlimit){
-	$sql = "INSERT INTO waitlist(nic, dates, counts, maxlimit) VALUES (?,?,?,?)";
+protected function addToWaitlist($nic, $fullname, $date, $count){
+	$sql = "INSERT INTO waitlist(nic, fullName, dates, counts) VALUES (?,?,?,?)";
 	$stmt = $this->connection()->prepare($sql);
-	$stmt->execute([$nic, $date, $count, $maxlimit]);
+	$stmt->execute([$nic, $fullname, $date, $count]);
 }
 }

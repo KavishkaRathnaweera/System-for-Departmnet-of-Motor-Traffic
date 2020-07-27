@@ -177,20 +177,18 @@ class UserAccount extends UserAccountDB{
             return true;
         }
     }
-    public function getRegistrationDate($nic){
+    public function getRegistrationDate($nic, $fullname){
         $out=$this->getLastRowOFwaitList();
 		if(empty($out)){
-			$dateNlimit=$this->getFirstRowOFlimitWait();
+			$date=$this->getFirstRowOFlimitWait();
 			$out["counts"]=1;
-			$out["dates"]=$dateNlimit["dates"];
-            $out["maxlimit"]=$dateNlimit["limits"];
+			$out["dates"]=$date["dates"];
 
 		}
-        elseif($out["counts"]==$out["maxlimit"]){
-            $dateNlimit=$this->getNextDateAndLimit(($this->getDateNumOFlimtWait($out["dates"]))["num"]+1);
+        elseif($out["counts"]>=($this->getLimit($out["dates"]))["limits"]){
+            $date=$this->getNextDate(($this->getDateNumOFlimtWait($out["dates"]))["num"]+1);
             $out["counts"]=1;
-            $out["dates"]=$dateNlimit["dates"];
-            $out["maxlimit"]=$dateNlimit["limits"];
+            $out["dates"]=$date["dates"];
  
 
         }
@@ -199,7 +197,7 @@ class UserAccount extends UserAccountDB{
             
 
         }
-        $this->addToWaitlist($nic,$out["dates"],$out["counts"],$out["maxlimit"]);
+        $this->addToWaitlist($nic, $fullname, $out["dates"],$out["counts"]);
         return $out["dates"];
         //return date and add to waitlist
     }

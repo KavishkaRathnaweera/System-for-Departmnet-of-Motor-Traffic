@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
     $account->addToDataBase(); 
 
     $email = EmailSend::getInstance();
-    $regDate=$account->getRegistrationDate($_POST["id_no"]);
+    $regDate=$account->getRegistrationDate($_POST["id_no"],$_POST["full_name"]);
     $body="Dear ".$_POST["full_name"].'..<br><br>'.'
     1)Applicant should be present in person.<br><br>
     

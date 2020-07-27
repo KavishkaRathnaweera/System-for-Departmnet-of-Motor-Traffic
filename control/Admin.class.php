@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 
 class Admin extends AdminDB{
 
-    private static Admin $instance;
+    private static $instance;
     private function __construct(){}
     // {
     //   //  $exam=new ExamList();

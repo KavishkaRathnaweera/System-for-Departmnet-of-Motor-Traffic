@@ -19,7 +19,7 @@ if (isset($_POST["search"])) {
         $_SESSION["fullname"] = $details["fullname"];
         $_SESSION["exam"] = $details["exam"];
         $_SESSION["email"] = $details["email"];
-        $_SESSION["trialDate"] = $details["date"];
+        $_SESSION["trialDate"] = $details["dates"];
     } else {
         $_SESSION["error"] = $details["error"];
         $_SESSION["nic"] = "";
@@ -38,9 +38,8 @@ if (isset($_SESSION["exam"]) && $_SESSION["exam"] == "pass") {
     if (isset($_POST["trialDate"])) {
         if ($_SESSION["trialDate"] == "") {
             $result = $permitCounterCtrl->processTrialDate($_SESSION["nic"]);
-            $_SESSION["trialDate"] = $result["date"];
-            $_SESSION["count"] = $result["count"];
-            $_SESSION["triallimit"] = $result["triallimit"];
+            $_SESSION["trialDate"] = $result["dates"];
+            $_SESSION["count"] = $result["counts"];
             $_SESSION["checkupdate"] = "no";
             $_SESSION["message"] = "Trial date processed Successfully";
         } else {
@@ -52,14 +51,14 @@ if (isset($_SESSION["exam"]) && $_SESSION["exam"] == "pass") {
 if (isset($_POST["UpdateList"])) {
 
     if (isset($_SESSION["checkupdate"]) && $_SESSION["checkupdate"] == "no") {
-        $permitCounterCtrl->addToTrialList($_SESSION["nic"], $_SESSION["fullname"], $_SESSION["trialDate"],  $_SESSION["count"], $_SESSION["triallimit"]);
+        $permitCounterCtrl->addToTrialList($_SESSION["nic"], $_SESSION["fullname"], $_SESSION["trialDate"],  $_SESSION["count"]);
         $_SESSION["checkupdate"] = "yes";
         $_SESSION["message"] = "Update List Successful";
     } elseif (isset($_SESSION["checkupdate"]) && $_SESSION["checkupdate"] == "yes") {
         $_SESSION["message"] = "Already updated";
     }
 }
-if (isset($_SESSION["trialDate"]) && $_SESSION["trialDate"] != "") {
+if (isset($_SESSION["trialDate"]) && $_SESSION["trialDate"] != "" && $_SESSION["checkupdate"] == "yes") {
     if (isset($_POST["print"])) {
         $_SESSION["message"] = "Print Successful";
     }

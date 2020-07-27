@@ -11,8 +11,8 @@ class Counter2DB extends DBconnection{
     $sql = "SELECT nic,fullname,verified FROM useraccount  WHERE nic = ?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$id]);
-
-		return $stmt;
+		$data = $stmt->fetch();
+		return $data;
 	}
 }
  ?>

@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model
 
 class Examinar extends ExaminarDB implements Countable, Iterator{
 
-    private static Examinar $instance;
+    private static $instance;
     private $details;
     private $questionArray;
     private int $currentIndex = 0;
@@ -95,7 +95,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         return count($this->questionArray);
     }
 
-    public function current(): Book
+    public function current(): Bool
     {
         return $this->questionArray[$this->currentIndex];
     }
