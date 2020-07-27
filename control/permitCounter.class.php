@@ -25,7 +25,7 @@ class PermitCounter extends PermitCounterDB{
 			$details = $this->getUserDetails($id);
 			$trialDate=($this->getTrialDate($id));
 			if(empty($trialDate)){
-				$trialDate["date"]="";
+				$trialDate["dates"]="";
 			}
 			if(empty($details)){
 				$details["error"]="invalid id";
@@ -40,32 +40,30 @@ class PermitCounter extends PermitCounterDB{
 		return $details;	
     }
     public function processTrialDate($id){
-		$out=$this->getLastTrialApplicant();
+		$out=$this->getLastTrialApplicant();//get count and date of triallist row which added recently.
+		
 		if(empty($out)){
-			$dateNlimit=$this->getFirstTriallimitRow();
-			$out["count"]=1;
-			$out["date"]=$dateNlimit["dates"];
-            $out["triallimit"]=$dateNlimit["limits"];
+			$date=$this->getFirstTriallimitRow();//get first date of triallimt table.
+			$out["counts"]=1;
+			$out["dates"]=$date["dates"];
 
 		}
-        elseif($out["count"]==$out["triallimit"]){
-            $dateNlimit=$this->getNextTrialDateAndLimit(($this->getLastTrialDateNum($out["date"]))["num"]+1);
-            $out["count"]=1;
-            $out["date"]=$dateNlimit["dates"];
-            $out["triallimit"]=$dateNlimit["limits"];
+        elseif($out["counts"]>=($this->getTrialLimit($out["dates"]))["limits"]){
+            $date=$this->getNextTrialDate(($this->getTrialDateNum($out["dates"]))["num"]+1);
+            $out["counts"]=1;
+            $out["dates"]=$date["dates"];
 
 
         }
         else{
-            $out["count"]=$out["count"]+1;
-            
+            $out["counts"]=$out["counts"]+1;
+		}
 
-        }
         return $out;
     }
 
-	public function addToTrialList($nic, $fullname, $date, $count, $triallimit){
-		$this->addToTrialListDB($nic, $fullname, $date, $count, $triallimit);
+	public function addToTrialList($nic, $fullname, $date, $count){
+		$this->addToTrialListDB($nic, $fullname, $date, $count);
 	}
 	public static function getInstance():PermitCounter{
 		if(!isset(self::$instance)){

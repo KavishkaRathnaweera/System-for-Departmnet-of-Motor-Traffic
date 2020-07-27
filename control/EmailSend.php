@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/lib/PHPMailer.master/PHPMailerAutoload.php');
 
 class EmailSend extends PHPMailer{
-    private static EmailSend $instance;
+    private static $instance;
 	private function  __construct()
 	{
 	}
@@ -19,7 +19,7 @@ public function sendmail($subject,$body,$address){
         $mail->Username = 'motortrafficdepartmentsl@gmail.com';
         $mail->Password = "0710000000";
         $mail->SetFrom('motortrafficdepartmentsl@gmail.com');
-
+        
         $mail->Subject = $subject;
         $mail->Body = $body;
         $mail->AddAddress($address);

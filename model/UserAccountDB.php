@@ -30,7 +30,7 @@ class UserAccountDB extends DBconnection {
 	public function updateCodeDB($email,$code){
 		$sql = "UPDATE useraccount SET recover_code='$code' WHERE email=?";
 		$stmt = $this->connection()->prepare($sql);
-		$stmt->execute([$email]);
+		$stmt->execute([$email]); 
 	}
 
 	public function updatePasswordDB($email,$password){
@@ -45,10 +45,51 @@ class UserAccountDB extends DBconnection {
 		$stmt->execute([$email]);
 
 }
-	protected function accessWaitlistDB(){
-// return 
-	}
-	protected function accessLimtwaitDB(){
-
-	}
+protected function getLastRowOFwaitList(){
+	$sql = "SELECT dates,counts FROM waitlist  ORDER BY num DESC LIMIT 1";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute();
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getLimit($date){
+	$sql = "SELECT limits FROM limitwait  WHERE dates = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$date]);
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getFirstRowOFlimitWait(){
+	$sql = "SELECT dates FROM limitwait LIMIT 1";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute();
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getDateNumOFlimtWait($date){
+	$sql = "SELECT num FROM limitwait  WHERE dates = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$date]);
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function getNextDate($num){
+	$sql = "SELECT dates FROM limitwait  WHERE num = ?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$num]);
+	$data = $stmt->fetch();
+	return $data;
+}
+protected function addToWaitlist($nic, $fullname, $date, $count){
+	$sql = "INSERT INTO waitlist(nic, fullName, dates, counts) VALUES (?,?,?,?)";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$nic, $fullname, $date, $count]);
+}
+public function getUserRow($nic){
+	$sql = 'SELECT * FROM examlist WHERE nic= ?';
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$nic]);
+	$data = $stmt->fetchAll();
+	return $data;
+}
 }
