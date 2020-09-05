@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 06:49 PM
+-- Generation Time: Jul 27, 2020 at 09:46 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `limitwait` (
+  `num` int(11) NOT NULL,
   `dates` date NOT NULL,
   `limits` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,28 +38,31 @@ CREATE TABLE `limitwait` (
 -- Dumping data for table `limitwait`
 --
 
-INSERT INTO `limitwait` (`dates`, `limits`) VALUES
-('2020-05-01', 250),
-('2020-06-01', 222),
-('2020-08-06', 250),
-('2020-08-06', 250),
-('2020-08-06', 250),
-('2020-08-06', 250),
-('2020-08-06', 250),
-('2020-08-06', 11111111),
-('2020-08-06', 11111111),
-('2020-08-06', 222222),
-('2020-08-07', 71),
-('2020-08-08', 45554545),
-('2020-09-08', 45554545),
-('2020-01-08', 45554545),
-('2020-02-08', 45554545),
-('2020-05-08', 45554545),
-('2020-10-08', 45554545),
-('2022-10-08', 123),
-('2022-10-08', 123),
-('2022-08-08', 123),
-('2020-05-28', 123);
+INSERT INTO `limitwait` (`num`, `dates`, `limits`) VALUES
+(1, '2020-05-16', 2),
+(2, '2020-06-01', 2),
+(3, '2020-06-02', 2),
+(4, '2020-06-03', 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `limitwait`
+--
+ALTER TABLE `limitwait`
+  ADD PRIMARY KEY (`num`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `limitwait`
+--
+ALTER TABLE `limitwait`
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
