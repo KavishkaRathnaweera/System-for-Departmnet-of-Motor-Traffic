@@ -1,5 +1,5 @@
 body {
-    background:rgb(170, 162, 162);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;text-align:left;
+  background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;text-align:left;
 }
 h1 {
     color:rgb(99, 12, 12);font-size:38px;text-align:center;font-family: Arial, Helvetica, sans-serif;
@@ -26,11 +26,12 @@ h1 {
   }
 
 label,select{
-    width: 10%;
+    width: 15%;
     float: left;
     color: rgb(31, 2, 2);
     padding: 6px;
     font-family: Arial;
+    
 }
 input{
   width: 40%;
@@ -99,4 +100,54 @@ th {
   background-color: rgb(214, 214, 214);
 }
 
+/* .......................................................................................................... */
+.container_C1V{
+  /* border: 2px solid rgb(8, 1, 1); */
+  position: relative;
+  height: 1050px;
 
+}
+.container_C1V *{
+  position: absolute;
+  border-radius: 6px;
+  
+}
+.container_C1A{
+  /* border: 2px solid rgb(8, 1, 1); */
+  position: relative;
+  height: 1325px;
+
+}
+.container_C1A *{
+  position: absolute;
+  border-radius: 6px;
+  
+}
+.search_box{
+  padding:10px;
+  /* border: 2px solid rgb(87, 82, 82); */
+  background:rgb(170, 162, 162);
+  text-align: center;
+  top: 20px;
+ left: 10%;
+ right: 10%;
+}
+.search_box *{
+  position: relative;
+  
+}
+.applicantDetails_box {
+  padding:10px;
+  background:rgb(170, 162, 162);
+  top: 120px;
+  left: 10%;
+  right:10%;
+  /* border: 2px solid rgb(98, 36, 212); */
+}
+.applicantDetails_box *{
+  position: relative;
+  
+}
+.applicantDetails_box button{
+  left: 16.3%;
+}

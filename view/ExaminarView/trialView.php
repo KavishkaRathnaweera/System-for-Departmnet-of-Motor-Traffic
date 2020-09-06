@@ -46,7 +46,7 @@
     <div class="applicantDetails_box">
             
             <h2>Applicant Details</h2>
-            <label>Applicant ID----: </label>
+            <label>Applicant ID: </label>
             <input type="text" value="<?php echo $_SESSION["tnic"]?>" size="50" disabled><br><br>
             <label>Applicant Name: </label>
             <input type="text" value="<?php echo $_SESSION["tfullname"]?>"  size="50" disabled><br><br>

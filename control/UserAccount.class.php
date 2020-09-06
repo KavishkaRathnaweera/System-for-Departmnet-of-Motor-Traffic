@@ -204,7 +204,7 @@ class UserAccount extends UserAccountDB{
     public Function checkUserForWriteExam($ID,$date){
         $err = array();
         $details=$this->getUserRow($ID);
-        $correctDate=$detais[0]['date'];
+        $correctDate=$details[0]['date'];
         if(!empty($details)) {
             if($date==$correctDate){
                 // $_SESSION['userId'] = $userID;
