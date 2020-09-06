@@ -15,16 +15,16 @@ session_start();
         $details = $counter2Ctrl->show_userDetails($id);
         
         if(!isset($details["error"])){
-            $_SESSION["error"]="";
-            $_SESSION["nic"]=$details["nic"];
-            $_SESSION["fullname"]=$details["fullname"];
-            $_SESSION["verified"]=$details["verified"];
+            $_SESSION["C2error"]="";
+            $_SESSION["C2nic"]=$details["nic"];
+            $_SESSION["C2fullname"]=$details["fullname"];
+            $_SESSION["C2verified"]=$details["verified"];
         }
         else{
-            $_SESSION["error"]=$details["error"];
-            $_SESSION["nic"]="";
-            $_SESSION["fullname"]="";
-            $_SESSION["verified"]="";
+            $_SESSION["C2error"]=$details["error"];
+            $_SESSION["C2nic"]="";
+            $_SESSION["C2fullname"]="";
+            $_SESSION["C2verified"]="";
         }
        
 	}

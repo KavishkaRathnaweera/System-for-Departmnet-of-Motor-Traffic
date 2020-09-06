@@ -1,9 +1,9 @@
 body {
-    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;min-width: 1000px;
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:15px;min-width: 1000px;
 }
 .container{
     position: relative;
-    height:600px;
+    height:550px;
     min-width: fit-content;
     background:rgb(194, 188, 188);
 
@@ -13,7 +13,7 @@ body {
     
 }
 .search_box{
-    height: 70px;
+    height: 60px;
     left:7.5%;
     right: 7.5%;
     top:20px;
@@ -31,14 +31,14 @@ body {
 }
 .search_box .searchform label{
     top: 8px;
-    font-size: 30px;
+    font-size: 20px;
     
 }
 .search_box input[id="ID_no"]{
     border-radius: 6px;
-    padding: 6px 8px;
+    padding: 3px 8px;
     width: 50%;
-    font-size: 20px;
+    font-size: 12px;
     border:none;
 }
 .search_box input[id="ID_no"]:focus{
@@ -53,8 +53,9 @@ body {
     background:transparent;
 }
 .search_box #search_btn{
-    font-size: 20px;
-    height: 35px;
+    font-size: 12px;
+    height: 24px;
+    width: 8%;
     border-radius: 8px;
     color: white;
     border:  none;
@@ -68,7 +69,7 @@ body {
 .applicantDetails_box{
 
     
-    height: 350px;
+    height: 300px;
     left:7.5%;
     right: 7.5%;
     top:120px;
@@ -93,7 +94,7 @@ body {
     float: left;
 }
 .applicantDetails_box input{
-    font-size: 16px;
+    font-size: 15px;
     color: black;
     background-color:rgb(170, 162, 162) ;
 }
@@ -108,9 +109,10 @@ body {
 }
 .button_box *{
     position: relative;
-    width: 33%;
-    height: 50px;
-    font-size: 20px;
+    width: 10%;
+    left: 68%;
+    height: 35px;
+    font-size: 15px;
     top: 20px;
     color:white;
     border:none;
@@ -118,12 +120,18 @@ body {
     border-radius: 10px;
     cursor: pointer; 
 }
-#logout{
+
+.logout {
+    background-color: rgb(202, 78, 78); 
+    color: rgb(255, 255, 255); 
+    border: 2px solid rgb(202, 78, 78);
     position: absolute;
     top: 20px;
     right: 1.5%;
-}
-
-
-
+  }
+  
+  .logout:hover {
+    background-color: rgb(170, 162, 162);
+    color: rgb(255, 255, 255);
+  }
 
