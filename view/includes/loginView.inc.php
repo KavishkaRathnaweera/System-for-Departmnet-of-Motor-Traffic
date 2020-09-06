@@ -5,7 +5,7 @@ session_start();
 
 $adm = new UserAccount();
 
-if(isset($_SESSION['userId'])) {
+if(isset($_SESSION['userid'])) {
 	header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');	
 }
 
@@ -15,7 +15,7 @@ if(isset($_POST["login"])){
     $password = $_POST['password'];
     $errorArray=$adm->checkUser($userID,$password);
     if (empty($errorArray)){
-        $_SESSION['userId'] = $userID;
+        $_SESSION['userid'] = $userID;
         header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
     }
 
