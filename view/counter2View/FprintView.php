@@ -21,7 +21,7 @@
     <main class="container">
         <div class="applicant_id_box">
             <label>Applicant ID:</label>
-            <input type="text" id="applicant_id" value="<?php echo $_SESSION["nic"] ?>" disabled>
+            <input type="text" id="applicant_id" value="<?php echo $_SESSION["C2nic"] ?>" disabled>
         </div>
         <div class="biometrics_box">
             <input type="image" id="photo" src="../images/3.png" disabled>
