@@ -16,7 +16,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+<!-- <button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button> -->
 <div class="navbar">
 
   <a href=>Verify Applicant Details</a>
@@ -45,7 +45,7 @@
             <label>Full Name: </label>
             <input type="text" name="fullname" value="<?php if(isset($_SESSION["C1fullName"])){echo $_SESSION["C1fullName"];}?>"  size="50"><br><br>
             <label>Gender: </label>
-            <input type="text" name="gender" value="<?php if(isset($_SESSION["gender"])){echo $_SESSION["gender"];}?>"  size="50"><br><br>
+            <input type="text" name="gender" value="<?php if(isset($_SESSION["C1gender"])){echo $_SESSION["C1gender"];}?>"  size="50"><br><br>
             <label>Birthday: </label>
             <input type="text" name="birthday" value="<?php if(isset($_SESSION["C1birthday"])){echo $_SESSION["C1birthday"];}?>"  size="50"><br><br>
             <label>Age: </label>
@@ -62,6 +62,8 @@
             <input type="text" name="phone" value="<?php if(isset($_SESSION["C1phone"])){echo $_SESSION["C1phone"];}?>"  size="50"><br><br>
             <label>Email: </label>
             <input type="text" name="email" value="<?php if(isset($_SESSION["C1email"])){echo $_SESSION["C1email"];}?>"  size="50"><br><br>
+            <label>Reg.Date: </label>
+            <input type="text" name="email" value="<?php if(isset($_SESSION["C1regDate"])){echo $_SESSION["C1regDate"];}?>"  size="50"><br><br>
             <label>Verified: </label>
             <input type="text" name="verified" value="<?php if(isset($_SESSION["C1verified"])){echo $_SESSION["C1verified"];}?>"  size="50" disabled><br><br>
         
