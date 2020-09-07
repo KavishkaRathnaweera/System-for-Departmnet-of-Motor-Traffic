@@ -42,7 +42,7 @@ INSERT INTO `officer` (`id`, `passwrd`) VALUES
 ('Counter2', 'c2password'),
 ('Cashier', 'capassword'),
 ('Examinar', 'expassword'),
-('Licencecounter', 'lcpassword'),
+('Licensecounter', 'lcpassword'),
 ('Permitcounter', 'pcpassword'),
 ('Admin', 'adpassword');
 COMMIT;

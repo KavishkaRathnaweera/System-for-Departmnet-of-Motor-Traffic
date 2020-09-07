@@ -208,7 +208,7 @@ class UserAccount extends UserAccountDB{
         if(!empty($details)) {
             $correctDate=$details[0]['dates'];
             if($date==$correctDate){
-                if($details[0]['attendance']=="yes"){
+                if($details[0]['attendance']=="Yes"){
                     $err[]="you can write the exam";
                 }else{
                     $err[]= "Today you have exam. Please come to the department before 8.00AM";

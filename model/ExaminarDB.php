@@ -15,7 +15,7 @@ class ExaminarDB extends DBconnection{
 
     public function attendance($nic)
     {
-        $sql = "UPDATE examlist SET attendance='yes' WHERE nic=?";
+        $sql = "UPDATE examlist SET attendance='Yes' WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$nic]);
     }
@@ -31,7 +31,7 @@ class ExaminarDB extends DBconnection{
 
     public function addtoUser($nic)
     {
-        $sql = "UPDATE useraccount SET trail='pass' WHERE nic=?";
+        $sql = "UPDATE useraccount SET trail='Yes' WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$nic]);
     }

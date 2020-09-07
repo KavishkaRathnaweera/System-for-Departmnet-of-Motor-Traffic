@@ -57,7 +57,12 @@
     <br>
     <form action="trialView.php" method="post">
         <label for=""> Add Trial result :</label>
-        <input type="text" name="mark1" placeholder="Enter person results">
+        <select  name="mark1">
+                <option value="Yes">All Types</option>
+                <option value="No">Motor Bike only</option>
+                <option value="No">Light Vehivle only</option>
+                <option value="No">Motor Tricycle</option>
+        </select>
         <button type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Add</button>
     </form>
 
