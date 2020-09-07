@@ -1,29 +1,36 @@
 <?php
 
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/ExaminarDB.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Comparator.class.php');
 
 class Examinar extends ExaminarDB implements Countable, Iterator{
-
     private static $instance;
     private $details;
     private $questionArray;
     private int $currentIndex = 0;
-
+    private IdComparator $idcomparator;
+    private DateComparator $datemparator;
 
     private function  __construct()
 	{
         $details=array();
         $questionArray = array();
+        //$this->Context=new Context();
+        $idcomparator=new IdComparator();
+        $datemparator=new DateComparator();
     }
     
 
-    public function getData($nic)
+    public function getDataE($nic)
     {
         $data = $this->getDataFromExm($nic);
+        $Context=new Context();
+        $Context->setComparator($datemparator);
+        $aa = $Context->compare($data[0]["date"],date('Y-m-d'));
         if($data==null){
             $details["noId"]="InvalidID";
         }
-        elseif($data[0]["dates"]!=date('Y-m-d')){
+        elseif($aa==0){
             $details["noDate"]="DateWrong";
             $details["date"]=$data[0]["dates"];
             // $data["nic"];
@@ -67,6 +74,25 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         elseif($data[0]["date"]!=date('Y-m-d')){
             $details["noDate"]="DateWrong";
             $details["date"]=$data[0]["date"];
+            // $data["nic"];
+            //echo $data[0];
+        }
+        else{
+            $details["nic"]=$data[0]["nic"];
+            $details["fullname"]=$data[0]["fullname"];
+            
+        }
+        return $details;
+    }
+    public function getData($nic)
+    {
+        $data = $this->getDataFromExm($nic);
+        if($data==null){
+            $details["noId"]="InvalidID";
+        }
+        elseif($data[0]["dates"]!=date('Y-m-d')){
+            $details["noDate"]="DateWrong";
+            $details["date"]=$data[0]["dates"];
             // $data["nic"];
             //echo $data[0];
         }

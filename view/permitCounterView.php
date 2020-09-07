@@ -1,3 +1,4 @@
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/permitCounter.inc.php'); ?>
 
 <!DOCTYPE html>
@@ -10,18 +11,18 @@
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Permit Counter</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/permitCounter.css">
+    <link rel="stylesheet" href="css/permitCounter1.css">
 
 
 </head>
 
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-    <button type="button" id="logout" onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php'">LOGOUT</button>
+    <button type="button" class="logout" onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php'">LOGOUT</button>
 
     <main class="container">
         <div class="search_box">
-            <form action="permitCounterView.php" method="post" class="searchform">
+            <form id="Search" action="permitCounterView.php#Search" method="post" class="searchform">
                 <label>Applicant ID: </label>
                 <input type="text" name="ID" id="ID_no" placeholder="Enter applicant id">
                 <button type="submit" name="search" id="search_btn">search</button>
@@ -61,7 +62,7 @@
         </div>
         <div class="button_box">
 
-            <form action="permitCounterView.php" method="POST">
+            <form id="Button" action="permitCounterView.php#Button" method="POST">
                 <button type="submit" name="trialDate" id="trialDate_btn">trial date</button>
                 <button type="submit" name="UpdateList" id="updateTrialList_btn">update trialList</button>
                 <button type="submit" name="print" id="print_btn">print</button>

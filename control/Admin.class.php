@@ -92,7 +92,7 @@ class Admin extends AdminDB{
             
             if(!empty($result)) {
                 if($password==$result[0]['passwrd']){
-                    $_SESSION["userId"]="admin";
+                    $_SESSION["officeLog"]="admin";
                     $this->setOfficer($userID);
                 }else{
                     $errors[] = "Password is incorrect!";

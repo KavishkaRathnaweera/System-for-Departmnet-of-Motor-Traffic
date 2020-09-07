@@ -1,0 +1,131 @@
+body {
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;min-width: 1000px;
+}
+.logout {
+    background-color: rgb(202, 78, 78); 
+    color: rgb(255, 255, 255); 
+    border: 2px solid rgb(202, 78, 78);
+    position: absolute;
+    top: 20px;
+    right: 1.5%;
+  }
+
+.title{
+    margin: auto;
+    height: 140px;
+    width:900px;
+    top:15px;
+    padding:10px;
+    color: black;
+    background:rgb(170, 162, 162);
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.title .head{
+    padding:0px;
+    color: rgb(66, 7, 7);
+    text-align: center;
+    position: relative;
+    top: 3px;
+    
+}
+.questions{
+    margin: auto;
+    height: 100%;
+    width:900px;
+    top:15px;
+    padding:10px;
+    color: black;
+    background:rgb(170, 162, 162);
+    border-radius: 10px;
+    position: relative;
+}
+.Qpara {
+    color: rgb(65, 14, 14);
+}
+.Qpara input {
+    color: rgb(65, 14, 14);
+}
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgb(65, 14, 14);
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(228, 192, 192);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: rgb(201, 109, 109);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #a36363;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+.checkanswers #buttonAutomaticallySubmit{
+    position: relative;
+    width: 33%;
+    height: 50px;
+    font-size: 20px;
+    top: 20px;
+    color:white;
+    border:none;
+    background-color: rgb(156, 40, 40);
+    border-radius: 10px;
+    cursor: pointer;
+    margin:auto;
+    left:30%;
+}

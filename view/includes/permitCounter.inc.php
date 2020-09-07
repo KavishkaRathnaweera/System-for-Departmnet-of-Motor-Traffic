@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
 include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/PermitCounter.class.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');

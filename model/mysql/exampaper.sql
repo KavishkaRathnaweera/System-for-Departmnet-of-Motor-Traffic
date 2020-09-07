@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2020 at 07:24 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Sep 06, 2020 at 07:51 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `exampaper` (
-  `idnumber` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
   `question` varchar(500) NOT NULL,
   `answere1` varchar(500) NOT NULL,
   `answere2` varchar(500) NOT NULL,
@@ -42,9 +42,21 @@ CREATE TABLE `exampaper` (
 -- Dumping data for table `exampaper`
 --
 
-INSERT INTO `exampaper` (`idnumber`, `question`, `answere1`, `answere2`, `answere3`, `answere4`, `correct`) VALUES
-(1, 'Question impl 1', 'answere1impl', 'answere2impl', 'answere3impl', 'answere4impl', 'A2'),
-(2, 'Question impl 1cvdssssssssss \r\n ssssssssssssssssssss ssffffffffff ffffffffffffffffffffff fffffffffffffffff ffffffffffffffffff ffffffffffffffffff ffffffffffffffffff fffffffffffffffffff ffffffffffffffff ffffffffffffffffff fffffffffffffff fffffffffffffffff', 'answere1impl', 'answere2impl', 'answere3impl', 'answere4impl', 'A2');
+INSERT INTO `exampaper` (`number`, `question`, `answere1`, `answere2`, `answere3`, `answere4`, `correct`) VALUES
+(1, 'What is my name?', 'Kavesha', 'shehan', 'rahal', 'rathne', 'A2'),
+(2, 'what is kadawatha guys name?', 'shehan', 'malaka', 'rathne', 'kavisha', 'A3'),
+(3, 'what is my home town?', 'Gampaha', 'Rathnapura', 'Minuwangoda', 'Kegalle', 'A1'),
+(4, 'What is my girl friend\'s nick name?', 'suukiri', 'ela kiri', 'pitikiri', 'pan piti', 'A1'),
+(5, 'What is the highest railway statio in Sri Lanka?', 'Gampaha', 'Matara', 'Pattipola', 'Nugegoda', 'A3'),
+(6, 'What is the highest mountain in Sri Lanka?', 'Pidurauthalagala', 'Sigiriya', 'Hanthana', 'Samanala Kanda', 'A1'),
+(7, 'What is the highest waterfall in the world?', 'Nayagara', 'Lakshapana', 'Veenus', 'Sea Walse', 'A1'),
+(8, 'What is the longest river in Sri Lanka?', 'Nilwala', 'Gin', 'Mahawali', 'Kalu', 'A3'),
+(9, 'Where the sun rise from?', 'East', 'West', 'North', 'South', 'A1'),
+(10, 'Where sun set from?', 'West', 'East', 'North', 'South', 'A1'),
+(11, 'How many family members I have?', '2', '4', '88', '6', 'A4'),
+(12, 'What is the capital of Si Lanka?', 'Colombo', 'Sri Jayawardenapura Kotte', 'Kandy', 'Anuradhapura', 'A1'),
+(13, 'How much commandments we have?', '2', '4', '8', '10', 'A4'),
+(14, 'How many Arc Angles we have?', '3', '5', '7', '9', 'A3');
 
 --
 -- Indexes for dumped tables
@@ -54,7 +66,7 @@ INSERT INTO `exampaper` (`idnumber`, `question`, `answere1`, `answere2`, `answer
 -- Indexes for table `exampaper`
 --
 ALTER TABLE `exampaper`
-  ADD PRIMARY KEY (`idnumber`);
+  ADD PRIMARY KEY (`number`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -64,7 +76,7 @@ ALTER TABLE `exampaper`
 -- AUTO_INCREMENT for table `exampaper`
 --
 ALTER TABLE `exampaper`
-  MODIFY `idnumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
