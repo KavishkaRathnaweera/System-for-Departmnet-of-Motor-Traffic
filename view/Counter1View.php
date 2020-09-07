@@ -25,15 +25,16 @@
 
 </div>
 <h1 class="head">Verify Details Sheet</h1>
-
+<main class="container_C1V">
     <div class="search_box">
         <form action="Counter1View.php" method="post">
             <lable>INPUT ID: </lable>
             <input type="text" name="ID" id="ID_no">
             <button type="submit" name="search" id="search_btn">search</button>
         </form>
+        <?php if(isset($_SESSION["C1nic"])) echo $_SESSION["C1error"]?>
     </div>
-    <h3 ><?php if(isset($_SESSION["C1nic"])) echo $_SESSION["C1error"]?></h3>
+    
     <div class="applicantDetails_box">
         <form action="Counter1View.php" method="post">
             <h2>Applicant Details</h2>
@@ -70,7 +71,7 @@
         <button type="submit" name="notVerify" <?php echo !isset($_SESSION["C1nic"]) || $_SESSION["C1nic"]=="" ? 'disabled="true"' : '';?> >Not Verify</button>
     </form>
     </div>
-
+</main>
     <script>function la(src)
     {
      window.location=src;
