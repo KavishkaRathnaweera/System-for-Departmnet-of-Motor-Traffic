@@ -108,7 +108,7 @@ class Admin extends AdminDB{
     {
         switch($officerName){
             case 'Counter1':
-                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/counter1View.php');
+                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/Counter1View.php');
                 break;
             case 'Counter2':
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/counter2View.php');
@@ -119,8 +119,8 @@ class Admin extends AdminDB{
             case 'Examinar':
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/examinarView.php');
                 break;
-            case 'Licencecounter':
-                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/licenseCounterView.php');
+            case 'Licensecounter':
+                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/LicenseCounterView.php');
                 break;
             case 'Permitcounter':
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/permitCounterView.php');
