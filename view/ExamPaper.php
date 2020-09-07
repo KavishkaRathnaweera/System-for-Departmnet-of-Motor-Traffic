@@ -21,6 +21,12 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
   margin-top: 0px;
   color: rgb(65, 14, 14);
 }
+#dem {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px;
+  color: rgb(65, 14, 14);
+}
 </style>
   
  
@@ -63,11 +69,13 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
             
         document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
             
-        if ((distance < 0) || (<?php echo((isset($_SESSION['examdone'])))?>)) {
+        if ((distance < 0) || "<?php echo((isset($_SESSION['examdone'])))?>") {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("demo").innerHTML = "Exam is End!";
             document.getElementById("buttonAutomaticallySubmit").click();
         }
+        
+        
     }, 1000);
 </script>
 
@@ -94,11 +102,12 @@ if(!(isset($_SESSION['examdone']))){
 
 </div>
 
-<div id ="demo"> <?php 
-    if(isset($passState[0])){
-        print('dfgh');
+<div id ="dem" class="title"> <?php 
+    if(isset($_SESSION['passState'])){
+        print($_SESSION['passState']);
     }
     ?> </div>
+
 
 
 
