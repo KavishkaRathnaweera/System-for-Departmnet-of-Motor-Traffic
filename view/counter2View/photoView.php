@@ -1,4 +1,5 @@
-<?php session_start()?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
+<?php //session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 

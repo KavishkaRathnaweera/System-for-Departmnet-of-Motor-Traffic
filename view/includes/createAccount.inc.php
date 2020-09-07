@@ -38,7 +38,7 @@ if(isset($_POST["submit"])){
 
     4)In obtaining a driving license for the first time, original of the birth certificate should be produced.<br><br>
     your registration date: '.$regDate;
-    echo $regDate;
+    //echo $regDate;
     $email->sendmail('Information for License applicant',$body,$_POST["email"]);
 
 

@@ -1,4 +1,5 @@
 
+ <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
  <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/counter2.inc.php'); ?>
 <!DOCTYPE html>
 <html lang="en">

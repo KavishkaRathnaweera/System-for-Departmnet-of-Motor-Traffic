@@ -1,7 +1,7 @@
 
 <?php
 
-session_start();
+//session_start();
 	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
     //check for search
     $_SESSION["IdError"]="";
