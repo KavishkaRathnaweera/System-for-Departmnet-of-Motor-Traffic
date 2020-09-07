@@ -1,5 +1,5 @@
 body {
-    background:rgb(170, 162, 162);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;text-align:left;
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:18px;text-align:left;
 }
 h1 {
     color:rgb(63, 2, 2);font-size:38px;text-align:center;font-family: 'Times New Roman',Arial, Helvetica, sans-serif;
@@ -67,3 +67,30 @@ input[type=text]:focus {
 
 
 /* ............................................................................................................. */
+.container{
+    /* border: 2px solid rgb(8, 1, 1); */
+    position: relative;
+    height: 900px;
+  
+  }
+.container *{
+    position: absolute;
+    border-radius: 6px;
+    
+  }
+  
+  .details_box {
+    padding:10px;
+    background:rgb(170, 162, 162);
+    top: 10px;
+    left: 10%;
+    right:10%;
+    /* border: 2px solid rgb(98, 36, 212); */
+  }
+  .details_box *{
+    position: relative;
+    
+  }
+  /* .details_box button{
+    left: 16.3%;
+  } */

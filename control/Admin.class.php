@@ -120,7 +120,7 @@ class Admin extends AdminDB{
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/examinarView.php');
                 break;
             case 'Licencecounter':
-                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/licenceCounterView.php');
+                header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/licenseCounterView.php');
                 break;
             case 'Permitcounter':
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/permitCounterView.php');

@@ -21,11 +21,12 @@
     <button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
     <h1 class="head">ADMIN</h1>
     <br>
-    
+    <main class="container">
+        <div class="details_box">
     <form action="AdminView.php#wait" id="wait" class="wait" method="post">
         
     <fieldset>
-                <legend><h1>Wait List</h1></legend>
+                <legend><h3>Wait List</h3></legend>
                 <p>
                     <label for="">Date :</label>
                     <input type="Date" name="date1" id="date11" placeholder="Enter Date" value="<?php if(isset($_SESSION['inpdate'])){echo($_SESSION['inpdate']); }?>">
@@ -52,7 +53,7 @@
     <form action="AdminView.php#exam" id="exam" class="exam" method="post">
         
     <fieldset>
-                <legend><h1>Exam List</h1></legend>
+                <legend><h3>Exam List</h3></legend>
                 <p>
                     <label for="">Date :</label>
                     <input type="Date" name="date2" placeholder="date" value="<?php if(isset($_SESSION['inpdate1'])){echo($_SESSION['inpdate1']); }?>">
@@ -78,7 +79,7 @@
     <form action="AdminView.php#trial" id="trial" class="trial" method="post">
         
     <fieldset>
-                <legend><h1>Trial List</h1></legend>
+                <legend><h3>Trial List</h3></legend>
                 <p>
                     <label for="">Date :</label>
                     <input type="Date" name="date3" placeholder="date" value="<?php if(isset($_SESSION['inpdate2'])){echo($_SESSION['inpdate2']); }?>">
@@ -99,6 +100,8 @@
     </fieldset>
 
     </form>
+    </div>
+</main>
 
     <div id =""><?php 
     // if(isset($_GET["idate"])){

@@ -29,6 +29,6 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/cont
     if (isset($_POST["issueLicense"])){
         $counterCtrl->updateUserAccount($_SESSION["nic"]); 
     }
-    echo(date("Y-m-d"));
+    
 
  ?>

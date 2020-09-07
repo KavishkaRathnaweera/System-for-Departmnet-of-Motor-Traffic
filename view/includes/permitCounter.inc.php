@@ -14,69 +14,69 @@ if (isset($_POST["search"])) {
     $details = $permitCounterCtrl->show_userDetails($id);
 
     if (!isset($details["error"])) {
-        $_SESSION["error"] = "";
-        $_SESSION["nic"] = $details["nic"];
-        $_SESSION["fullname"] = $details["fullname"];
-        $_SESSION["exam"] = $details["exam"];
-        $_SESSION["email"] = $details["email"];
-        $_SESSION["trialDate"] = $details["dates"];
+        $_SESSION["Perror"] = "";
+        $_SESSION["Pnic"] = $details["nic"];
+        $_SESSION["Pfullname"] = $details["fullname"];
+        $_SESSION["Pexam"] = $details["exam"];
+        $_SESSION["Pemail"] = $details["email"];
+        $_SESSION["PtrialDate"] = $details["dates"];
     } else {
-        $_SESSION["error"] = $details["error"];
-        $_SESSION["nic"] = "";
-        $_SESSION["fullname"] = "";
-        $_SESSION["email"] = "";
-        $_SESSION["exam"] = "";
-        $_SESSION["trialDate"] = "";
+        $_SESSION["Perror"] = $details["error"];
+        $_SESSION["Pnic"] = "";
+        $_SESSION["Pfullname"] = "";
+        $_SESSION["Pemail"] = "";
+        $_SESSION["Pexam"] = "";
+        $_SESSION["PtrialDate"] = "";
     }
-    $_SESSION["message"] = "";
-    $_SESSION["checkupdate"] = "";
+    $_SESSION["Pmessage"] = "";
+    $_SESSION["Pcheckupdate"] = "";
 }
 
 
 
-if (isset($_SESSION["exam"]) && $_SESSION["exam"] == "pass") {
+if (isset($_SESSION["Pexam"]) && $_SESSION["Pexam"] == "Yes") {
     if (isset($_POST["trialDate"])) {
-        if ($_SESSION["trialDate"] == "") {
-            $result = $permitCounterCtrl->processTrialDate($_SESSION["nic"]);
-            $_SESSION["trialDate"] = $result["dates"];
-            $_SESSION["count"] = $result["counts"];
-            $_SESSION["checkupdate"] = "no";
-            $_SESSION["message"] = "Trial date processed Successfully";
+        if ($_SESSION["PtrialDate"] == "") {
+            $result = $permitCounterCtrl->processTrialDate($_SESSION["Pnic"]);
+            $_SESSION["PtrialDate"] = $result["dates"];
+            $_SESSION["Pcount"] = $result["counts"];
+            $_SESSION["Pcheckupdate"] = "No";
+            $_SESSION["Pmessage"] = "Trial date processed Successfully";
         } else {
-            $_SESSION["message"] = "Trial date is already produced";
+            $_SESSION["Pmessage"] = "Trial date is already produced";
         }
     }
 }
 
 if (isset($_POST["UpdateList"])) {
 
-    if (isset($_SESSION["checkupdate"]) && $_SESSION["checkupdate"] == "no") {
-        $permitCounterCtrl->addToTrialList($_SESSION["nic"], $_SESSION["fullname"], $_SESSION["trialDate"],  $_SESSION["count"]);
-        $_SESSION["checkupdate"] = "yes";
-        $_SESSION["message"] = "Update List Successful";
-    } elseif (isset($_SESSION["checkupdate"]) && $_SESSION["checkupdate"] == "yes") {
-        $_SESSION["message"] = "Already updated";
+    if (isset($_SESSION["Pcheckupdate"]) && $_SESSION["Pcheckupdate"] == "No") {
+        $permitCounterCtrl->addToTrialList($_SESSION["Pnic"], $_SESSION["Pfullname"], $_SESSION["PtrialDate"],  $_SESSION["Pcount"]);
+        $_SESSION["Pcheckupdate"] = "Yes";
+        $_SESSION["Pmessage"] = "Update List Successful";
+    } elseif (isset($_SESSION["Pcheckupdate"]) && $_SESSION["Pcheckupdate"] == "Yes") {
+        $_SESSION["Pmessage"] = "Already updated";
     }
 }
-if (isset($_SESSION["trialDate"]) && $_SESSION["trialDate"] != "" && $_SESSION["checkupdate"] == "yes") {
+if (isset($_SESSION["PtrialDate"]) && $_SESSION["PtrialDate"] != "" && $_SESSION["Pcheckupdate"] == "Yes") {
     if (isset($_POST["print"])) {
-        $_SESSION["message"] = "Print Successful";
+        $_SESSION["Pmessage"] = "Print Successful";
     }
 
     if (isset($_POST["sendEmail"])) {
         $mail = EmailSend::getInstance();
 
-        $to = $_SESSION["email"];
+        $to = $_SESSION["Pemail"];
         $subject = "Trial date";
 
-        $body = "Your trial date: '{$_SESSION["trialDate"]}'.<br><br> 
+        $body = "Your trial date: '{$_SESSION["PtrialDate"]}'.<br><br> 
             On the trial date<br>
             1. Your national identity card or the valid passport with the national identity card number <br>
             2. Medical certificate,<br>
                           should be produced. Please be there on time";
 
         $mail->sendmail($subject, $body, $to);
-        $_SESSION["message"] = "Send email successful";
+        $_SESSION["Pmessage"] = "Send email successful";
     }
 }
 

@@ -17,7 +17,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../index.php')">LOGOUT</button>
 <script>function la(src)
     {
      window.location=src;
@@ -34,32 +34,33 @@
 
 </div>
 <h1 class="head">Examinar-Attendance Sheet</h1>
-
+<main class="container_EAS">
     <div class="search_box">
-        <form action="examinarView.php" method="post">
+        <form id="Search" action="examinarView.php#Search" method="post">
             <lable>INPUT ID: </lable>
             <input type="text" name="ID" id="ID_no">
             <button type="submit" name="search" id="search_btn">search</button>
         </form>
+        <?php echo $_SESSION["IdError"]?>
+    <?php echo $_SESSION["dateError"]?>
     </div>
-    <h3 ><?php echo $_SESSION["IdError"]?></h3>
-    <h3 ><?php echo $_SESSION["dateError"]?></h3>
+    
     <div class="applicantDetails_box">
             
             <h2>Applicant Details</h2>
-            <label>Applicant ID----: </label>
+            <label>Applicant ID: </label>
             <input type="text" value="<?php echo $_SESSION["nic"]?>" size="50" disabled><br><br>
             <label>Applicant Name: </label>
             <input type="text" value="<?php echo $_SESSION["fullname"]?>"  size="50" disabled><br><br>
 
         
             
-    </div>
-    <form action="examinarView.php" method="post">
+    
+    <form id="Mark" action="examinarView.php#Mark" method="post">
         <button type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Mark Attendance</button>
     </form>
-    
-
+    </div>
+</main>
 
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>

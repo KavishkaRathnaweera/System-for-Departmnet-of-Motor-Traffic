@@ -1,9 +1,9 @@
 body {
-    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:16px;min-width: 1000px;
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:15px;min-width: 1000px;
 }
 .container{
     position: relative;
-    height:550px;
+    height:600px;
     min-width: fit-content;
     background:rgb(194, 188, 188);
 
@@ -44,7 +44,7 @@ body {
 .search_box input[id="ID_no"]:focus{
     background-color: rgb(214, 214, 214);
 }
-.search_box input[id="messagebar"]{
+.search_box input[id="messagebar1"]{
     text-align: center;
     padding: 8px;
     width: 50%;
@@ -66,6 +66,7 @@ body {
     cursor: pointer;
     
 }
+
 .applicantDetails_box{
 
     
@@ -94,23 +95,35 @@ body {
     float: left;
 }
 .applicantDetails_box input{
-    font-size: 15px;
+    font-size: 16px;
     color: black;
     background-color:rgb(170, 162, 162) ;
 }
 
+.applicantDetails_box #messagebar2{
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    text-align: center;
+    background-color:transparent ;
+}
 .button_box{
     height: 100px;
     left:7.5%;
     right: 7.5%;
-    bottom: 10px;
+    bottom: 40px;
     background:rgb(194, 188, 188);
     
+    
 }
-.button_box *{
+
+.button_box form{
+    width: 100%;
+}
+.button_box form *{
     position: relative;
     width: 10%;
-    left: 68%;
+    left: 90%;
     height: 35px;
     font-size: 15px;
     top: 20px;
@@ -123,7 +136,7 @@ body {
 .button_box button:hover {
     background-color: #3f0000;
   }
-  .logout {
+.logout {
     width: 10%;
 
     background-color: rgb(202, 78, 78); 
@@ -144,4 +157,3 @@ body {
     background-color: rgb(170, 162, 162);
     color: rgb(255, 255, 255);
   }
-
