@@ -2,12 +2,12 @@
 
 //session_start();
 
-include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/PermitCounter.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 
 
 //check for search 
-$permitCounterCtrl = PermitCounter::getInstance();
+$permitCounterCtrl = CounterFactory::getCounter("permitCounter");
 if (isset($_POST["search"])) {
 
     $id = $_POST["ID"];

@@ -1,8 +1,8 @@
 <?php 
 
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/PermitCounterDBconnection.php');
 
-class PermitCounterDB extends DBconnection{
+class PermitCounterDB extends PermitCounterDBconnection{
 
 	
 

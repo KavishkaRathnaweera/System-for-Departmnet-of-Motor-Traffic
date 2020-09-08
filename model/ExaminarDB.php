@@ -1,8 +1,8 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/ExaminarDBconnection.php');
 
-class ExaminarDB extends DBconnection{
+class ExaminarDB extends ExaminarDBconnection{
     
     public function getDataFromExm($nic)
     {

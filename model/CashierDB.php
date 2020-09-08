@@ -1,8 +1,8 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/CashierDBconnection.php');
 
-class CashierDB extends DBconnection{
+class CashierDB extends CashierDBconnection{
 
     public function getDataFromUser($nic)
     {

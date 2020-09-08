@@ -1,8 +1,8 @@
 <?php
 
 //session_start();
-     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Cashier.class.php');
-     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
     //check for search
     $_SESSION["IdError"]="";
     $_SESSION["nic"]="";
@@ -14,7 +14,7 @@
     $_SESSION["trialF"]="";
     
 
-    $cashierCtrl = Cashier::getInstance();
+    $cashierCtrl = CounterFactory::getCounter("Cashier");
     
     if (isset($_POST["search"])) {
         

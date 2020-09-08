@@ -1,14 +1,14 @@
 <?php
 
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/LicenseCounter.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
     $_SESSION["lnic"]="";
     $_SESSION["lname"]="";
     $_SESSION["ltrial"]="";
     $_SESSION["error"]="";
 
-    $counterCtrl = LicenseCounter::getInstance();
+    $counterCtrl = CounterFactory::getCounter("LicenseCounter");
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
