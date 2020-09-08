@@ -58,5 +58,38 @@ class ExamPaper extends ExamPaperDB{
             return false;
         }
     }
+    public Function checkUserForWriteExam($ID,$date){
+        $err = array();
+        $details=$this->getUserRow($ID);
+        
+        if(!empty($details)) {
+            $correctDate=$details[0]['dates'];
+            if($date==$correctDate){
+                if($details[0]['attendance']=="Yes"){
+                    $err[]="you can write the exam";
+                }else{
+                    $err[]= "Today you have exam. Please come to the department before 8.00AM";
+                }
+            }else{
+                $err[] = "Your Exam Day is {$correctDate} You are not eligible for write exam now!" ;
+            }
+        }else {		
+            $err[] = "You cannot write exam. Whether you already wrote the exam or not yet came to the department.";
+        }
+        return ($err);
+    }
+    public Function showUserDetails($ID){
+        return($this->selectUserByUserName($ID));
+    }
+    public function addtoFailList($nic){
+            $failBefore=$this->searchFailexam($nic);
+            if($failBefore==null){
+                $this->addtoFailexam($nic);
+            }
+            else{
+                $count=$failBefore[0]["examfail"]+1;
+                $this->updateExamfail($nic,$count);
+            }
+    }
 
 }

@@ -2,13 +2,13 @@
 
 use function PHPSTORM_META\type;
 
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/permitCounterDB.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/permitCounterDB.php');
 
 class PermitCounter extends PermitCounterDB{
 	private $out;
 	private $details;
 	private $trialDate;
-	private static PermitCounter $instance;
+	private static $instance;
 	private function  __construct()
 	{
 		$out=null;

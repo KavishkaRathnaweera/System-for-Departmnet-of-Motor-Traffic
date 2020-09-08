@@ -17,7 +17,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
 <script>function la(src)
     {
      window.location=src;
@@ -34,16 +34,17 @@
 
 </div>
 <h1 class="head">Examinar-Trail Record</h1>
-
+<main class="container_ETR">
     <div class="search_box">
-        <form action="trialView.php" method="post">
+        <form id="Search" action="trialView.php#Search" method="post">
             <lable>INPUT ID: </lable>
             <input type="text" name="ID" id="ID_no">
             <button type="submit" name="search" id="search_btn">search</button>
         </form>
+        <?php echo $_SESSION["tIdError"]?>
+    <?php echo $_SESSION["tdateError"]?>
     </div>
-    <h3 ><?php echo $_SESSION["tIdError"]?></h3>
-    <h3 ><?php echo $_SESSION["tdateError"]?></h3>
+    
     <div class="applicantDetails_box">
             
             <h2>Applicant Details</h2>
@@ -53,14 +54,20 @@
             <input type="text" value="<?php echo $_SESSION["tfullname"]?>"  size="50" disabled><br><br>
         
             
-    </div>
+    
     <br>
-    <form action="trialView.php" method="post">
+    <form id="Mark" action="trialView.php#Mark" method="post">
         <label for=""> Add Trial result :</label>
-        <input type="text" name="mark1" placeholder="Enter person results">
-        <button type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Add</button>
+        <select  name="mark1">
+                <option value="Yes">All Types</option>
+                <option value="No">Motor Bike only</option>
+                <option value="No">Light Vehivle only</option>
+                <option value="No">Motor Tricycle</option>
+        </select>
+        <button type="submit" name="mark" id="addbtn" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Add</button>
     </form>
-
+    </div>
+</main>
 
 
 

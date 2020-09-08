@@ -11,7 +11,7 @@
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Permit Counter</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/permitCounter1.css">
+    <link rel="stylesheet" href="css/permitCounter.css">
 
 
 </head>
@@ -27,8 +27,8 @@
                 <input type="text" name="ID" id="ID_no" placeholder="Enter applicant id">
                 <button type="submit" name="search" id="search_btn">search</button>
             </form>
-            <input type="text" id="messagebar1" value="<?php if (isset($_SESSION["error"])) {
-                                                            echo $_SESSION["error"];
+            <input type="text" id="messagebar1" value="<?php if (isset($_SESSION["Perror"])) {
+                                                            echo $_SESSION["Perror"];
                                                         } ?>" size="50" disabled>
         </div>
 
@@ -36,27 +36,27 @@
             
             <h1>Applicant Details</h1>
             <label>Applicant ID : </label>
-            <input type="text" value="<?php if (isset($_SESSION["nic"])) {
-                                            echo $_SESSION["nic"];
+            <input type="text" value="<?php if (isset($_SESSION["Pnic"])) {
+                                            echo $_SESSION["Pnic"];
                                         } ?>" size="50" disabled><br><br>
             <label>Applicant Name: </label>
-            <input type="text" value="<?php if (isset($_SESSION["fullname"])) {
-                                            echo $_SESSION["fullname"];
+            <input type="text" value="<?php if (isset($_SESSION["Pfullname"])) {
+                                            echo $_SESSION["Pfullname"];
                                         } ?>" size="50" disabled><br><br>
             <label>Exam : </label>
-            <input type="text" value="<?php if (isset($_SESSION["exam"])) {
-                                            echo $_SESSION["exam"];
+            <input type="text" value="<?php if (isset($_SESSION["Pexam"])) {
+                                            echo $_SESSION["Pexam"];
                                         } ?>" size="50" disabled><br><br>
             <label>Email : </label>
-            <input type="text" value="<?php if (isset($_SESSION["email"])) {
-                                            echo $_SESSION["email"];
+            <input type="text" value="<?php if (isset($_SESSION["Pemail"])) {
+                                            echo $_SESSION["Pemail"];
                                         } ?>" size="50" disabled><br><br>
             <label>Trial Date : </label>
-            <input type="text" value="<?php if (isset($_SESSION["trialDate"])) {
-                                            echo $_SESSION["trialDate"];
+            <input type="text" value="<?php if (isset($_SESSION["PtrialDate"])) {
+                                            echo $_SESSION["PtrialDate"];
                                         } ?>" size="50" disabled>
-            <input type="text" id="messagebar2" value="<?php if (isset($_SESSION["message"])) {
-                                                            echo $_SESSION["message"];
+            <input type="text" id="messagebar2" value="<?php if (isset($_SESSION["Pmessage"])) {
+                                                            echo $_SESSION["Pmessage"];
                                                         } ?>" size="50" disabled>
 
         </div>

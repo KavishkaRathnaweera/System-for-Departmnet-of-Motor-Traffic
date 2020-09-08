@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2020 at 09:45 AM
+-- Generation Time: Sep 08, 2020 at 08:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -39,29 +39,7 @@ CREATE TABLE `limitexam` (
 --
 
 INSERT INTO `limitexam` (`num`, `dates`, `limits`) VALUES
-(1, '2020-12-20', 44),
-(2, '2020-12-20', 44),
-(3, '2020-12-21', 44),
-(4, '2020-12-23', 222),
-(5, '2020-12-23', 44444),
-(6, '2020-12-23', 44444),
-(7, '2020-12-25', 300),
-(8, '2020-12-25', 0),
-(9, '2020-12-25', 0),
-(10, '2020-12-25', 24242),
-(11, '2020-12-25', 24242),
-(12, '2020-12-25', 44444),
-(13, '2020-12-25', 44444),
-(14, '2020-12-25', 44444),
-(15, '2020-12-25', 44444),
-(16, '2020-12-25', 44444),
-(17, '2020-12-25', 44444),
-(18, '2020-08-25', 44444),
-(19, '2018-08-25', 300),
-(20, '2020-05-21', 300),
-(21, '2020-05-22', 0),
-(22, '2020-06-01', 2),
-(23, '2020-07-01', 45);
+(2, '2020-09-08', 20);
 
 --
 -- Indexes for dumped tables
@@ -81,7 +59,7 @@ ALTER TABLE `limitexam`
 -- AUTO_INCREMENT for table `limitexam`
 --
 ALTER TABLE `limitexam`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,14 +2,14 @@
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
     $_SESSION["IdError"]="";
     $_SESSION["dateError"]="";
     $_SESSION["nic"]="";
     $_SESSION["fullname"]="";
    
-    $examinarCtrl = Examinar::getInstance();
+    $examinarCtrl = CounterFactory::getCounter("Examinar");
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];

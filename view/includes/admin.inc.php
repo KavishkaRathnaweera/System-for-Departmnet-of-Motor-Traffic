@@ -1,10 +1,10 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Admin.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
 //session_start();
 
 
-$admin = Admin::getInstance();
+$admin = CounterFactory::getCounter("Admin");
 
 $checkdateW="";
 $checkdateE="";

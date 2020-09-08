@@ -1,8 +1,8 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/ExaminarDBconnection.php');
 
-class ExaminarDB extends DBconnection{
+class ExaminarDB extends ExaminarDBconnection{
     
     public function getDataFromExm($nic)
     {
@@ -15,7 +15,7 @@ class ExaminarDB extends DBconnection{
 
     public function attendance($nic)
     {
-        $sql = "UPDATE examlist SET attendance='yes' WHERE nic=?";
+        $sql = "UPDATE examlist SET attendance='Yes' WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$nic]);
     }
@@ -31,7 +31,7 @@ class ExaminarDB extends DBconnection{
 
     public function addtoUser($nic)
     {
-        $sql = "UPDATE useraccount SET trail='pass' WHERE nic=?";
+        $sql = "UPDATE useraccount SET trail='Yes' WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$nic]);
     }

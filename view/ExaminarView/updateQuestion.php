@@ -63,7 +63,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
 <script>function la(src)
     {
      window.location=src;
@@ -80,18 +80,18 @@
 
 </div>
 <h1 class="head">Examinar-Update Exam Questions</h1>
-
+<main class="container_EUEQ">
     <div class="search_box">
-        <form action="updateQuestion.php" method="post">
+        <form id="Search" action="updateQuestion.php#Search" method="post">
             <lable>Search Question by Question number: </lable>
             <input type="text" name="qnum" id="q_no" size="50" class="searchUpdate">
             <button type="submit" name="searchQ" id="search_btnQ">search</button>
         </form>
+        <?php echo $_SESSION["QuesNotFoundError"]?>
     </div>
-    <h3 ><?php echo $_SESSION["QuesNotFoundError"]?></h3>
    
-    <div class="qdetails">        
-    <form action="updateQuestion.php" id="qupdateForm" class="updtqn" method="post">
+    <div class="qdetails_box">        
+    <form action="updateQuestion.php#qupdateForm" id="qupdateForm" class="updtqn" method="post">
         <p>
             <label for="">Question : </label>
             <input type="text" name="questionUp" value="<?php echo $_SESSION["qstn"]?>" placeholder="" required>
@@ -113,6 +113,7 @@
             <input type="text" name="ans4" value="<?php echo $_SESSION["answer4"]?>" placeholder="" required>
         </p>
         <p>
+            <br>
             <label for="">Select Answer: </label>
             <select  name="correct">
                 <option value="A1">Answer 1</option>
@@ -122,8 +123,6 @@
             </select>
         </p>
         <p>
-            <br>
-            <br>
             <button type="submit" name="submitUpdtQ" id="idUp" >Update Question </button>   
         </p>
     
@@ -132,7 +131,7 @@
     </div>
     <h3 ><?php echo $_SESSION["notype"]?></h3>
 
-
+</main>
 
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>

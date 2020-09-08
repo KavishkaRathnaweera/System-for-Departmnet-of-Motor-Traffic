@@ -1,7 +1,7 @@
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/counter2.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
    
     
@@ -11,7 +11,7 @@
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
-		$counter2Ctrl = Counter2::getInstance();
+		$counter2Ctrl = CounterFactory::getCounter("Counter2");
         $details = $counter2Ctrl->show_userDetails($id);
         
         if(!isset($details["error"])){

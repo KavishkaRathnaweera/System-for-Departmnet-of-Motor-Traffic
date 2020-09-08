@@ -1,8 +1,8 @@
 <?php 
 
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/Counter1DBconnection.php');
 
-class Counter1DB extends DBconnection{
+class Counter1DB extends Counter1DBconnection{
 
 
 	//function to get userdetails

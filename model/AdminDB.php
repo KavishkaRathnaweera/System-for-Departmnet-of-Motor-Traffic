@@ -1,8 +1,8 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/AdminDBconnection.php');
 
-class AdminDB extends DBconnection{
+class AdminDB extends AdminDBconnection{
     private static $limitexam = 200;
     private static $limitwait = 200;
     private static $limittrial = 400;

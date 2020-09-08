@@ -1,8 +1,8 @@
 <?php
 
 //session_start();
-     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Cashier.class.php');
-     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
     //check for search
     $_SESSION["IdError"]="";
     $_SESSION["nic"]="";
@@ -14,7 +14,7 @@
     $_SESSION["trialF"]="";
     
 
-    $cashierCtrl = Cashier::getInstance();
+    $cashierCtrl = CounterFactory::getCounter("Cashier");
     
     if (isset($_POST["search"])) {
         
@@ -54,7 +54,6 @@
     3)You should come at 8.00 a.m. on following date<br><br>
     your Exam date: '.$examDate;
     $email->sendmail('Information for License applicant',$body,$_SESSION["email"]);
-    echo $examDate;
         }
         else{
             $_SESSION["trialDate"]=$cashierCtrl->getNewDate("newTrialDate",$_SESSION["id"], $_SESSION["fullname1"]);
@@ -65,7 +64,6 @@
     3)You should come at 8.00 a.m. on following date<br><br>
     your Trial date: '.$trialDate;
     $email->sendmail('Information for License applicant',$body,$_SESSION["email"]);
-    echo $trialDate;
         }
         
     }

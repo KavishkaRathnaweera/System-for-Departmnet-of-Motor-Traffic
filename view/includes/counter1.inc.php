@@ -1,10 +1,10 @@
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Counter1.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
    
-    $counter1Ctrl = Counter1::getInstance(); 
+    $counter1Ctrl = CounterFactory::getCounter("Counter1");
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
@@ -24,6 +24,7 @@
             $_SESSION["C1addrss"]=$details["addrss"];
             $_SESSION["C1phone"]=$details["phone"];
             $_SESSION["C1email"]=$details["email"];
+            $_SESSION["C1regDate"]=$details["registerDate"];
             $_SESSION["C1verified"]=$details["verified"];
         }
         else{
@@ -40,6 +41,7 @@
             $_SESSION["C1addrss"]="";
             $_SESSION["C1phone"]="";
             $_SESSION["C1email"]="";
+            $_SESSION["C1regDate"]="";
             $_SESSION["C1verified"]="";
         }
 

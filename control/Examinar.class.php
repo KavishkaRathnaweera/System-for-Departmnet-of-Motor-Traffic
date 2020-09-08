@@ -7,9 +7,9 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
     private static $instance;
     private $details;
     private $questionArray;
-    private int $currentIndex = 0;
-    private IdComparator $idcomparator;
-    private DateComparator $datemparator;
+    private $currentIndex = 0;
+    private $idcomparator;
+    private $datemparator;
 
     private function  __construct()
 	{
@@ -51,10 +51,10 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
 
     public function addMarks($nic,$marks)
     {
-        if($marks=="pass"){
+        if($marks=="Yes"){
             $this->addtoUser($nic);
         }
-        elseif($marks=="fail"){
+        elseif($marks=="No"){
             $failBefore=$this->searchFailtrial($nic);
             if($failBefore==null){
                 $this->addtoFailtrail($nic);
@@ -71,9 +71,9 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         if($data==null){
             $details["noId"]="InvalidID";
         }
-        elseif($data[0]["date"]!=date('Y-m-d')){
+        elseif($data[0]["dates"]!=date('Y-m-d')){
             $details["noDate"]="DateWrong";
-            $details["date"]=$data[0]["date"];
+            $details["date"]=$data[0]["dates"];
             // $data["nic"];
             //echo $data[0];
         }

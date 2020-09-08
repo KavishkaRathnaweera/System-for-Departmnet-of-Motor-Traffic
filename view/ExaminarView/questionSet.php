@@ -24,7 +24,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
 <script>function la(src)
     {
      window.location=src;
@@ -42,12 +42,17 @@
 </div>
 
 <h1 class="head">Examinar-Exam Question Database</h1>
+<main class="container_EEQD">
+<?php
+if (!isset($_POST["Qsearch"])) {
+    echo('<form action="questionSet.php#questionDetails" id="questionDetails" class="questionSet" method="post">
 
-<form action="questionSet.php" id="questionDetails" class="questionSet" method="post">
+    <button type="submit" name="Qsearch" id="Qsearch_btn" >Show Questions</button>
+    
+    </form>');
+}
+?>
 
-<button type="submit" name="Qsearch" id="Qsearch_btn">Show Questions</button>
-
-</form>
 <div class="tableQ">
 <?php
 if (isset($_POST["Qsearch"])) {
@@ -55,7 +60,7 @@ if (isset($_POST["Qsearch"])) {
 }
 ?>
 </div>
-    
+</main>   
 
 
 
