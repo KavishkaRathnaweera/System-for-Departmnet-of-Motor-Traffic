@@ -24,6 +24,7 @@
             $_SESSION["C1addrss"]=$details["addrss"];
             $_SESSION["C1phone"]=$details["phone"];
             $_SESSION["C1email"]=$details["email"];
+            $_SESSION["C1regDate"]=$details["registerDate"];
             $_SESSION["C1verified"]=$details["verified"];
         }
         else{
@@ -40,6 +41,7 @@
             $_SESSION["C1addrss"]="";
             $_SESSION["C1phone"]="";
             $_SESSION["C1email"]="";
+            $_SESSION["C1regDate"]="";
             $_SESSION["C1verified"]="";
         }
 

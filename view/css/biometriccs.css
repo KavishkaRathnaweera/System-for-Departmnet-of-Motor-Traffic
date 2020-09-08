@@ -1,0 +1,96 @@
+body {
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:20px;min-width: 1000px;
+}
+.container{
+    position: relative;
+    height:600px;
+    /* border:2px solid black; */
+    background:rgb(194, 188, 188);
+
+}
+.container *{
+    position: absolute;
+    
+}
+.applicant_id_box{
+    height: 46px;
+    left:7.5%;
+    right: 7.5%;
+    top:20px;
+    padding:10px;
+    color: black;
+    background:rgb(170, 162, 162);
+    text-align: center;
+    border-radius: 10px;
+}
+.applicant_id_box *{
+    top: 10px;
+    position: relative;
+    font-size: 20px;
+}
+.biometrics_box {
+    height: 400px;
+    left:7.5%;
+    right: 7.5%;
+    top:100px;
+    background:rgb(170, 162, 162);
+    /* border:10px solid rgb(170, 162, 162); */
+    border-radius: 10px;
+}
+.biometrics_box #photo{
+   
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    height: 200px;
+    border: 2px solid black;
+
+}
+.biometrics_box #message{
+    background: none;
+    border: none;
+    top: 90%;
+    left: 60%;
+    transform: translateX(-50%)translateY(-50%);
+    font-size: 15px;
+    
+}
+.button_box{
+    height: 100px;
+    left:7.5%;
+    right: 7.5%;
+    bottom: 5px;
+    background: none;
+    
+}
+.button_box button{
+    position: relative;
+    width: 10%;
+    height: 35px;
+    font-size: 15px;
+    top: 20px;
+    left:48%;
+    color:white;
+    border:none;
+    background-color: rgb(156, 40, 40);
+    border-radius: 10px;
+    cursor: pointer; 
+}
+.button_box button:hover {
+    background-color: #3f0000;
+  }
+.button_box #back_btn{
+    left:0.5%;
+    
+}
+/* .button_box input{
+    width: 98.2%;
+    left: 0.9%;
+    padding: 2px 0px;
+    background:rgb(170, 162, 162);
+    border: none;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    
+} */

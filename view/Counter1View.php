@@ -9,25 +9,24 @@
     <meta name="description" content="This page is for creating new driving licence or renew your current licence "/>
     <meta name="keywords" content="motor traffic,sri lanka"/>
     <title>Attendance</title>
-    <link rel="stylesheet" type="text/css" href="css/examinar.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="css/counter1.css?v=<?php echo time(); ?>">
     <link rel="icon" href="images/3.png">
   
  
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../index.php')">LOGOUT</button>
 <div class="navbar">
 
   <a href=>Verify Applicant Details</a>
- <!-- <a href='ExaminarView/ExamMarkView.php'>Mark Exam Marks</a>-->
   <a href="Counter1View/handleAbsenteesView.php">Handle Absentees</a>
 
 </div>
 <h1 class="head">Verify Details Sheet</h1>
 <main class="container_C1V">
     <div class="search_box">
-        <form action="Counter1View.php" method="post">
+        <form id="Search" action="Counter1View.php#Search" method="post">
             <lable>INPUT ID: </lable>
             <input type="text" name="ID" id="ID_no">
             <button type="submit" name="search" id="search_btn">search</button>
@@ -45,7 +44,7 @@
             <label>Full Name: </label>
             <input type="text" name="fullname" value="<?php if(isset($_SESSION["C1fullName"])){echo $_SESSION["C1fullName"];}?>"  size="50"><br><br>
             <label>Gender: </label>
-            <input type="text" name="gender" value="<?php if(isset($_SESSION["gender"])){echo $_SESSION["gender"];}?>"  size="50"><br><br>
+            <input type="text" name="gender" value="<?php if(isset($_SESSION["C1gender"])){echo $_SESSION["C1gender"];}?>"  size="50"><br><br>
             <label>Birthday: </label>
             <input type="text" name="birthday" value="<?php if(isset($_SESSION["C1birthday"])){echo $_SESSION["C1birthday"];}?>"  size="50"><br><br>
             <label>Age: </label>
@@ -62,6 +61,8 @@
             <input type="text" name="phone" value="<?php if(isset($_SESSION["C1phone"])){echo $_SESSION["C1phone"];}?>"  size="50"><br><br>
             <label>Email: </label>
             <input type="text" name="email" value="<?php if(isset($_SESSION["C1email"])){echo $_SESSION["C1email"];}?>"  size="50"><br><br>
+            <label>Reg.Date: </label>
+            <input type="text" name="email" value="<?php if(isset($_SESSION["C1regDate"])){echo $_SESSION["C1regDate"];}?>"  size="50" disabled><br><br>
             <label>Verified: </label>
             <input type="text" name="verified" value="<?php if(isset($_SESSION["C1verified"])){echo $_SESSION["C1verified"];}?>"  size="50" disabled><br><br>
         

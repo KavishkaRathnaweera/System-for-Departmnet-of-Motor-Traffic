@@ -10,7 +10,7 @@
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Counter 2</title>
     <link rel="icon" href="../images/3.png">
-    <link rel="stylesheet" href="../css/biometrics.css">
+    <link rel="stylesheet" href="../css/biometriccs.css">
 
 
 </head>
@@ -20,20 +20,20 @@
     <main class="container">
         <div class="applicant_id_box">
             <label>Applicant ID:</label>
-            <input type="text" id="applicant_id" value="<?php echo $_SESSION["nic"]?>" disabled>
+            <input type="text" id="applicant_id" value="<?php echo $_SESSION["C2nic"]?>" disabled>
         </div>
         <div class="biometrics_box">
             <input type="image" id="photo" src="../images/3.png"  disabled>
+            <input type="text" id="message" disabled value="<?php echo " Please Connect Signature Scanner"?>" size="50px"><br>
         </div>
 
         <div class="button_box">
-                <input type="text" id="message" disabled value="<?php echo " Please Connect Signature Scanner"?>"><br>
 
             <button id="back_btn" onclick="backButton()">back</button>
-            <button id="take_btn" onclick="takeButton()">take</button>
-            <button id="save_btn" onclick="saveButton()">save</button>
-            <button id="delete_btn" onclick="deleteButton()">delete</button>
-            <button id="cancle_btn" onclick="cancleButton()">cancle</button>
+            <button id="take_btn" onclick="">take</button>
+            <button id="save_btn" onclick="">save</button>
+            <button id="delete_btn" onclick="">delete</button>
+            <button id="cancle_btn" onclick="">cancle</button>
         </div>
 
     </main>
@@ -41,7 +41,11 @@
 
 
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
-    <script type="text/javascript" src="../js/counter2.js"></script>
+    <script type="text/javascript">
+        function backButton() {
+            document.location = "../counter2View.php";
+        }
+    </script>
 </body>
 
 </html>

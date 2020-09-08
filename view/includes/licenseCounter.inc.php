@@ -29,6 +29,6 @@ session_start();
     if (isset($_POST["issueLicense"])){
         $counterCtrl->updateUserAccount($_SESSION["nic"]); 
     }
-    echo(date("Y-m-d"));
+    
 
  ?>

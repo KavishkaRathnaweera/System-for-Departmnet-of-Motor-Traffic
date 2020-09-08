@@ -10,7 +10,7 @@
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Counter 2</title>
     <link rel="icon" href="../images/3.png">
-    <link rel="stylesheet" href="../css/biometrics.css">
+    <link rel="stylesheet" href="../css/biometriccs.css">
 
 
 </head>
@@ -24,10 +24,11 @@
         </div>
         <div class="biometrics_box">
             <input type="image" id="photo" src="../images/3.png" disabled>
+            <input type="text" id="message" disabled value="<?php echo "Please Connect  Scanner" ?>" size="50px"><br>
         </div>
 
         <div class="button_box">
-            <input type="text" id="message" disabled value="<?php echo "Please Connect  Camera Scanner" ?>"><br>
+            
 
             <button id="back_btn" onclick="la('../Counter1View.php')">back</button>
             <button id="scan_btn" onclick="">scan</button>

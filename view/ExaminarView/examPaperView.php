@@ -17,7 +17,7 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../../index.php')">LOGOUT</button>
+<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
 <script>function la(src)
     {
      window.location=src;
@@ -35,8 +35,9 @@
 </div>
 
 <h1 class="head">Examinar-Add Question</h1>
-
-<form action="examPaperView.php" id="userDetails" class="question" method="post">
+<main class="container_EAQ">
+<div class="question_box">
+<form action="examPaperView.php#userDetails" id="userDetails" class="question" method="post">
         <p>
             <label for="">Question : </label>
             <input type="text" name="question" placeholder="" required>
@@ -57,6 +58,7 @@
             <label for="">Answere 4 : </label>
             <input type="text" name="ans4" placeholder="" required>
         </p>
+        <br>
         <p>
             <label for="">Select Answere: </label>
             <select  name="correct">
@@ -67,15 +69,13 @@
             </select>
         </p>
         <p>
-            <br>
-            <br>
             <button type="submit" name="submitQ" id="id1" >Add Question </button>   
         </p>
     
 
            </form>
-    
-
+</div>    
+</main>
 
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
