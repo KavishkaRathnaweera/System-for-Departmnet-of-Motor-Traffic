@@ -15,6 +15,7 @@ if(isset($_POST["check"])){
     }else{
         $_SESSION['passState']="You have Failed the online exam!";
         $examppr->UpdateExamResult('No',$_SESSION['userid']);
+        $examppr->addtoFailList($_SESSION['userid']);
         header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/ExamPaper.php');
     }
 }
