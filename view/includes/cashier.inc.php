@@ -54,7 +54,6 @@
     3)You should come at 8.00 a.m. on following date<br><br>
     your Exam date: '.$examDate;
     $email->sendmail('Information for License applicant',$body,$_SESSION["email"]);
-    echo $examDate;
         }
         else{
             $_SESSION["trialDate"]=$cashierCtrl->getNewDate("newTrialDate",$_SESSION["id"], $_SESSION["fullname1"]);
@@ -65,7 +64,6 @@
     3)You should come at 8.00 a.m. on following date<br><br>
     your Trial date: '.$trialDate;
     $email->sendmail('Information for License applicant',$body,$_SESSION["email"]);
-    echo $trialDate;
         }
         
     }
