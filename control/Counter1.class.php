@@ -1,6 +1,6 @@
 <?php 
 
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/Counter1DB.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/Counter1DB.php');
 
 class Counter1 extends Counter1DB{
 	private $out;

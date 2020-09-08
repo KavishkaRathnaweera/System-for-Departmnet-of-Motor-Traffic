@@ -1,6 +1,6 @@
 <?php
 class Context{
-    private IComparator $comparator;
+    private $comparator;
 
     // public function __construct(IComparator $comp)
     // {
