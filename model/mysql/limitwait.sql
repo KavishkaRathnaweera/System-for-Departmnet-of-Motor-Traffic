@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2020 at 09:46 AM
+-- Generation Time: Sep 08, 2020 at 08:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -39,10 +39,8 @@ CREATE TABLE `limitwait` (
 --
 
 INSERT INTO `limitwait` (`num`, `dates`, `limits`) VALUES
-(1, '2020-05-16', 2),
-(2, '2020-06-01', 2),
-(3, '2020-06-02', 2),
-(4, '2020-06-03', 2);
+(4, '2020-09-08', 20),
+(5, '2020-09-09', 20);
 
 --
 -- Indexes for dumped tables
@@ -62,7 +60,7 @@ ALTER TABLE `limitwait`
 -- AUTO_INCREMENT for table `limitwait`
 --
 ALTER TABLE `limitwait`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
