@@ -58,8 +58,8 @@ function MM_swapImage() { //v3.0
    <H1>Welcome</H1> 
    <hr/>
  <table align="center"><tr><td>
- <a href="view/loginView.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','view/images/4.1.png',1)"><img src="view/images/4.png" alt="" width="250" height="70" id="Image1"></a></td><td>
- <a href="view/createAccountView.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','view/images/5.1.png',1)"><img src="view/images/5.png" alt="" width="250" height="70" id="Image2"></a>
+ <a href="view/loginView.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','view/images/4.1.png',1)"><img src="view/images/4.png" alt="" width="125" height="35" id="Image1"></a></td><td>
+ <a href="view/createAccountView.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','view/images/5.1.png',1)"><img src="view/images/5.png" alt="" width="125" height="35" id="Image2"></a>
   </td></tr></table>
 
  
