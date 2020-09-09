@@ -11,7 +11,7 @@
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Permit Counter</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/permitcounter.css">
+    <link rel="stylesheet" href="css/permitCountr.css">
 
 
 </head>

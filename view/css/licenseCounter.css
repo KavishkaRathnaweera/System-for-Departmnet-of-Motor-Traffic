@@ -3,7 +3,7 @@ body {
 }
 .container{
     position: relative;
-    height:600px;
+    height:540px;
     min-width: fit-content;
     background:rgb(194, 188, 188);
 
@@ -111,10 +111,10 @@ body {
     background-color:transparent ;
 }
 .button_box{
-    height: 100px;
+    height: 60px;
     left:7.5%;
     right: 7.5%;
-    bottom: 40px;
+    bottom: 20px;
     background:rgb(194, 188, 188);
     
     

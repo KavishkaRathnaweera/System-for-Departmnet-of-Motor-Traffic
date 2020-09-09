@@ -63,5 +63,5 @@ if (isset($_POST["Qsearch"])) {
 </main>   
 
 
-
+<br>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>

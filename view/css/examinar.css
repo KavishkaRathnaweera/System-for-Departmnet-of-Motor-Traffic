@@ -142,7 +142,7 @@ main *{
   position: relative;
   height: 450px;
 }
-.applicantDetails_box button{
+.applicantDetails_box #addbtn{
   left: 1%;
   width: 8%;
 }
@@ -184,6 +184,7 @@ bottom: 48px;
   background:rgb(170, 162, 162);
   padding:10px;
   border-radius: 6px;
+  min-height: 200px;
 }
 .container_EEQD *{
   position: relative;
@@ -191,6 +192,7 @@ bottom: 48px;
 .container_EEQD #Qsearch_btn{
  width: 100px;
  left: 50px;
+ top: 80px;
  
 }
 td,th,tr{
@@ -216,7 +218,7 @@ th {
 .container_EUEQ{
   /* border: 2px solid rgb(8, 1, 1); */
   position: relative;
-  height: 550px;
+  height: 570px;
 }
 .qdetails_box {
   padding:10px;

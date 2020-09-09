@@ -3,10 +3,10 @@ body {
 }
 .container{
     position: relative;
-    height:600px;
+    height:580px;
     min-width: fit-content;
     background:rgb(194, 188, 188);
-
+    /* border: 1px solid rgb(17, 12, 12); */
 }
 .container *{
     position: absolute;
@@ -112,13 +112,13 @@ body {
     border: none;
 }
 .button_box{
-    height: 100px;
+    height: 80px;
     left:7.5%;
     right: 7.5%;
     bottom: 40px;
     background:rgb(194, 188, 188);
     
-    
+    /* border: 1px solid rgb(17, 12, 12); */
 }
 
 .button_box form{
