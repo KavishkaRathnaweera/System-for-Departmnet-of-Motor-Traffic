@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page is for creating new driving licence or renew your current licence "/>
     <meta name="keywords" content="motor traffic,sri lanka"/>
-    <title>Absentees</title>
+    <title>Counter 1</title>
     <link rel="stylesheet" type="text/css" href="../css/counter1.css?v=<?php echo time(); ?>">
     <link rel="icon" href="../images/3.png">
   

@@ -25,7 +25,7 @@
     <form action="createAccountView.php" id="userDetails" class="userform" method="post">
         <p>
             <label for="">ID no : </label>
-            <input type="text" name="id_no" id="a" placeholder="Enter id or passport number" required>
+            <input type="text" name="id_no" id="a" placeholder="Enter id or passport number(must be correct)" required>
         </p>
         <p>
             <label for="">Surname: </label>

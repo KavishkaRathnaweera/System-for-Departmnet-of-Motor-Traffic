@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page is for creating new driving licence or renew your current licence "/>
     <meta name="keywords" content="motor traffic,sri lanka"/>
-    <title>Attendance</title>
+    <title>Counter 1</title>
     <link rel="stylesheet" type="text/css" href="css/counter1.css?v=<?php echo time(); ?>">
     <link rel="icon" href="images/3.png">
   
@@ -38,7 +38,7 @@
         <form action="Counter1View.php" method="post">
             <h2>Applicant Details</h2>
             <label>ID: </label>
-            <input type="text" name="NID" value="<?php if(isset($_SESSION["C1nic"])){echo $_SESSION["C1nic"];}?>" size="50" ><br><br>
+            <input type="text" name="NID" value="<?php if(isset($_SESSION["C1nic"])){echo $_SESSION["C1nic"];}?>" size="50" disabled><br><br>
             <label>Surname: </label>
             <input type="text" name="surname" value="<?php if(isset($_SESSION["C1surname"])){echo $_SESSION["C1surname"];}?>"  size="50"><br><br>
             <label>Full Name: </label>

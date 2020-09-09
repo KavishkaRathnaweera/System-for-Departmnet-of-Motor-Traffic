@@ -142,6 +142,13 @@ main *{
   position: relative;
   height: 450px;
 }
+.applicantDetails_box button{
+  left: 1%;
+  width: 8%;
+}
+.applicantDetails_box select{
+  height: 25px;
+}
 /* ......................examiner add questions.................................................................. */
 .container_EAQ{
   /* border: 2px solid rgb(8, 1, 1); */

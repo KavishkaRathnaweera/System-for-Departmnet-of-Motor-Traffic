@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page is for counter2 person " />
     <meta name="keywords" content="motor traffic,sri lanka" />
-    <title>Counter 2</title>
+    <title>Counter 1</title>
     <link rel="icon" href="../images/3.png">
     <link rel="stylesheet" href="../css/biometriccs.css">
 
