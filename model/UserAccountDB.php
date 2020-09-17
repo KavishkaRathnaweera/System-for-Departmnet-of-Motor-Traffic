@@ -18,6 +18,7 @@ class UserAccountDB extends DBconnection {
 		$data = $stmt->fetchAll();
 		return $data;
 	}
+	
 
 	public function ByGivenEmailselectEmail($email){
 		$sql='SELECT * FROM useraccount WHERE email=?';

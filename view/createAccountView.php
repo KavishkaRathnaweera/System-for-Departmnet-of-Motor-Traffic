@@ -19,7 +19,9 @@
     <h1>Create new account</h1>
     <br>
     <div>
-        <h2><?php if(isset($_POST["submit"])){echo("You have successfully created your Account. Please refer Email to further details");} ?></h2>
+        <h2><?php if(isset($_POST["submit"])){
+            if(empty($array1) && empty($array2)){
+            echo("You have successfully created your Account. Please refer Email to further details");} }?></h2>
     </div>
     <main class="container">
     <form action="createAccountView.php" id="userDetails" class="userform" method="post">

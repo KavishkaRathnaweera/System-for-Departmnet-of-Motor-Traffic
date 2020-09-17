@@ -33,7 +33,8 @@ function MM_swapImage() { //v3.0
  </Head>
    
  <Body>
- <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php'); ?>
+ <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php'); 
+ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes//home.inc.php'); ?>
 
 
 

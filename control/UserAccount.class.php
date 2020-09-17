@@ -155,7 +155,7 @@ class UserAccount extends UserAccountDB{
             
 
             if(!empty($result)) {
-                if($password==$result[0]['passwrd']){
+                if(sha1($password)==$result[0]['passwrd']){
                     // $_SESSION['userId'] = $userID;
                     // header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
                 }else{
@@ -208,7 +208,7 @@ class UserAccount extends UserAccountDB{
         return($this->CodeDBupdate($email,$code));
     }
     public function updatePasswordDB($email,$password){
-        return($this->PasswordDBupdate($email,$password));
+        return($this->PasswordDBupdate($email,sha1($password)));
     }
     public function updaterecoverCodeDB($email){
         return($this->recoverCodeDBupdate($email));
