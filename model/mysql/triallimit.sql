@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 05:41 PM
+-- Generation Time: Sep 08, 2020 at 08:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -39,9 +39,7 @@ CREATE TABLE `triallimit` (
 --
 
 INSERT INTO `triallimit` (`num`, `dates`, `limits`) VALUES
-(1, '2020-05-16', 3),
-(2, '2020-05-17', 2),
-(3, '2020-05-25', 5);
+(2, '2020-09-08', 20);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +59,7 @@ ALTER TABLE `triallimit`
 -- AUTO_INCREMENT for table `triallimit`
 --
 ALTER TABLE `triallimit`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

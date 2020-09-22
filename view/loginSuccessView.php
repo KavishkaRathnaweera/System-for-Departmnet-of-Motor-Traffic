@@ -10,7 +10,7 @@
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/loginSuccessView.inc.php'); ?>
-<form action="loginSuccessView.php" id="logout" class="logout" method="post">
+<form action="loginSuccessView.php" id="logout" class="Logout" method="post">
     <button type="submit" class="logout" name="button1" >LOGOUT</button>
 </form>
 

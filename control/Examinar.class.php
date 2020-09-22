@@ -7,9 +7,9 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
     private static $instance;
     private $details;
     private $questionArray;
-    private int $currentIndex = 0;
-    private IdComparator $idcomparator;
-    private DateComparator $datemparator;
+    private $currentIndex = 0;
+    private $idcomparator;
+    private $datemparator;
 
     private function  __construct()
 	{

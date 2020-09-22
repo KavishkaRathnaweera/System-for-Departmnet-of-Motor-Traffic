@@ -155,7 +155,7 @@ class UserAccount extends UserAccountDB{
             
 
             if(!empty($result)) {
-                if($password==$result[0]['passwrd']){
+                if(sha1($password)==$result[0]['passwrd']){
                     // $_SESSION['userId'] = $userID;
                     // header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginSuccessView.php');
                 }else{
@@ -222,31 +222,23 @@ class UserAccount extends UserAccountDB{
         return $fidates.$newTime;
     }
 
-    public Function checkUserForWriteExam($ID,$date){
-        $err = array();
-        $details=$this->getUserRow($ID);
-        
-        if(!empty($details)) {
-            $correctDate=$details[0]['dates'];
-            if($date==$correctDate){
-                if($details[0]['attendance']=="Yes"){
-                    $err[]="you can write the exam";
-                }else{
-                    $err[]= "Today you have exam. Please come to the department before 8.00AM";
-                }
-            }else{
-                $err[] = "Your Exam Day is {$correctDate} You are not eligible for write exam now!" ;
-            }
-        }else {		
-            $err[] = "You cannot write exam. Whether you already wrote the exam or not yet came to the department.";
-        }
-        return ($err);
+
+    public function selectEmailByGivenEmail($email){
+        return($this->ByGivenEmailselectEmail($email));
     }
+    public function updateCodeDB($email,$code){
+        return($this->CodeDBupdate($email,$code));
+    }
+    public function updatePasswordDB($email,$password){
+        return($this->PasswordDBupdate($email,sha1($password)));
+    }
+    public function updaterecoverCodeDB($email){
+        return($this->recoverCodeDBupdate($email));
+    }
+    
 
 
-    public Function showUserDetails($ID){
-        return($this->selectUserByUserName($ID));
-    }
+    
 
 
 

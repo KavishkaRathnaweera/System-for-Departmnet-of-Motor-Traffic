@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This page is for creating new driving licence or renew your current licence "/>
     <meta name="keywords" content="motor traffic,sri lanka"/>
-    <title>Absentees</title>
-    <link rel="stylesheet" type="text/css" href="../css/examinar.css?v=<?php echo time(); ?>">
+    <title>Counter 1</title>
+    <link rel="stylesheet" type="text/css" href="../css/counter1.css?v=<?php echo time(); ?>">
     <link rel="icon" href="../images/3.png">
   
  
@@ -29,7 +29,7 @@
     <br>
    
     <div class="search_box">
-        <form action="handleAbsenteesView.php" method="post">
+        <form id="Search" action="handleAbsenteesView.php#Search" method="post">
             <lable>INPUT ID: </lable>
             <input type="text" name="ID" id="ID_no">
             <button type="submit" name="search" id="search_btn">search</button>
@@ -38,7 +38,7 @@
     </div>
     
     <div class="applicantDetails_box">
-        <form action="handleAbsenteesView.php" method="post">
+        <!-- <form action="handleAbsenteesView.php" method="post"> -->
             <h3>Applicant Details</h3>
             <label>ID: </label>
             <input type="text" name="NID" value="<?php if(isset($_SESSION["C1Hnic"])){echo $_SESSION["C1Hnic"];}?>" size="50" disabled ><br><br>
@@ -48,7 +48,7 @@
     <form action="handleAbsenteesView.php#wait" id="wait" class="wait" method="post">
         
     <fieldset>
-            <legend><h2>Register Absentees</h2></legend>
+            <legend><h3>Register Absentees</h3></legend>
             <label>Register Date: </label>
             <input type="text" name="registerDate" value="<?php if(isset($_SESSION["C1HregisterDate"])){echo $_SESSION["C1HregisterDate"];}?>"  size="50" disabled><br><br>
             <label>Verified: </label>
@@ -64,7 +64,7 @@
     <form action="handleAbsenteesView.php#exam" id="exam" class="exam" method="post">
         
     <fieldset>
-            <legend><h2>Exam Absentees</h2></legend>
+            <legend><h3>Exam Absentees</h3></legend>
             <label>Exam Date: </label>
             <input type="text" name="examDate" value="<?php if(isset($_SESSION["C1HexamDate"])){echo $_SESSION["C1HexamDate"];}?>"  size="50" disabled><br><br>
             <label>Exam: </label>
@@ -81,7 +81,7 @@
     <form action="handleAbsenteesView.php#trial" id="trial" class="trial" method="post">
         
     <fieldset>
-            <legend><h2>Trial Absentees</h2></legend>
+            <legend><h3>Trial Absentees</h3></legend>
             <label>Trial Date: </label>
             <input type="text" name="trialDate" value="<?php if(isset($_SESSION["C1HtrialDate"])){echo $_SESSION["C1HtrialDate"];}?>"  size="50" disabled><br><br>
             <label>Trial: </label>

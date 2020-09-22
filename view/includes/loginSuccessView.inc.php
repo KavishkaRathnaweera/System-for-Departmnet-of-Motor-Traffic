@@ -1,8 +1,8 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/ExamPaper.class.php');
 session_start();
 
-$loggeduser = new UserAccount();
+$loggeduser = new ExamPaper();
 $_SESSION["fullname"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['fullName'];
 $_SESSION["verified"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['verified'];
 $_SESSION["exam"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['exam'];

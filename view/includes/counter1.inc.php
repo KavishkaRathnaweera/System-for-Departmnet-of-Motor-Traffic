@@ -1,10 +1,10 @@
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Counter1.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
    
-    $counter1Ctrl = Counter1::getInstance(); 
+    $counter1Ctrl = CounterFactory::getCounter("Counter1");
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];

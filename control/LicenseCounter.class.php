@@ -1,6 +1,6 @@
 <?php 
 
-include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic//model/LicenseCounterDB.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/LicenseCounterDB.php');
 
 class LicenseCounter extends LicenseCounterDB{
 	private $details;

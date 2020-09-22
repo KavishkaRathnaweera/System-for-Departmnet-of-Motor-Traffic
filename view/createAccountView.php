@@ -19,12 +19,15 @@
     <h1>Create new account</h1>
     <br>
     <div>
-        <h2><?php if(isset($_POST["submit"])){echo("You have successfully created your Account. Please refer Email to further details");} ?></h2>
+        <h2><?php if(isset($_POST["submit"])){
+            if(empty($array1) && empty($array2)){
+            echo("You have successfully created your Account. Please refer Email to further details");} }?></h2>
     </div>
+    <main class="container">
     <form action="createAccountView.php" id="userDetails" class="userform" method="post">
         <p>
             <label for="">ID no : </label>
-            <input type="text" name="id_no" id="a" placeholder="Enter id or passport number" required>
+            <input type="text" name="id_no" id="a" placeholder="Enter id or passport number(must be correct)" required>
         </p>
         <p>
             <label for="">Surname: </label>
@@ -128,7 +131,7 @@
 
     </form>
     
-
+    </main>
    
     <script>function la(src)
     {
@@ -139,10 +142,10 @@
     <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     
     <br>
-    <pre>
+    <!-- <pre>
     <div id ="demo">
     </div>
-    </pre>
+    </pre> -->
 
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 

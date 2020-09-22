@@ -18,8 +18,9 @@ class UserAccountDB extends DBconnection {
 		$data = $stmt->fetchAll();
 		return $data;
 	}
+	
 
-	public function selectEmailByGivenEmail($email){
+	public function ByGivenEmailselectEmail($email){
 		$sql='SELECT * FROM useraccount WHERE email=?';
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$email]);
@@ -27,19 +28,19 @@ class UserAccountDB extends DBconnection {
 		return $data;
 	}
 
-	public function updateCodeDB($email,$code){
+	public function CodeDBupdate($email,$code){
 		$sql = "UPDATE useraccount SET recover_code='$code' WHERE email=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$email]); 
 	}
 
-	public function updatePasswordDB($email,$password){
+	public function PasswordDBupdate($email,$password){
 		$sql = "UPDATE useraccount SET passwrd='$password' WHERE email=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$email]);
 
 	}
-	public function updaterecoverCodeDB($email){
+	public function recoverCodeDBupdate($email){
 		$sql = "UPDATE useraccount SET recover_code='0' WHERE email=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$email]);
@@ -85,11 +86,5 @@ protected function addToWaitlist($nic, $fullname, $date, $count){
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute([$nic, $fullname, $date, $count]);
 }
-public function getUserRow($nic){
-	$sql = 'SELECT * FROM examlist WHERE nic= ?';
-	$stmt = $this->connection()->prepare($sql);
-	$stmt->execute([$nic]);
-	$data = $stmt->fetchAll();
-	return $data;
-}
+
 }

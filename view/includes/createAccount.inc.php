@@ -7,6 +7,10 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/contr
 
 if(isset($_POST["submit"])){
     $account = new UserAccount();
+    $array1=$account->selectUserByUserName($_POST["id_no"]);
+    $array2=$account->ByGivenEmailselectEmail($_POST["email"]);
+if( empty($array1) && empty($array2)){
+
     $account->setnic($_POST["id_no"]);
     $account->setSurname($_POST["surname"]);
     $account->setOther($_POST["other_names"]);
@@ -20,7 +24,7 @@ if(isset($_POST["submit"])){
     $account->setAddrs($_POST["address"]);
     $account->setPhone($_POST["phone_number"]);
     $account->setEmail($_POST["email"]);
-    $account->setPasswd($_POST["password"]);
+    $account->setPasswd(sha1($_POST["password"]));
 
     //echo($_POST["grp1"]);
     $account->addToDataBase(); 
@@ -42,6 +46,9 @@ if(isset($_POST["submit"])){
     $email->sendmail('Information for License applicant',$body,$_POST["email"]);
 
 
+}
+else{(print("Email or NIC is already registered");
+}
 }
 
 ?>

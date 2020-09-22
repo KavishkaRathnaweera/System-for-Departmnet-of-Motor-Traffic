@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2020 at 07:52 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Generation Time: Sep 08, 2020 at 08:51 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,14 +39,6 @@ CREATE TABLE `examlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `examlist`
---
-
-INSERT INTO `examlist` (`num`, `nic`, `fullname`, `dates`, `count`, `examlimit`, `attendance`) VALUES
-(2, '12345', 'WEERAPPULIGE AKSHEN MADUMADA JAYAMANNA', '2020-09-02', 11, 100, 'yes'),
-(1, '990122164V', 'Kavishka Rathnaweera', '2020-09-06', 10, 100, 'yes');
-
---
 -- Indexes for dumped tables
 --
 
@@ -65,7 +57,7 @@ ALTER TABLE `examlist`
 -- AUTO_INCREMENT for table `examlist`
 --
 ALTER TABLE `examlist`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

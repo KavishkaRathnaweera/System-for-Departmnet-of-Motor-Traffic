@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 05:41 PM
+-- Generation Time: Sep 08, 2020 at 08:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -31,22 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `triallist` (
   `num` int(11) NOT NULL,
   `nic` varchar(100) NOT NULL,
-  `date` date NOT NULL,
-  `count` int(11) NOT NULL,
-  `triallimit` int(11) NOT NULL
+  `fullname` varchar(100) NOT NULL,
+  `dates` date NOT NULL,
+  `counts` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `triallist`
---
-
-INSERT INTO `triallist` (`num`, `nic`, `date`, `count`, `triallimit`) VALUES
-(3, '12135465V', '2020-05-16', 3, 3),
-(4, '12345', '2020-05-17', 1, 2),
-(1, '123456', '2020-05-16', 1, 3),
-(18, '34567', '2020-05-25', 1, 5),
-(2, '6646846', '2020-05-16', 2, 3),
-(17, '67890', '2020-05-17', 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -67,7 +55,7 @@ ALTER TABLE `triallist`
 -- AUTO_INCREMENT for table `triallist`
 --
 ALTER TABLE `triallist`
-  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

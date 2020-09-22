@@ -1,1 +1,1 @@
-<footer><p style="text-align:right;font-size:20px">contact us: 0716565834</p></footer>   
+<footer><img src="http://localhost/System-for-Departmnet-of-Motor-Traffic/view/images/footer.jpg"   width="100%"/></footer>   

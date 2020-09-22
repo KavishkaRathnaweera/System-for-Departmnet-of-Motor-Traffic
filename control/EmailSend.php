@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/
 
 class EmailSend extends PHPMailer{
     private static $instance;
-	private function  __construct()
+	public function  __construct()
 	{
 	}
 
