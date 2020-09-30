@@ -198,9 +198,31 @@ class UserAccount extends UserAccountDB{
 
         }
         $this->addToWaitlist($nic, $fullname, $out["dates"],$out["counts"]);
-        return $out["dates"];
+        $calculatedTimeSlot=$this->calculateTime($out["dates"],$out["counts"]);
+        return $calculatedTimeSlot;
         //return date and add to waitlist
     }
+
+    public function calculateTime($fidates,$ficount)
+    {
+        $newTime;
+        $newLimits = ($this->getLimit($fidates))["limits"];
+        if(($ficount/$newLimits)<=(1/4)){
+            $newTime=" 8.00 AM";
+        }
+        elseif(($ficount/$newLimits)<=(2/4)){
+            $newTime=" 10.00 AM";
+        }
+        elseif(($ficount/$newLimits)<=(3/4)){
+            $newTime=" 01.00 PM";
+        }
+        else{
+            $newTime=" 03.00 PM";
+        }
+        return $fidates.$newTime;
+    }
+
+
     public function selectEmailByGivenEmail($email){
         return($this->ByGivenEmailselectEmail($email));
     }

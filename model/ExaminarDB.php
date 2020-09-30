@@ -76,7 +76,7 @@ class ExaminarDB extends ExaminarDBconnection{
     }
     public function getQuestionFromExm($number)
     {
-        $sql = 'SELECT * FROM exampaper WHERE idnumber= ?';
+        $sql = 'SELECT * FROM exampaper WHERE number= ?';
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$number]);
 		$data = $stmt->fetchAll();
