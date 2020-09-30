@@ -1,6 +1,7 @@
-<ul style="position:absolute;top:22%;left:-1%;" >
-<li id="navig"><a href="index.php" id="naviglink" >Home</a></li>
-<li id="navig"><a href="Instructions.php" id="naviglink">Instructions</a></li>
-<li id="navig"><a href="Vehicleinfo.php" id="naviglink">Vehicle Info</a></li>
-<li id="navig"><a href="Aboutus.php" id="naviglink">About Us</a></li>
-</ul>
+
+<div class="navbar" >
+    <a href="index.php"  >Home</a>
+<a href="Instructions.php" >Instructions</a>
+<a href="Vehicleinfo.php" >Vehicle Info</a>
+<a href="Aboutus.php" >About Us</a></div>
+

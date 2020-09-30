@@ -47,7 +47,8 @@ if( empty($array1) && empty($array2)){
 
 
 }
-else{print("Email or NIC is already registered");}
+
+
 }
 
 
