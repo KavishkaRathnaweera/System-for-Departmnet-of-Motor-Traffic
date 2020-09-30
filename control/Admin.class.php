@@ -92,7 +92,7 @@ class Admin extends AdminDB{
             
             if(!empty($result)) {
                 if($password==$result[0]['passwrd']){
-                    $_SESSION["officeLog"]="admin";
+                   // $_SESSION["officeLog"]="admin";
                     $this->setOfficer($userID);
                 }else{
                     $errors[] = "Password is incorrect!";
@@ -108,24 +108,31 @@ class Admin extends AdminDB{
     {
         switch($officerName){
             case 'Counter1':
+                $_SESSION["officeLog"]="#Counter1";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/Counter1View.php');
                 break;
             case 'Counter2':
+                $_SESSION["officeLog"]="#Counter2";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/counter2View.php');
                 break;
             case 'Cashier':
+                $_SESSION["officeLog"]="#Cashier";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/cashierView.php');
                 break;
             case 'Examinar':
+                $_SESSION["officeLog"]="#Examinar";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/examinarView.php');
                 break;
             case 'Licensecounter':
+                $_SESSION["officeLog"]="#Licensecounter";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/LicenseCounterView.php');
                 break;
             case 'Permitcounter':
+                $_SESSION["officeLog"]="#Permitcounter";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/permitCounterView.php');
                 break;
             case 'Admin':
+                $_SESSION["officeLog"]="#Admin";
                 header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/AdminView.php');
                 break;
         }

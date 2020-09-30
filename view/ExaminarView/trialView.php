@@ -1,6 +1,10 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/trialView.inc.php'); ?>
-
+<?php 
+if($_SESSION["officeLog"]!="#Examinar"){
+    header("location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +67,7 @@
                 <option value="No">Motor Bike only</option>
                 <option value="No">Light Vehivle only</option>
                 <option value="No">Motor Tricycle</option>
+                <option value="No">Fail</option>
         </select>
         <button type="submit" name="mark" id="addbtn" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Add</button>
     </form>
