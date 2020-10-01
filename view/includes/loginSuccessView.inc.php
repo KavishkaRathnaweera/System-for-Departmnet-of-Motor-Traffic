@@ -13,8 +13,8 @@ $_SESSION["trail"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['trail']
 $_SESSION["email"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['email'];
 
 
-echo($_POST["renewLicense"]);
-if (isset($_POST["renewLicense"]) && $_POST["renewLicense"]==0){
+
+if (isset($_POST["renewLicense"])){
     $regDate=$userAccount->clickedRenewlicense($_SESSION["userid"], $_SESSION["fullname"]);
     $emailRenewLicense = EmailSend::getInstance();
     $bodyRenewLicense="Dear ".$_SESSION["fullname"].'..<br><br>'.'
@@ -29,8 +29,7 @@ if (isset($_POST["renewLicense"]) && $_POST["renewLicense"]==0){
     4)If you have old license. please bring it with you.<br><br>
     your registration date: '.$regDate;
     $emailRenewLicense->sendmail('Information for License applicant',$bodyRenewLicense,$_SESSION["email"]);
-    $_POST["renewLicense"]==1;
-    echo($_POST["renewLicense"]);
+ 
 }
 if(isset($_POST["button1"])){
     unset($_SESSION['userid']);
