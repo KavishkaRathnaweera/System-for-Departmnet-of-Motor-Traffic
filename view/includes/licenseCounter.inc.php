@@ -1,6 +1,4 @@
 <?php
-
-session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
     $_SESSION["lnic"]="";

@@ -1,5 +1,10 @@
-
+<?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
  <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/licenseCounter.inc.php'); ?>
+ <?php 
+if($_SESSION["officeLog"]!="#Licensecounter"){
+    header("location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

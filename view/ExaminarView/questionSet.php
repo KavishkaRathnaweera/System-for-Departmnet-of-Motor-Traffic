@@ -1,5 +1,9 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/session.php'); ?>
-
+<?php 
+if($_SESSION["officeLog"]!="#Examinar"){
+    header("location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php");
+}
+?>
 <?php
 
 //session_start();
