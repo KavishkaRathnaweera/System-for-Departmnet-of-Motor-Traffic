@@ -70,7 +70,8 @@ if($_SESSION["officeLog"]!="#Cashier"){
                 <option value="trialAdd">Trial List</option>
             </select>
     </p>
-    <button type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Make Payment</button>
+    <button type="submit" class="button1" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Make Payment</button>
+    <button type="submit" class="button2" name="renewApplicant" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Renew License</button>
     </form>
     </div>
 </main>

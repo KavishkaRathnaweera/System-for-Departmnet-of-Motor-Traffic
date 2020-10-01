@@ -10,6 +10,7 @@
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/includes/loginSuccessView.inc.php'); ?>
+
 <form action="loginSuccessView.php" id="logout" class="Logout" method="post">
     <button type="submit" class="logout" name="button1" >LOGOUT</button>
 </form>
@@ -32,8 +33,8 @@
         <input type="text" value="<?php echo $_SESSION["trail"];?>" size="50" disabled><br><br>
     </div>
     <form action="loginSuccessView.php" id="loginSuccessDetail" class="loginSuccess" method="post">
-        <button type="button" name="answerPaper" onclick="myFunction()">Answer Paper</button>
-        <button type="submit" name="renewLicense">Re-new License</button>
+        <button type="button" name="answerPaper" onclick="myFunction1()">Answer Paper</button>
+        <button type="submit" name="renewLicense" onclick="">Re-new License</button>
     </form>
 
 
@@ -44,7 +45,7 @@
 <script type="text/javascript" src="js/loginSucces.js"></script>
 
 <script type="text/javascript">
-    function myFunction() {
+    function myFunction1() {
         var err = "<?php echo(($loggeduser->checkUserForWriteExam($_SESSION["userid"],date("Y-m-d")))[0]) ?>";
         if(err!="you can write the exam"){
             alert(err);

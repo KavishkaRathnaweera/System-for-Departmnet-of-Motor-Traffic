@@ -68,8 +68,15 @@ class CashierDB extends CashierDBconnection{
         $stmt->execute([$userId]);
     }
 
+    protected function addToLicenseTable($nic, $fullname)
+    {
+        $sql = 'INSERT INTO licensetable(nic,fullname) VALUES (?,?)';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute([$nic,$fullname]);
+    }
 
-}
+    }
+
 
 
 

@@ -236,8 +236,12 @@ class UserAccount extends UserAccountDB{
         return($this->recoverCodeDBupdate($email));
     }
     
-
-
+    public function clickedRenewlicense($id, $fullname){
+        $this->removeVerification($id);
+        $date=$this->getRegistrationDate($id, $fullname);
+        return $date;
+    }
+    
     
 
 
