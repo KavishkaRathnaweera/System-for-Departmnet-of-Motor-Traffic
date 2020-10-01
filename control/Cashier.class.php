@@ -44,6 +44,7 @@ class Cashier extends CashierDB{
     }
     public function getNewDate($dateType,$id,$fullname){
 		if($dateType=="newExamDate"){
+            $this->ChangeUserExam($id);
 			$limitTable="limitexam";
 			$listTable="examlist";
 		}

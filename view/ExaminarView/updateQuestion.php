@@ -44,7 +44,7 @@ if($_SESSION["officeLog"]!="#Examinar"){
         //echo($_SESSION["idnum"]);
         $_SESSION["idnum"]="";
         //echo($_POST["questionUp"]);
-        
+        //echo($_POST["ans1"]);
         }
         else{
             $_SESSION["notype"]="Please search question from id";

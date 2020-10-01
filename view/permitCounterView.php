@@ -67,10 +67,10 @@ if($_SESSION["officeLog"]!="#Permitcounter"){
         <div class="button_box">
 
             <form id="Button" action="permitCounterView.php#Button" method="POST">
-                <button type="submit" name="trialDate" id="trialDate_btn">trial date</button>
-                <button type="submit" name="UpdateList" id="updateTrialList_btn">update trialList</button>
-                <button type="submit" name="print" id="print_btn">print</button>
-                <button type="submit" name="sendEmail" id="sendEmail_btn">send email</button>
+                <button type="submit" name="trialDate" id="trialDate_btn">Trial date</button>
+                <button type="submit" name="UpdateList" id="updateTrialList_btn">Update TrialList</button>
+                <button type="submit" name="print" id="print_btn">Print</button>
+                <button type="submit" name="sendEmail" id="sendEmail_btn">Send Email</button>
 
             </form>
         </div>

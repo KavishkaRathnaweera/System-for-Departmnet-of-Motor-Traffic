@@ -60,8 +60,8 @@ if($_SESSION["officeLog"]!="#Examinar"){
         
             
     
-    <form id="Mark" action="examinarView.php#Mark" method="post">
-        <button type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Mark Attendance</button>
+    <form class="Mark" action="examinarView.php#Mark" method="post">
+        <button id="examMA" type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Mark Attendance</button>
     </form>
     </div>
 </main>
