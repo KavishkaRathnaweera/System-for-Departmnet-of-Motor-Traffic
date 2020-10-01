@@ -61,12 +61,22 @@ class ExamPaper extends ExamPaperDB{
     public Function checkUserForWriteExam($ID,$date){
         $err = array();
         $details=$this->getUserRow($ID);
+        $detailsInUserAccount=$this->selectUserByUserName($ID);
         
         if(!empty($details)) {
             $correctDate=$details[0]['dates'];
             if($date==$correctDate){
                 if($details[0]['attendance']=="Yes"){
-                    $err[]="you can write the exam";
+                    if($detailsInUserAccount[0]['exam']=="No"){
+                        $err[]="you can write the exam";
+                    }else{
+                        if($detailsInUserAccount[0]['exam']=="Yes"){
+                            $err[]="You have passed the exam! Why do you attend again.";
+                        }
+                        if($detailsInUserAccount[0]['exam']=="Failed"){
+                            $err[]="You have failed the exam. You cannot write again.";
+                        }
+                    }
                 }else{
                     $err[]= "Today you have exam. Please come to the department before 8.00AM";
                 }

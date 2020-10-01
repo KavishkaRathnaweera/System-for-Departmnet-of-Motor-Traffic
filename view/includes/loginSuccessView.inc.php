@@ -16,7 +16,7 @@ if(isset($_POST["renewLicense"])){
 if(isset($_POST["button1"])){
     unset($_SESSION['userid']);
     unset($_SESSION['rand']);
-    //unset($_SESSION['examdone']);
+    unset($_SESSION['examdone']);
     unset($_SESSION['passState']);
     header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/view/loginView.php');
 }
