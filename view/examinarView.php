@@ -27,7 +27,7 @@ if($_SESSION["officeLog"]!="#Examinar"){
      window.location=src;
     }
     </script>
-<div class="navbar">
+<div class="navbar" id="nbar">
 
   <a href=>Mark Exam Attendance</a>
  <!-- <a href='ExaminarView/ExamMarkView.php'>Mark Exam Marks</a>-->
@@ -36,6 +36,9 @@ if($_SESSION["officeLog"]!="#Examinar"){
   <a href="ExaminarView/questionSet.php">View Created Question</a>
   <a href="ExaminarView/updateQuestion.php">Update Questions</a>
 
+  <form class="email" action="examinarView.php#email1" id="email1" method="post">
+        <button id="emailID" type="submit" name="email" >Email</button>
+    </form>
 </div>
 <h1 class="head">Examinar-Attendance Sheet</h1>
 <main class="container_EAS">
@@ -64,6 +67,7 @@ if($_SESSION["officeLog"]!="#Examinar"){
         <button id="examMA" type="submit" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Mark Attendance</button>
     </form>
     </div>
+
 </main>
 
 

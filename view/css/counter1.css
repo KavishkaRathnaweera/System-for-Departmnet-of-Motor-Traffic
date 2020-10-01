@@ -24,7 +24,14 @@ body {
   .navbar a:hover {
       color: #ffffff;
     }
-  
+
+    .navbar #emailID{
+      position: relative;
+      top: 6px;
+      left: 66.8%;
+    
+    }
+    
   label{
       width: 15%;
       float: left;

@@ -127,7 +127,7 @@ body {
 .button_box form *{
     position: relative;
     width: 10%;
-    left: 56%;
+    left: 58%;
     height: 35px;
     font-size: 15px;
     top: 20px;
@@ -140,6 +140,9 @@ body {
 .button_box button:hover {
     background-color: #3f0000;
   }
+.button_box #emailID{
+  left: 1%;
+}
 .logout {
     width: 10%;
 

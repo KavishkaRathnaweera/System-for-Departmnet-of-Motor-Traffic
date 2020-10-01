@@ -3,8 +3,7 @@
 //session_start();
 
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
-
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailMediator.class.php');
 
 //check for search 
 $permitCounterCtrl = CounterFactory::getCounter("permitCounter");
@@ -78,6 +77,12 @@ if (isset($_SESSION["PtrialDate"]) && $_SESSION["PtrialDate"] != "" && $_SESSION
         $mail->sendmail($subject, $body, $to);
         $_SESSION["Pmessage"] = "Send email successful";
     }
+}
+
+if (isset($_POST["emailsnd"])){
+    $mail = EmailMediator::getInstance();
+    $mail->SendEmailList("trialApplicant");
+    unset($_POST["emailsnd"]);
 }
 
 
