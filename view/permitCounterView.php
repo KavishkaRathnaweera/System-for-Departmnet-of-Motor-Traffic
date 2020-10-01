@@ -22,8 +22,9 @@ if($_SESSION["officeLog"]!="#Permitcounter"){
 
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-    <button type="button" class="logout" onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php'">LOGOUT</button>
-
+    <form action="permitCounterView.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+    </form>
     <main class="container">
         <div class="search_box">
             <form id="Search" action="permitCounterView.php#Search" method="post" class="searchform">

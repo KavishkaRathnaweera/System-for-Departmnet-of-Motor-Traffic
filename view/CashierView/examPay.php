@@ -33,6 +33,10 @@
     if (isset($_POST["mark"])){
         $cashierCtrl->markAttendance($_SESSION["id"]);
     }
+    if(isset($_POST["button1"])){
+        unset($_SESSION['officeLog']);
+        header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
+    }
 
  ?>
 
@@ -52,7 +56,9 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+<form action="examPay.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+</form>
 <script>function la(src)
     {
      window.location=src;

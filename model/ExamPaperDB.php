@@ -1,7 +1,7 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnection.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/DBconnections/ExamPaperDBconnection.php');
 
-class ExamPaperDB extends DBconnection {
+class ExamPaperDB extends ExamPaperDBconnection {
     public function getQuestions(){
         $sql = 'SELECT * FROM exampaper';
 		$stmt = $this->connection()->prepare($sql);

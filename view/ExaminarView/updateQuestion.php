@@ -6,8 +6,9 @@ if($_SESSION["officeLog"]!="#Examinar"){
 ?>
 <?php
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
-    //check for search
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+$examinarCtrl2 = CounterFactory::getCounter("Examinar");
+//check for search
     $_SESSION["QuesNotFoundError"]="";
     $_SESSION["qstn"]="";
     $_SESSION["answer1"]="";
@@ -16,7 +17,6 @@ if($_SESSION["officeLog"]!="#Examinar"){
     $_SESSION["answer4"]="";
     //$_SESSION["idnum"]="qq";
     $_SESSION["notype"]="";
-    $examinarCtrl2 = Examinar::getInstance();
 	if (isset($_POST["searchQ"])) {
         
 		$id = $_POST["qnum"];
@@ -50,6 +50,10 @@ if($_SESSION["officeLog"]!="#Examinar"){
             $_SESSION["notype"]="Please search question from id";
         }
     }
+    if(isset($_POST["button1"])){
+        unset($_SESSION['officeLog']);
+        header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
+    }
 
  ?>
 <!DOCTYPE html>
@@ -68,7 +72,9 @@ if($_SESSION["officeLog"]!="#Examinar"){
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
+<form action="updateQuestion.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+</form>
 <script>function la(src)
     {
      window.location=src;

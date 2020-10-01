@@ -72,5 +72,9 @@
         $mail->SendEmailList("newApplicant");
         unset($_POST["emailsnd"]);
     }
+    if(isset($_POST["button1"])){
+        unset($_SESSION['officeLog']);
+        header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
+    }
 
  ?>

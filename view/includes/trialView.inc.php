@@ -1,14 +1,14 @@
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     //check for search
     $_SESSION["tIdError"]="";
     $_SESSION["tdateError"]="";
     $_SESSION["tnic"]="";
     $_SESSION["tfullname"]="";
    
-    $examinarCtrl = Examinar::getInstance();
+    $examinarCtrl = CounterFactory::getCounter("Examinar");
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
@@ -27,12 +27,14 @@
             $_SESSION["tnic"]=$details["nic"];
             $_SESSION["tfullname"]=$details["fullname"];
             $_SESSION["tid"]=$details["nic"];
+            $_SESSION["tfname"]=$details["fullname"];
         }
        
     }
     
     if (isset($_POST["mark"])){
-        $examinarCtrl->addMarks($_SESSION["tid"],$_POST["mark1"]);
+        $examinarCtrl->addMarks($_SESSION["tid"],$_POST["mark1"],$_SESSION["tfname"]);
+       // echo $_SESSION["tfname"];
     }
 
  ?>

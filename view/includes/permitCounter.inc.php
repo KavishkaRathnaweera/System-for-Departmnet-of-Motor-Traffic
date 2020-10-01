@@ -78,6 +78,10 @@ if (isset($_SESSION["PtrialDate"]) && $_SESSION["PtrialDate"] != "" && $_SESSION
         $_SESSION["Pmessage"] = "Send email successful";
     }
 }
+if(isset($_POST["button1"])){
+    unset($_SESSION['officeLog']);
+    header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
+}
 
 if (isset($_POST["emailsnd"])){
     $mail = EmailMediator::getInstance();

@@ -15,12 +15,26 @@ class LicenseCounterDB extends LicenseCounterDBconnection{
 		return $data;
     }
     
-    public function addToDB($id)
+    public function updateUserAccount($id)
     {
         $date = date("Y-m-d");
         $sql = "UPDATE useraccount SET license=? WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$date,$id]);
+	}
+	public function removeFromlicenseTable($id)
+    {
+		$sql = " DELETE FROM licensetable WHERE nic=? ";
+		$stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$id]);
+	}
+	public function getQ()
+    {
+        $sql = 'SELECT * FROM licensetable';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute();
+		$data = $stmt->fetchAll();
+		return $data;
     }
 }
  ?>

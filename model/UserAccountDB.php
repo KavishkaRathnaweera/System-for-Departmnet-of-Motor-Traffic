@@ -86,5 +86,10 @@ protected function addToWaitlist($nic, $fullname, $date, $count){
 	$stmt = $this->connection()->prepare($sql);
 	$stmt->execute([$nic, $fullname, $date, $count]);
 }
+protected function removeVerification($id){
+	$sql = "UPDATE useraccount SET verified='No' WHERE nic=?";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$id]);
+}
 
 }
