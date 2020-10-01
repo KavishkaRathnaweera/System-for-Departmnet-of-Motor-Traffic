@@ -25,6 +25,12 @@ if($_SESSION["officeLog"]!="#Licensecounter"){
     <form action="LicenseCounterView.php" class="Logout"  method="post">
         <button type="submit" class="logout" name="button1" >LOGOUT</button>
     </form>
+    <div class="navbar">
+
+<a href=>License Issuing</a>
+<a href='LicensecounterView/issueListview.php'>Issuing List</a>
+
+</div>
     <main class="container">
         <div class="search_box">
         <form id="Search" action="LicenseCounterView.php#Search" method="post" class="searchform">

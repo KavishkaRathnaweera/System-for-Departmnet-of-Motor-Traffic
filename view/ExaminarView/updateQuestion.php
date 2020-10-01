@@ -6,8 +6,9 @@ if($_SESSION["officeLog"]!="#Examinar"){
 ?>
 <?php
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
-    //check for search
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+$examinarCtrl2 = CounterFactory::getCounter("Examinar");
+//check for search
     $_SESSION["QuesNotFoundError"]="";
     $_SESSION["qstn"]="";
     $_SESSION["answer1"]="";
@@ -16,7 +17,6 @@ if($_SESSION["officeLog"]!="#Examinar"){
     $_SESSION["answer4"]="";
     //$_SESSION["idnum"]="qq";
     $_SESSION["notype"]="";
-    $examinarCtrl2 = Examinar::getInstance();
 	if (isset($_POST["searchQ"])) {
         
 		$id = $_POST["qnum"];

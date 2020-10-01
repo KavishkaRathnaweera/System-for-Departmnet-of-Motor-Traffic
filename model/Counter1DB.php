@@ -15,10 +15,11 @@ class Counter1DB extends Counter1DBconnection{
         }
 
     protected function verifyToDB($id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified){
-            $sql = "UPDATE useraccount set nic='{$id}',surname='{$surname}',fullName='{$fullname}',gender='{$gender}',birthday='{$birthday}',age='{$age}',height='{$height}',bloodGroup='{$bloodGroup}',vehicle='{$vehicle}',addrss='{$addrss}',phone='{$phone}',email='{$email}',verified='{$verified}' WHERE nic = ?";
+            $sql = "UPDATE useraccount set nic=? ,surname=? ,fullName=? ,gender=? ,birthday=? ,age=? ,height=? ,bloodGroup=? ,vehicle=? ,addrss=? ,phone=? ,email=? ,verified=?  WHERE nic = ?";
             $stmt = $this->connection()->prepare($sql);
-            $stmt->execute([$id]);
+            $stmt->execute([$id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified,$id]);
     }
+    
     protected function getRegisterDate($id){
         $sql = "SELECT dates FROM waitlist  WHERE nic = ?";
         $stmt = $this->connection()->prepare($sql);
@@ -85,8 +86,8 @@ class Counter1DB extends Counter1DBconnection{
         return $data;
     }
     protected function addTolist($listTable,$nic,$fullname, $date, $count){
-        $sql = " DELETE FROM $listTable WHERE nic='{$nic}'; INSERT INTO $listTable(nic, fullname, dates, counts) VALUES (?,?,?,?)";
+        $sql = " DELETE FROM $listTable WHERE nic=? ; INSERT INTO $listTable(nic, fullname, dates, counts) VALUES (?,?,?,?)";
         $stmt = $this->connection()->prepare($sql);
-        $stmt->execute([$nic, $fullname, $date, $count]);
+        $stmt->execute([$nic,$nic, $fullname, $date, $count]);
     }
 }
