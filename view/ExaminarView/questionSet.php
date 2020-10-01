@@ -7,9 +7,12 @@ if($_SESSION["officeLog"]!="#Examinar"){
 <?php
 
 //session_start();
-	 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Examinar.class.php');
-   
-    $examinarCtrl1 = Examinar::getInstance();
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+//session_start();
+
+
+$examinarCtrl1 = CounterFactory::getCounter("Examinar");
+
 	
 
 ?>

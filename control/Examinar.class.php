@@ -49,10 +49,11 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         $this->attendance($nic);
     }
 
-    public function addMarks($nic,$marks)
+    public function addMarks($nic,$marks,$fullname)
     {
         if($marks=="Yes"){
             $this->addtoUser($nic);
+            $this->addtoLicense($nic,$fullname);
         }
         elseif($marks=="No"){
             $failBefore=$this->searchFailtrial($nic);

@@ -21,6 +21,14 @@ class LicenseCounterDB extends LicenseCounterDBconnection{
         $sql = "UPDATE useraccount SET license=? WHERE nic=?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$date,$id]);
+	}
+	public function getQ()
+    {
+        $sql = 'SELECT * FROM licensetable';
+		$stmt = $this->connection()->prepare($sql);
+		$stmt->execute();
+		$data = $stmt->fetchAll();
+		return $data;
     }
 }
  ?>

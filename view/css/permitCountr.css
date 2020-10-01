@@ -1,6 +1,7 @@
 body {
     background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:15px;min-width: 1000px;
 }
+
 .container{
     position: relative;
     height:580px;

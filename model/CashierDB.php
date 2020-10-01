@@ -57,9 +57,9 @@ class CashierDB extends CashierDBconnection{
         return $data;
     }
     protected function addTolist($listTable,$nic,$fullname, $date, $count){
-        $sql = " DELETE FROM $listTable WHERE nic='{$nic}'; INSERT INTO $listTable(nic, fullname, dates, counts) VALUES (?,?,?,?)";
+        $sql = " DELETE FROM $listTable WHERE nic=? ; INSERT INTO $listTable(nic, fullname, dates, counts) VALUES (?,?,?,?)";
         $stmt = $this->connection()->prepare($sql);
-        $stmt->execute([$nic, $fullname, $date, $count]);
+        $stmt->execute([$nic, $nic, $fullname, $date, $count]);
     }
 
 

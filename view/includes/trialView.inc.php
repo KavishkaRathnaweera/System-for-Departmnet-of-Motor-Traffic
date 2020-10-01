@@ -27,12 +27,14 @@
             $_SESSION["tnic"]=$details["nic"];
             $_SESSION["tfullname"]=$details["fullname"];
             $_SESSION["tid"]=$details["nic"];
+            $_SESSION["tfname"]=$details["fullname"];
         }
        
     }
     
     if (isset($_POST["mark"])){
-        $examinarCtrl->addMarks($_SESSION["tid"],$_POST["mark1"]);
+        $examinarCtrl->addMarks($_SESSION["tid"],$_POST["mark1"],$_SESSION["tfname"]);
+       // echo $_SESSION["tfname"];
     }
 
  ?>
