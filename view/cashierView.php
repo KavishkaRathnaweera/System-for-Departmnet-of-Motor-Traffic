@@ -20,7 +20,11 @@ if($_SESSION["officeLog"]!="#Cashier"){
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="logout" onclick="la('../index.php')">LOGOUT</button>
+
+<form action="cashierView.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+</form>
+
 <script>function la(src)
     {
      window.location=src;

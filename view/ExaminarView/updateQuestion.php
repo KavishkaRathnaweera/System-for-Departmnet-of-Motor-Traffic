@@ -50,6 +50,10 @@ $examinarCtrl2 = CounterFactory::getCounter("Examinar");
             $_SESSION["notype"]="Please search question from id";
         }
     }
+    if(isset($_POST["button1"])){
+        unset($_SESSION['officeLog']);
+        header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
+    }
 
  ?>
 <!DOCTYPE html>
@@ -68,7 +72,9 @@ $examinarCtrl2 = CounterFactory::getCounter("Examinar");
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<button type="button" class="logout" onclick="la('../../index.php')">LOGOUT</button>
+<form action="updateQuestion.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+</form>
 <script>function la(src)
     {
      window.location=src;

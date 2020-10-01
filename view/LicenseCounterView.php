@@ -22,7 +22,9 @@ if($_SESSION["officeLog"]!="#Licensecounter"){
 
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-    <button type="button" class="logout" onclick="location.href = 'http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php'">LOGOUT</button>
+    <form action="LicenseCounterView.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+    </form>
     <div class="navbar">
 
 <a href=>License Issuing</a>
