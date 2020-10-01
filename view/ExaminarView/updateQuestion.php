@@ -44,7 +44,7 @@ $examinarCtrl2 = CounterFactory::getCounter("Examinar");
         //echo($_SESSION["idnum"]);
         $_SESSION["idnum"]="";
         //echo($_POST["questionUp"]);
-        
+        //echo($_POST["ans1"]);
         }
         else{
             $_SESSION["notype"]="Please search question from id";

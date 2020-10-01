@@ -17,6 +17,13 @@
     <h1>Office Login</h1>
     <br>
     
+    <strong><div id ="demo"> <?php 
+    if(isset($error[0])){
+        print($error[0]);
+    }
+    ?> </div>
+</strong>
+    
     <form action="officeLoginView.php" id="loginDetail" class="loginForm" method="post">
     <fieldset>
         <p>
@@ -46,11 +53,6 @@
     <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     
     <br>
-    <div id ="demo"> <?php 
-    if(isset($error[0])){
-        print($error[0]);
-    }
-    ?> </div>
 
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 

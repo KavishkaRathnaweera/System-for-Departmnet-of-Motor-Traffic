@@ -9,6 +9,10 @@ $_SESSION["exam"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['exam'];
 $_SESSION["trail"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['trail'];
 
 
+if(isset($_POST["renewLicense"])){
+    
+}
+
 if(isset($_POST["button1"])){
     unset($_SESSION['userid']);
     unset($_SESSION['rand']);

@@ -33,7 +33,9 @@
     </div>
     <form action="loginSuccessView.php" id="loginSuccessDetail" class="loginSuccess" method="post">
         <button type="button" name="answerPaper" onclick="myFunction()">Answer Paper</button>
+        <button type="submit" name="renewLicense">Re-new License</button>
     </form>
+
 
 </main>
 

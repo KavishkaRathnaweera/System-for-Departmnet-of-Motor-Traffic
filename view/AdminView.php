@@ -22,7 +22,12 @@ if($_SESSION["officeLog"]!="#Admin"){
 </head>
 <body>
     <?php include("AllPageIncludes/header.php");  ?>
-    <button type="button" class="button1" onclick="la('../index.php')">LOGOUT</button>
+
+    <form action="AdminView.php" class="Logout"  method="post">
+        <button type="submit" class="logout" name="button1" >LOGOUT</button>
+    </form>
+
+    
     <h1 class="head">ADMIN</h1>
     <br>
     <main class="container">

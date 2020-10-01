@@ -61,6 +61,12 @@ class CashierDB extends CashierDBconnection{
         $stmt = $this->connection()->prepare($sql);
         $stmt->execute([$nic, $nic, $fullname, $date, $count]);
     }
+    protected function ChangeUserExam($userId)
+    {
+        $sql = "UPDATE useraccount set exam='No' WHERE nic = ?";
+        $stmt = $this->connection()->prepare($sql);
+        $stmt->execute([$userId]);
+    }
 
 
 }

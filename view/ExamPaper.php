@@ -16,16 +16,19 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
     <style>
 #demo {
+  height:50px;
   text-align: center;
   font-size: 30px;
   margin-top: 0px;
   color: rgb(65, 14, 14);
 }
 #dem {
+    height:280px;
   text-align: center;
   font-size: 30px;
   margin-top: 0px;
   color: rgb(65, 14, 14);
+  
 }
 </style>
   
@@ -35,7 +38,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
-<form action="loginSuccessView.php" id="logout" class="logout" method="post">
+<form action="loginSuccessView.php" id="logout" class="Logout" method="post">
 <button type="submit" class="logout" name="button1" >LOGOUT</button>
 </form>
 <script>function la(src)
@@ -54,11 +57,11 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 
 <script>
-    localStorage.clear();
+    //localStorage.clear();
     if ("<?php echo($_SESSION['userid']) ?>" in localStorage){
         var countDownDate = localStorage.getItem("<?php echo($_SESSION['userid']) ?>");
     }else{
-        var countDownDate = new Date().getTime() + 500000;
+        var countDownDate = new Date().getTime() + 120000;
         localStorage.setItem("<?php echo($_SESSION['userid']) ?>",parseInt(countDownDate));
     }
     var x = setInterval(function() {
@@ -102,13 +105,12 @@ if(!(isset($_SESSION['examdone']))){
 
 
 </div>
-
+<?php
+ if(isset($_SESSION['passState'])){ ?>
 <div id ="dem" class="title"> <?php 
-    if(isset($_SESSION['passState'])){
         print($_SESSION['passState']);
-    }
-    ?> </div>
-
+ ?> </div> <?php }
+?>
 
 
 

@@ -17,7 +17,12 @@
     
     <h1>User Login</h1>
     <br>
-    
+    <strong> <div style="text-align: center; color: rgb(31, 2, 2);font-family: Verdana, Geneva, Tahoma, sans-serif;"> <?php 
+    if(isset($errorArray[0])){
+        print($errorArray[0]);
+    }
+    ?> </div>
+</strong>
     <form action="loginView.php" id="loginDetail" class="loginForm" method="post">
     <fieldset>
         <p>
@@ -47,12 +52,7 @@
     <button id='id1'  onclick='UpdateDetails()' disabled>Update Details</button>-->
     
     <br>
-    <div id ="demo"> <?php 
-    if(isset($errorArray[0])){
-        print($errorArray[0]);
-    }
-    ?> </div>
-
+   
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/footer.php');  ?>
 
 </body>

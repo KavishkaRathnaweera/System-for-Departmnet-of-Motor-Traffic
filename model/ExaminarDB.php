@@ -90,7 +90,7 @@ class ExaminarDB extends ExaminarDBconnection{
     }
     public function updatequestionData($question,$a1,$a2,$a3,$a4,$correct,$idnum)
     {
-        $sql = "UPDATE exampaper SET question=?,answere1=?,answere2=?,answere3=?,answere4=?,correct=? WHERE idnumber=?";
+        $sql = "UPDATE exampaper SET question=?,answere1=?,answere2=?,answere3=?,answere4=?,correct=? WHERE number=?";
 		$stmt = $this->connection()->prepare($sql);
         $stmt->execute([$question,$a1,$a2,$a3,$a4,$correct,$idnum]);
 
