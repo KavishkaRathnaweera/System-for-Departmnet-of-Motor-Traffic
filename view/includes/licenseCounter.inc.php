@@ -25,7 +25,7 @@
        
     }
     if (isset($_POST["issueLicense"])){
-        $counterCtrl->updateUserAccount($_SESSION["nic"]); 
+        $counterCtrl->issuedLicense($_SESSION["nic"]); 
     }
     
 

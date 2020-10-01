@@ -74,7 +74,12 @@ class Cashier extends CashierDB{
         $this->addTolist($listTable,$id,$fullname,$out["dates"],$out["counts"]);
         return $out["dates"];
         //return date and add to waitlist
-	}
+    }
+    public function renewLicense($nic,$fullname)
+    {
+        $this->addToLicenseTable($nic,$fullname);
+    }
+    
     // public function getTrialData($nic)
     // {
     //     $data = $this->getDataFromUser($nic);

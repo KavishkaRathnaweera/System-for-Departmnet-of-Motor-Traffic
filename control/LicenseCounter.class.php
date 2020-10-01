@@ -26,10 +26,11 @@ class LicenseCounter extends LicenseCounterDB{
 		}
 		return $details;	
     }
-    public function updateUserAccount($id){
-        $this->addToDB($id);
-    
-    }
+    public function issuedLicense($id){
+        $this->updateUserAccount($id);
+		$this->removeFromlicenseTable($id);
+	}
+	
 	public static function getInstance():LicenseCounter{
 		if(!isset(self::$instance)){
 			self::$instance=new LicenseCounter();

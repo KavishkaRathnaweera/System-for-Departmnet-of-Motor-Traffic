@@ -67,5 +67,8 @@
         }
         
     }
-
+    if (isset($_POST["renewApplicant"]))
+    {
+        $cashierCtrl->renewLicense($_SESSION["id"],$_SESSION["fullname1"]);
+    }
  ?>
