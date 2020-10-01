@@ -16,7 +16,7 @@
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view/AllPageIncludes/header.php');  ?>
     <button type="button" class="button1" onclick="la('../index.php')">Back</button>
-    <h1>Create new account</h1>
+    <h1>Create New Account</h1>
     <br>
     <div>
         <h2><?php if(isset($_POST["submit"])){
@@ -113,7 +113,7 @@
         </p>
         <p>
             <label for="">Password Confirmation : </label>
-            <input type="text" name="passwrdr" placeholder="Retype new password" required>
+            <input type="password" name="passwrdr" placeholder="Retype new password" required>
         </p>
         <p>
             <label for="">&nbsp;</label>

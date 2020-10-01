@@ -34,11 +34,12 @@ if($_SESSION["officeLog"]!="#Counter2"){
 
         <div class="button_box">
 
-            <button id="back_btn" onclick="backButton()">back</button>
-            <button id="take_btn" onclick="">take</button>
-            <button id="save_btn" onclick="">save</button>
-            <button id="delete_btn" onclick="">delete</button>
-            <button id="cancle_btn" onclick="">cancle</button>
+            
+        <button id="back_btn" onclick="backButton()">Back</button>
+            <button id="take_btn" onclick="">Take</button>
+            <button id="save_btn" onclick="">Save</button>
+            <button id="delete_btn" onclick="">Delete</button>
+            <button id="cancle_btn" onclick="">Cancle</button>
         </div>
 
     </main>

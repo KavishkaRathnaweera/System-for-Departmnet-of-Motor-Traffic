@@ -49,3 +49,9 @@ label{
 .loginForm{
     height: 270px;
 }
+#demo{
+    text-align: center; 
+    color: rgb(31, 2, 2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
