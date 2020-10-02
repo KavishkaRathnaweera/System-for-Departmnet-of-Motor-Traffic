@@ -141,6 +141,13 @@ main *{
 .Mark #examMA{
   width:15%;
 }
+.navbar #emailID{
+  position: relative;
+  top: 6px;
+  left: 36%;
+
+}
+
 /* ......................exam trial record............................................................................................... */
 
 .container_ETR{

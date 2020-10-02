@@ -2,6 +2,7 @@
 
 //session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailMediator.class.php');
     //check for search
    
     $counter1Ctrl = CounterFactory::getCounter("Counter1");
@@ -65,6 +66,11 @@
     if (isset($_POST["notVerify"])){
         $_SESSION["C1verified"]="No";
         $counter1Ctrl->verify($_SESSION["C1nic"], $_SESSION["C1surname"],$_SESSION["C1fullName"],$_SESSION["C1gender"],$_SESSION["C1birthday"],$_SESSION["C1age"],$_SESSION["C1height"],$_SESSION["C1bloodGroup"],$_SESSION["C1vehicle"],$_SESSION["C1addrss"],$_SESSION["C1phone"],$_SESSION["C1email"],$_SESSION["C1verified"]);
+    }
+    if (isset($_POST["emailsnd"])){
+        $mail = EmailMediator::getInstance();
+        $mail->SendEmailList("newApplicant");
+        unset($_POST["emailsnd"]);
     }
     if(isset($_POST["button1"])){
         unset($_SESSION['officeLog']);

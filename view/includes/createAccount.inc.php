@@ -1,32 +1,36 @@
 <?php 
 session_start();
-
-include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccount.class.php');
+include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/UserAccountBuilder.class.php');
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 //include("../createAccount.class.php");
-
+$UAB=new UserAccountBuilder();
 if(isset($_POST["submit"])){
-    $account = new UserAccount();
+    //$account = new UserAccount();
+  
+
+    $UAB->setnic($_POST["id_no"]);
+    $UAB->setSurname($_POST["surname"]);
+    $UAB->setOther($_POST["other_names"]);
+    $UAB->setFname($_POST["full_name"]);
+    $UAB->setGender($_POST["grp1"]);
+    $UAB->setBirth($_POST["date"]);
+    $UAB->setAge($_POST["age"]);
+    $UAB->setheight($_POST["height"]);
+    $UAB->setblood($_POST["blood"]);
+    $UAB->setvehicle($_POST["vehicle"]);
+    $UAB->setAddrs($_POST["address"]);
+    $UAB->setPhone($_POST["phone_number"]);
+    $UAB->setEmail($_POST["email"]);
+    $UAB->setPasswd(sha1($_POST["password"]));
+
+    $account=$UAB->getUser();
+    
     $array1=$account->selectUserByUserName($_POST["id_no"]);
     $array2=$account->ByGivenEmailselectEmail($_POST["email"]);
 if( empty($array1) && empty($array2)){
 
-    $account->setnic($_POST["id_no"]);
-    $account->setSurname($_POST["surname"]);
-    $account->setOther($_POST["other_names"]);
-    $account->setFname($_POST["full_name"]);
-    $account->setGender($_POST["grp1"]);
-    $account->setBirth($_POST["date"]);
-    $account->setAge($_POST["age"]);
-    $account->setheight($_POST["height"]);
-    $account->setblood($_POST["blood"]);
-    $account->setvehicle($_POST["vehicle"]);
-    $account->setAddrs($_POST["address"]);
-    $account->setPhone($_POST["phone_number"]);
-    $account->setEmail($_POST["email"]);
-    $account->setPasswd(sha1($_POST["password"]));
-
     //echo($_POST["grp1"]);
+
     $account->addToDataBase(); 
 
     $email = EmailSend::getInstance();

@@ -15,7 +15,7 @@ if($_SESSION["officeLog"]!="#Permitcounter"){
     <meta name="keywords" content="motor traffic,sri lanka" />
     <title>Permit Counter</title>
     <link rel="icon" href="images/3.png">
-    <link rel="stylesheet" href="css/permitCountr.css">
+    <link rel="stylesheet" href="css/permitCounter.css">
 
 
 </head>
@@ -74,7 +74,12 @@ if($_SESSION["officeLog"]!="#Permitcounter"){
                 <button type="submit" name="sendEmail" id="sendEmail_btn">Send Email</button>
 
             </form>
+            <form class="email" action="permitCounterView.php#email1" id="email1" method="post">
+        <button id="emailID" type="submit" name="emailsnd" >Email</button>
+    </form>
         </div>
+
+       
 
     </main>
 

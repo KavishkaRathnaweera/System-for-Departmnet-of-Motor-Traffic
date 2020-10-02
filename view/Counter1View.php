@@ -27,6 +27,9 @@ if($_SESSION["officeLog"]!="#Counter1"){
 
   <a href=>Verify Applicant Details</a>
   <a href="Counter1View/handleAbsenteesView.php">Handle Absentees</a>
+  <form class="email" action="Counter1View.php#email1" id="email1" method="post">
+        <button id="emailID" type="submit" name="emailsnd" >Email</button>
+    </form>
 
 </div>
 <h1 class="head">Verify Details Sheet</h1>
@@ -78,6 +81,9 @@ if($_SESSION["officeLog"]!="#Counter1"){
         <button type="submit" name="notVerify" <?php echo !isset($_SESSION["C1nic"]) || $_SESSION["C1nic"]=="" ? 'disabled="true"' : '';?> >Not Verify</button>
     </form>
     </div>
+
+    
+
 </main>
     <script>function la(src)
     {

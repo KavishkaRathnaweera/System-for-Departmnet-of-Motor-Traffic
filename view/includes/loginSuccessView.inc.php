@@ -29,6 +29,7 @@ if (isset($_POST["renewLicense"])){
     4)If you have old license. please bring it with you.<br><br>
     your registration date: '.$regDate;
     $emailRenewLicense->sendmail('Information for License applicant',$bodyRenewLicense,$_SESSION["email"]);
+ 
 }
 if(isset($_POST["button1"])){
     unset($_SESSION['userid']);

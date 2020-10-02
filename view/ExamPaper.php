@@ -16,7 +16,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
     <style>
 #demo {
-  height:50px;
+  
   text-align: center;
   font-size: 30px;
   margin-top: 0px;
@@ -57,7 +57,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 
 <script>
-    //localStorage.clear();
+    localStorage.clear();
     if ("<?php echo($_SESSION['userid']) ?>" in localStorage){
         var countDownDate = localStorage.getItem("<?php echo($_SESSION['userid']) ?>");
     }else{
@@ -88,10 +88,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 
 
-
-
-
-<?php
+<div style="height:2800px;"><?php
 if(!(isset($_SESSION['examdone']))){
         if(isset($_SESSION['rand'])){
             $examppr->promptQuestion($_SESSION['rand']);
@@ -103,8 +100,10 @@ if(!(isset($_SESSION['examdone']))){
 
 ?>
 
-
 </div>
+
+
+
 <?php
  if(isset($_SESSION['passState'])){ ?>
 <div id ="dem" class="title"> <?php 
