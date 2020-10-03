@@ -57,7 +57,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 
 <script>
-    localStorage.clear();
+    //localStorage.clear();
     if ("<?php echo($_SESSION['userid']) ?>" in localStorage){
         var countDownDate = localStorage.getItem("<?php echo($_SESSION['userid']) ?>");
     }else{
@@ -75,6 +75,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
             
         if ((distance < 0) || "<?php echo((isset($_SESSION['examdone'])))?>") {
             clearInterval(x);
+            localStorage.clear();
             document.getElementById("demo").innerHTML = "Exam is End!";
             document.getElementById("buttonAutomaticallySubmit").click();
         }
@@ -88,7 +89,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/view
 
 
 
-<div style="height:2800px;"><?php
+<?php
 if(!(isset($_SESSION['examdone']))){
         if(isset($_SESSION['rand'])){
             $examppr->promptQuestion($_SESSION['rand']);
@@ -100,7 +101,6 @@ if(!(isset($_SESSION['examdone']))){
 
 ?>
 
-</div>
 
 
 

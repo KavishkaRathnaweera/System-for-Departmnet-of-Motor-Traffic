@@ -92,4 +92,5 @@ protected function removeVerification($id){
 	$stmt->execute([$id]);
 }
 
+
 }

@@ -39,7 +39,7 @@ body {
 }
 
 .applicantDetails_box{
-    height: 310px;
+    height: 340px;
     left:7.5%;
     right: 7.5%;
     top:110px;
@@ -74,10 +74,10 @@ body {
 }
 
 #loginSuccessDetail{
-    height: 100px;
+    height: 80px;
     left:7.5%;
     right: 7.5%;
-    bottom: 60px;
+    bottom: 50px;
     background:rgb(194, 188, 188);
     text-align: center;
     

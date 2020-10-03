@@ -31,6 +31,8 @@
         <input type="text" value="<?php echo $_SESSION["exam"];?>" size="50" disabled><br><br>
         <label>Trial State: </label>
         <input type="text" value="<?php echo $_SESSION["trail"];?>" size="50" disabled><br><br>
+        <label>Lisense Issued Date: </label>
+        <input type="text" value="<?php echo $_SESSION["lisensedate"];?>" size="50" disabled><br><br>
     </div>
     <form action="loginSuccessView.php" id="loginSuccessDetail" class="loginSuccess" method="post">
         <button type="button" name="answerPaper" onclick="myFunction1()">Answer Paper</button>
