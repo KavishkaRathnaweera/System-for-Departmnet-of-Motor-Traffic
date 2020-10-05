@@ -109,7 +109,7 @@
         </p>
         <p>
             <label for="">New Password : </label>
-            <input type="text" name="password" placeholder="Enter new password" required>
+            <input type="password" name="password" placeholder="Enter new password" required>
         </p>
         <p>
             <label for="">Password Confirmation : </label>

@@ -36,6 +36,8 @@ if( empty($array1) && empty($array2)){
     $email = EmailSend::getInstance();
     $regDate=$account->getRegistrationDate($_POST["id_no"],$_POST["full_name"]);
     $body="Dear ".$_POST["full_name"].'..<br><br>'.'
+    
+    Your license apply informations is here.<br><br>
     1)Applicant should be present in person.<br><br>
     
     2)Should bring the national identity card or the valid passport with the national identity card number.<br><br>

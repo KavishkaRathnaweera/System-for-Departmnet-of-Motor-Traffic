@@ -18,7 +18,7 @@ if (isset($_POST["renewLicense"])){
     $regDate=$userAccount->clickedRenewlicense($_SESSION["userid"], $_SESSION["fullname"]);
     $emailRenewLicense = EmailSend::getInstance();
     $bodyRenewLicense="Dear ".$_SESSION["fullname"].'..<br><br>'.'
-    1)Applicant should be present in person.<br><br>
+    1) Renew license Applicant should be present in person.<br><br>
     
     2)Should bring the national identity card or the valid passport with the national identity card number.<br><br>
 
@@ -27,7 +27,7 @@ if (isset($_POST["renewLicense"])){
     photographs with white background are required.<br><br>
 
     4)If you have old license. please bring it with you.<br><br>
-    your registration date: '.$regDate;
+    your renewing date: '.$regDate;
     $emailRenewLicense->sendmail('Information for License applicant',$bodyRenewLicense,$_SESSION["email"]);
  
 }
