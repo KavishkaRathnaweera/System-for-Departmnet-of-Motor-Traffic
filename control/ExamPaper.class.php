@@ -71,10 +71,10 @@ class ExamPaper extends ExamPaperDB{
                         $err[]="you can write the exam";
                     }else{
                         if($detailsInUserAccount[0]['exam']=="Yes"){
-                            $err[]="You have passed the exam! Why do you attend again.";
+                            $err[]="You cannot write exam now";
                         }
                         if($detailsInUserAccount[0]['exam']=="Failed"){
-                            $err[]="You have failed the exam. You cannot write again.";
+                            $err[]="You cannot write exam now";
                         }
                     }
                 }else{
@@ -84,7 +84,7 @@ class ExamPaper extends ExamPaperDB{
                 $err[] = "Your Exam Day is {$correctDate} You are not eligible for write exam now!" ;
             }
         }else {		
-            $err[] = "You cannot write exam. Whether you already wrote the exam or not yet came to the department.";
+            $err[] = "You cannot write exam now";
         }
         return ($err);
     }

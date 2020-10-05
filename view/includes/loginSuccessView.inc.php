@@ -4,6 +4,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/contr
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 session_start();
 
+
+$_SESSION["lisensedate"]="";
 $loggeduser = new ExamPaper();
 $userAccount = new UserAccount();
 $_SESSION["fullname"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['fullName'];
@@ -11,6 +13,8 @@ $_SESSION["verified"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['veri
 $_SESSION["exam"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['exam'];
 $_SESSION["trail"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['trail'];
 $_SESSION["email"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['email'];
+$_SESSION["lisensedate"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['license'];
+
 
 
 
