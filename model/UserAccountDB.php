@@ -82,10 +82,17 @@ protected function getNextDate($num){
 	return $data;
 }
 protected function addToWaitlist($nic, $fullname, $date, $count){
-	$sql = "INSERT INTO waitlist(nic, fullName, dates, counts) VALUES (?,?,?,?)";
+	$sql = " DELETE FROM waitlist WHERE nic=? ; INSERT INTO waitlist(nic, fullName, dates, counts) VALUES (?,?,?,?)";
 	$stmt = $this->connection()->prepare($sql);
-	$stmt->execute([$nic, $fullname, $date, $count]);
+	$stmt->execute([$nic, $nic, $fullname, $date, $count]);
 }
+protected function addTolist($listTable,$nic,$fullname, $date, $count){
+	$sql = " DELETE FROM $listTable WHERE nic=? ; INSERT INTO $listTable(nic, fullname, dates, counts) VALUES (?,?,?,?)";
+	$stmt = $this->connection()->prepare($sql);
+	$stmt->execute([$nic, $nic, $fullname, $date, $count]);
+}
+
+
 protected function removeVerification($id){
 	$sql = "UPDATE useraccount SET verified='No' WHERE nic=?";
 	$stmt = $this->connection()->prepare($sql);
