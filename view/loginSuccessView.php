@@ -36,7 +36,7 @@
     </div>
     <form action="loginSuccessView.php" id="loginSuccessDetail" class="loginSuccess" method="post">
         <button type="button" name="answerPaper" onclick="myFunction1()">Answer Paper</button>
-        <button type="submit" name="renewLicense" onclick="" <?php echo ($_SESSION["exam"]!="Yes") ? 'disabled="true"' : '';?> >Re-new License</button>
+        <button type="submit" name="renewLicense" onclick="" <?php echo (($_SESSION["lisensedate"]=="")||($_SESSION["verified"]=="No")) ? 'disabled="true"' : '';?> >Re-new License</button>
     </form>
 
 
