@@ -26,8 +26,8 @@ class Cashier extends CashierDB{
         }
         else{
             if($dataFail==null){
-                $details["trialF"]=null;
-                $details["examF"]=null;
+                $details["trialF"]="0";
+                $details["examF"]="0";
             }
             else{
                 $details["trialF"]=$dataFail[0]["trialfail"];
@@ -39,6 +39,8 @@ class Cashier extends CashierDB{
             $details["exam"]=$data[0]["exam"];
             $details["trial"]=$data[0]["trail"];
             $details["email"]=$data[0]["email"];
+            $details["licenseIssuedDate"]=$data[0]["license"];
+            
         }
         return $details;
     }
