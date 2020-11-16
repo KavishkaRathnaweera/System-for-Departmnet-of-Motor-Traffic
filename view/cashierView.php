@@ -59,7 +59,8 @@ if($_SESSION["officeLog"]!="#Cashier"){
             <input type="text" value="<?php echo $_SESSION["trial"]?>"  size="50" disabled><br><br>
             <label>Trial Fail: </label>
             <input type="text" value="<?php echo $_SESSION["trialF"]?>"  size="50" disabled><br><br>
-       
+            <label>License Issued: </label>
+            <input type="text" value="<?php echo $_SESSION["licenseIssuedDate"]?>"  size="50" disabled><br><br>
     
 
     <form id="submit1" action="cashierView.php#submit1" method="post">
@@ -71,7 +72,7 @@ if($_SESSION["officeLog"]!="#Cashier"){
             </select>
     </p>
     <button type="submit" class="button1" name="mark" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Make Payment</button>
-    <button type="submit" class="button2" name="renewApplicant" <?php echo !isset($details["nic"]) ? 'disabled="true"' : '';?> >Renew License</button>
+    <button type="submit" class="button2" name="renewApplicant" <?php echo ($_SESSION["licenseIssuedDate"]=="") ? 'disabled="true"' : '';?> >Renew License</button>
     </form>
     </div>
 </main>
