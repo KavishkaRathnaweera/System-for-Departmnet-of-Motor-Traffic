@@ -18,7 +18,7 @@ $_SESSION["lisensedate"]=$loggeduser->showUserDetails($_SESSION["userid"])[0]['l
 
 
 
-if (isset($_POST["renewLicense"])){
+if (isset($_POST["renewLicense"]) && $_SESSION["verified"]!="No"){
     $regDate=$userAccount->clickedRenewlicense($_SESSION["userid"], $_SESSION["fullname"]);
     $emailRenewLicense = EmailSend::getInstance();
     $bodyRenewLicense="Dear ".$_SESSION["fullname"].'..<br><br>'.'
