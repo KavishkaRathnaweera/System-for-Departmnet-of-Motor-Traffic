@@ -12,6 +12,7 @@
     $_SESSION["examF"]="";
     $_SESSION["trial"]="";
     $_SESSION["trialF"]="";
+    $_SESSION["licenseIssuedDate"]="";
     
 
     $cashierCtrl = CounterFactory::getCounter("Cashier");
@@ -38,6 +39,7 @@
             $_SESSION["trialF"]=$details["trialF"];
             $_SESSION["id"]=$details["nic"];
             $_SESSION["email"]=$details["email"];
+            $_SESSION["licenseIssuedDate"]=$details["licenseIssuedDate"];
         }
        
     }
