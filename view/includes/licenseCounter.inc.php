@@ -4,6 +4,7 @@
     $_SESSION["lnic"]="";
     $_SESSION["lname"]="";
     $_SESSION["ltrial"]="";
+    $_SESSION["laddrss"]="";
     $_SESSION["error"]="";
 
     $counterCtrl = CounterFactory::getCounter("LicenseCounter");
@@ -16,6 +17,7 @@
         if(!isset($details["error"])){
             $_SESSION["lnic"]=$details["nic"];
             $_SESSION["lname"]=$details["fullname"];
+            $_SESSION["laddrss"]=$details["addrss"];
             $_SESSION["ltrial"]=$details["trail"];
             $_SESSION["nic"]=$details["nic"];
         }
