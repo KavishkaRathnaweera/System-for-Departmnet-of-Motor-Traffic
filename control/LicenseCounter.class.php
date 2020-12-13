@@ -26,7 +26,7 @@ class LicenseCounter extends LicenseCounterDB{
 		}
 		return $details;	
     }
-    public function issuedLicense($id){
+    public function issuedLicense($id){// after click issuelicense button 
         $this->updateUserAccount($id);
 		$this->removeFromlicenseTable($id);
 	}
