@@ -19,7 +19,7 @@ public function sendmail($subject,$body,$address){
         $mail->Port = '465';
         $mail->isHTML();
         $mail->Username = 'motortrafficdepartmentsl@gmail.com';
-        $mail->Password = "0710000000";
+        $mail->Password = "motortraffic@sl";
         $mail->SetFrom('motortrafficdepartmentsl@gmail.com');
         
         $mail->Subject = $subject;
