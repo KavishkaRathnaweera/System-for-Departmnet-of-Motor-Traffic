@@ -8,7 +8,7 @@ session_start();
 $admin = Admin::getInstance();
 
 
-
+//Officer login handling function
 if(isset($_POST["login"])){
 
     $userID = $_POST['id_no'];

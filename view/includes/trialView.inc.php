@@ -9,6 +9,7 @@
     $_SESSION["tfullname"]="";
    
     $examinarCtrl = CounterFactory::getCounter("Examinar");
+    //Get trial applicant details
 	if (isset($_POST["search"])) {
         
 		$id = $_POST["ID"];
@@ -31,7 +32,7 @@
         }
        
     }
-    
+    //add trial marks to the applicant
     if (isset($_POST["mark"])){
         $examinarCtrl->addMarks($_SESSION["tid"],$_POST["mark1"],$_SESSION["tfname"]);
        // echo $_SESSION["tfname"];

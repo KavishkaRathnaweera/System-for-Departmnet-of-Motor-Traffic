@@ -3,6 +3,7 @@
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/ExaminarDB.php');
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/Comparator.class.php');
 
+//Examinar responsible for mark exam attendence, mark trial marks, create and update exam questions. 
 class Examinar extends ExaminarDB implements Countable, Iterator{
     private static $instance;
     private $details;
@@ -20,7 +21,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         $datemparator=new DateComparator();
     }
     
-
+    //Function for get data from exam list
     public function getDataE($nic)
     {
         $data = $this->getDataFromExm($nic);
@@ -44,11 +45,13 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         return $details;
     }
 
+    //Function for mark attendence
     public function markAttendance($nic)
     {
         $this->attendance($nic);
     }
 
+    //Function for add trial marks
     public function addMarks($nic,$marks,$fullname)
     {
         if($marks=="Yes"){
@@ -66,6 +69,8 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
             }
         }
     }
+
+    //Function for  get data from trial list
     public function getDataT($nic)
     {
         $data = $this->getDataFromTrial($nic);
@@ -85,6 +90,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         }
         return $details;
     }
+    //Function for  get data from exam list
     public function getData($nic)
     {
         $data = $this->getDataFromExm($nic);
@@ -104,7 +110,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         }
         return $details;
     }
-
+    //Add question to the database
     public function addQuestion($question,$a1,$a2,$a3,$a4,$correct)
     {
         $this->addQdatabase($question,$a1,$a2,$a3,$a4,$correct);
@@ -117,6 +123,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
 		return self::$instance;
 	}
 
+    //Iterator design pattern implementation
     public function count(): int
     {
         return count($this->questionArray);
@@ -147,6 +154,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         return isset($this->questionArray[$this->currentIndex]);
     }
 
+    //function for show exam question to the examinor
     public function showQuestion()
     {
         $questionArray = $this->getQ();
@@ -164,6 +172,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         echo($table);
     }
 
+    ////Function for search question by ID
     public function findQuestion($number)
     {
         $data = $this->getQuestionFromExm($number);
@@ -174,6 +183,7 @@ class Examinar extends ExaminarDB implements Countable, Iterator{
         return $data;
     }
 
+    //Function for update question
     public function updateQs($question,$a1,$a2,$a3,$a4,$correct,$idnum)
     {
         $this->updatequestionData($question,$a1,$a2,$a3,$a4,$correct,$idnum);

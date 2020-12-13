@@ -2,12 +2,8 @@
 
 //session_start();
      include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
-    //check for search
-    // $_SESSION["tIdError"]="";
-    // $_SESSION["tdateError"]="";
-    // $_SESSION["tnic"]="";
-    // $_SESSION["tfullname"]="";
-   
+
+    //add exam question 
     $examinarCtrl = CounterFactory::getCounter("Examinar");
 	if (isset($_POST["submitQ"])) {
         

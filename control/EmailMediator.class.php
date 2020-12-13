@@ -3,6 +3,8 @@
 include ($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/MailDB.php');
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailSend.php');
 
+//This is mediator design pattern. All emails sent to the clients are handle in here. Officers can send email manually or
+//system will send email using this email mediator.
 class EmailMediator extends MailDB{
     private static $instance;
 
@@ -16,12 +18,14 @@ class EmailMediator extends MailDB{
 		}
 		return self::$instance;
     }
+    //send email function
     public function SendEmailList($applicantType)
     {
         $body;
         $applicantSet;
         $day = date('Y-m-d');
         $nextday=date('Y-m-d',strtotime($day.' +1 day'));
+        //check application type
         switch($applicantType){
             case 'newApplicant':
                 $applicantSet=$this->getNextApplicant("waitlist",$nextday);
@@ -53,7 +57,7 @@ class EmailMediator extends MailDB{
     }
 
 }
-
+// Here use iterator design pattern implementation for go through the clients iteratively
 class ApplicantIterator implements Iterator{
     private $collection;
     private $position;

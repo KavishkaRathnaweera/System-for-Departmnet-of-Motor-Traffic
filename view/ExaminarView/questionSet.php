@@ -68,6 +68,7 @@ if (!isset($_POST["Qsearch"])) {
 
 <div class="tableQ">
 <?php
+//show question in examinor view
 if (isset($_POST["Qsearch"])) {
     $examinarCtrl1->showQuestion();
 }
