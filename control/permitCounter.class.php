@@ -48,7 +48,7 @@ class PermitCounter extends PermitCounterDB{
 			$out["dates"]=$date["dates"];
 
 		}
-        elseif($out["counts"]>=($this->getTrialLimit($out["dates"]))["limits"]){
+        elseif($out["counts"]>=($this->getTrialLimit($out["dates"]))["limits"]){//if the count and limit are equal, get the next date from limittable,
             $date=$this->getNextTrialDate(($this->getTrialDateNum($out["dates"]))["num"]+1);
             $out["counts"]=1;
             $out["dates"]=$date["dates"];
@@ -56,13 +56,13 @@ class PermitCounter extends PermitCounterDB{
 
         }
         else{
-            $out["counts"]=$out["counts"]+1;
+            $out["counts"]=$out["counts"]+1; // if count and limit are equal, return same date and count is incremented by 1
 		}
 
         return $out;
     }
 
-	public function addToTrialList($nic, $fullname, $date, $count){
+	public function addToTrialList($nic, $fullname, $date, $count){// processed trial date is added to the trial table
 		$this->addToTrialListDB($nic, $fullname, $date, $count);
 	}
 	public static function getInstance():PermitCounter{

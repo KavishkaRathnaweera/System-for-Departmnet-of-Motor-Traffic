@@ -60,7 +60,8 @@ class Counter1 extends Counter1DB{
 			$details["error"]="please enter id";
 		}
 		return $details;	
-    }
+	}
+	// add verified details to data base 
     public function verify($id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified){
         $this->verifyToDB($id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified);
 	}
