@@ -5,7 +5,7 @@ if($_SESSION["officeLog"]!="#Examinar"){
 }
 ?>
 <?php
-//session_start();
+
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
 $examinarCtrl2 = CounterFactory::getCounter("Examinar");
 //check for search
@@ -15,8 +15,9 @@ $examinarCtrl2 = CounterFactory::getCounter("Examinar");
     $_SESSION["answer2"]="";
     $_SESSION["answer3"]="";
     $_SESSION["answer4"]="";
-    //$_SESSION["idnum"]="qq";
     $_SESSION["notype"]="";
+    
+    //search for question using question ID
 	if (isset($_POST["searchQ"])) {
         
 		$id = $_POST["qnum"];
@@ -37,19 +38,20 @@ $examinarCtrl2 = CounterFactory::getCounter("Examinar");
         }
        
     }
-    
+    //update question  in database
     if (isset($_POST["submitUpdtQ"])){
         if(isset( $_SESSION["idnum"])){
         $examinarCtrl2->updateQs($_POST["questionUp"],$_POST["ans1"],$_POST["ans2"],$_POST["ans3"],$_POST["ans4"],$_POST["correct"],$_SESSION["idnum"]);
-        //echo($_SESSION["idnum"]);
+        
         $_SESSION["idnum"]="";
-        //echo($_POST["questionUp"]);
-        //echo($_POST["ans1"]);
+        
+        
         }
         else{
             $_SESSION["notype"]="Please search question from id";
         }
     }
+    //logout
     if(isset($_POST["button1"])){
         unset($_SESSION['officeLog']);
         header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');

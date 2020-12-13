@@ -5,7 +5,7 @@
     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/CounterFactory.class.php');
     include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/EmailMediator.class.php');
 
-    //check for search
+
     $_SESSION["IdError"]="";
     $_SESSION["dateError"]="";
     $_SESSION["nic"]="";
@@ -33,11 +33,12 @@
         }
        
     }
-    
+    //Exam applicants attendent marking function
     if (isset($_POST["mark"])){
         $examinarCtrl->markAttendance($_SESSION["id"]);
         $_SESSION["validate"]="yes";
     }
+    //Email sending function
     if (isset($_POST["email"]) && $_SESSION["validate"]="No"){
         $_SESSION["validate"]="yes";
         $mail = EmailMediator::getInstance();

@@ -1,11 +1,8 @@
 <?php
+
+//THis is strategy desing pattern. Comparator compare by ID or Date.
 class Context{
     private $comparator;
-
-    // public function __construct(IComparator $comp)
-    // {
-    //     $this->comparator = $comp;
-    // }
 
     public function setComparator($cmp)
     {
@@ -17,11 +14,12 @@ class Context{
     }
 
 }
-
+//Interface for comparator
 interface IComparator{
     public function compare($a, $b): int;
 }
 
+//date camparator
 class DateComparator implements IComparator{
     public function compare($a,$b): int{
         if(date("Y-m-d")==$a){
@@ -33,6 +31,7 @@ class DateComparator implements IComparator{
     }
 }
 
+//Id comparator
 class IdComparator implements IComparator{
     public function compare($a,$b): int{
         if($a==$b){

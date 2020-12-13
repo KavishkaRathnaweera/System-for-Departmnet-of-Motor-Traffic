@@ -1,12 +1,14 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/control/lib/PHPMailer.master/PHPMailerAutoload.php');
 
+//This is email send implementation.
 class EmailSend extends PHPMailer{
     private static $instance;
 	public function  __construct()
 	{
 	}
-
+//Authentication procedure
+// email: motortrafficdepartmentsl@gmail.com
 public function sendmail($subject,$body,$address){
     try{
         $mail = new PHPMailer(true);

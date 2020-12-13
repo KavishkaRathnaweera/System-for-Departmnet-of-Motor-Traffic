@@ -1,14 +1,13 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/model/AdminDB.php');
 
+//Admin is responsible for add dates to the waiting list, exam list and trial list
 class Admin extends AdminDB{
 
     private static $instance;
     private function __construct(){}
-    // {
-    //   //  $exam=new ExamList();
-    //   //  $wait=new WaitList();
-    // }
+
+
     public static function getInstance():Admin
     {
         if(!isset(self::$instance)){
@@ -17,6 +16,7 @@ class Admin extends AdminDB{
         return self::$instance;
     }
 
+    //Function for add waitlist dates
     public function addDate($date,$limits){
         $check1=$this->checkDate($date);
         if($check1==null){
@@ -28,6 +28,7 @@ class Admin extends AdminDB{
         }  
     }
 
+    //Function for add examlist dates
     public function addDateExam($date,$limits){
         $check2=$this->checkDateE($date);
         if($check2==null){
@@ -39,6 +40,7 @@ class Admin extends AdminDB{
         }
     }
 
+    //Function for add triallist dates
     public function addDateTrial($date,$limits){
         $check2=$this->checkDateT($date);
         if($check2==null){
@@ -50,6 +52,7 @@ class Admin extends AdminDB{
         }
     }
 
+    //change limits of dates
     public function changewaitLimit($limit){
         self::changeLimitWait($limit);
     }
@@ -74,7 +77,7 @@ class Admin extends AdminDB{
     {
         return self::getlimittrial();
     }
-
+    //THis function ckeck officer username and password. Then allows to go the relavant counter.
     public function checkOfficer($userID,$password)
     {
         $errors = array();

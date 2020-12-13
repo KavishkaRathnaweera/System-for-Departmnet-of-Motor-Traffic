@@ -9,12 +9,13 @@ $admin = CounterFactory::getCounter("Admin");
 $checkdateW="";
 $checkdateE="";
 $checkdateT="";
+//If add waitlist limit button presses, call changewaitlimit function in admin class
 if(isset($_POST["limitbtn1"])){
     $setlmt = $_POST["limit1"];
     $_SESSION['todaylimit'] = $setlmt;
     $admin->changewaitLimit($setlmt);
 }
-
+//If add waitlist day button presses, call addDate function in admin class
 if(isset($_POST["datebtn1"])){
     $setdt = $_POST["date1"];
     $_SESSION['inpdate'] = $setdt;
@@ -30,7 +31,7 @@ if(isset($_POST["datebtn1"])){
     
 }
 
-
+//If add examlist limit button presses, call changeexamlimit function in admin class add new dates to exam limit list
 if(isset($_POST["limitbtn2"])){
 
     $setlmte = $_POST["limit2"];
@@ -52,7 +53,8 @@ if(isset($_POST["datebtn2"])){
    
     
 }
-
+// add new dates to trail limit list
+//change triali limit function
 if(isset($_POST["limitbtn3"])){
 
     $setlmtt = $_POST["limit3"];
@@ -60,6 +62,7 @@ if(isset($_POST["limitbtn3"])){
     $admin->changetrialLimit($setlmtt);
 
 }
+//add trial data function
 if(isset($_POST["datebtn3"])){
     $setdtt = $_POST["date3"];
     $_SESSION['inpdate2'] = $setdtt;
@@ -74,6 +77,7 @@ if(isset($_POST["datebtn3"])){
    
     
 }
+//Logout function
 if(isset($_POST["button1"])){
     unset($_SESSION['officeLog']);
     header('location: http://localhost/System-for-Departmnet-of-Motor-Traffic/index.php');
