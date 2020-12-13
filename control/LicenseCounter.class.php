@@ -26,9 +26,9 @@ class LicenseCounter extends LicenseCounterDB{
 		}
 		return $details;	
     }
-    public function issuedLicense($id){
-        $this->updateUserAccount($id);
-		$this->removeFromlicenseTable($id);
+    public function issuedLicense($id){// after click issuelicense button
+        $this->updateUserAccount($id);//add license issue date to license table
+		$this->removeFromlicenseTable($id);// corresponding id and name remove from license table
 	}
 	
 	public static function getInstance():LicenseCounter{
@@ -37,7 +37,7 @@ class LicenseCounter extends LicenseCounterDB{
 		}
 		return self::$instance;
 	}
-	public function showQuestion()
+	public function showLicensetable()// license table data get and return
     {
         $applicantArray = $this->getQ();
         $table = '<table >';

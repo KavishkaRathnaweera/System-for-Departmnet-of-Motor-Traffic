@@ -41,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/System-for-Departmnet-of-Motor-Traffic/contr
 <div class="tableQ">
 <?php
     $counterCtrl2 = CounterFactory::getCounter("LicenseCounter");
-    $counterCtrl2->showQuestion();
+    $counterCtrl2->showLicensetable();
 ?>
 </div>
 </main>   

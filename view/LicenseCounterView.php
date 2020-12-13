@@ -48,6 +48,8 @@ if($_SESSION["officeLog"]!="#Licensecounter"){
             <input type="text" value="<?php echo $_SESSION["lnic"]?>" size="50" disabled><br><br>
             <label>Applicant Name: </label>
             <input type="text" value="<?php echo $_SESSION["lname"]?>" size="50" disabled><br><br>
+            <label>Applicant Address: </label>
+            <input type="text" value="<?php echo $_SESSION["laddrss"]?>" size="50" disabled><br><br>
             <label>Trial: </label>
             <input type="text" value="<?php echo $_SESSION["ltrial"]?>" size="50" disabled><br><br>
         </div>

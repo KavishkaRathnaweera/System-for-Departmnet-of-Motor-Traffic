@@ -60,12 +60,13 @@ class Counter1 extends Counter1DB{
 			$details["error"]="please enter id";
 		}
 		return $details;	
-    }
+	}
+	// add verified details to data base 
     public function verify($id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified){
         $this->verifyToDB($id,$surname,$fullname,$gender,$birthday,$age,$height,$bloodGroup,$vehicle,$addrss,$phone,$email,$verified);
 	}
 
-	public function getNewDate($dateType,$id,$fullname){
+	public function getNewDate($dateType,$id,$fullname){// in handle absentees page new date process using this func.
 		if($dateType=="newRegDate"){
 			$limitTable="limitwait";
 			$listTable="waitlist";
@@ -99,10 +100,10 @@ class Counter1 extends Counter1DB{
         }
         $this->addTolist($listTable,$id,$fullname,$out["dates"],$out["counts"]);
         return $out["dates"];
-        //return date and add to waitlist
+        //return date and add to relevent data table
 	}
 
-	public static function getInstance():Counter1{
+	public static function getInstance():Counter1{// singelton method
 		if(!isset(self::$instance)){
 			self::$instance=new Counter1();
 		}

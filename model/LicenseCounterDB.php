@@ -8,7 +8,7 @@ class LicenseCounterDB extends LicenseCounterDBconnection{
 
 	//function to get userdetails
 	protected function getUserDetails($id){
-    $sql = "SELECT nic,fullname,trail FROM useraccount  WHERE nic = ?";
+    $sql = "SELECT nic,fullname,trail,addrss FROM useraccount  WHERE nic = ?";
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute([$id]);
 		$data = $stmt->fetch();
