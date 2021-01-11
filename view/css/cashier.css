@@ -1,0 +1,111 @@
+body {
+  background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:18px;text-align:left;
+}
+h1 {
+    color:rgb(99, 12, 12);font-size:38px;text-align:center;font-family: Arial, Helvetica, sans-serif;
+}
+
+label{
+    width: 15%;
+    float: left;
+    color: rgb(31, 2, 2);
+    padding: 6px;
+    font-family: Arial;
+    
+}
+input{
+  width: 40%;
+  padding: 4px 20px;
+  margin: 6px 0;
+  border: 1px solid rgb(170, 162, 162);
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+}
+button {
+  width: 10%;
+  background-color: rgb(156, 40, 40);
+  color: white;
+  padding: 6px 20px;
+  margin: 3px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3f0000;
+}
+.logout {
+  width: 10%;
+
+  background-color: rgb(202, 78, 78); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid rgb(202, 78, 78);
+  position: absolute;
+  top: 20px;
+  right: 1.5%;
+
+  padding: 6px 20px;
+  margin: 3px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.logout:hover {
+  background-color: rgb(170, 162, 162);
+  color: rgb(255, 255, 255);
+}
+
+/* .......................................................................................................... */
+.container{
+  /* border: 2px solid rgb(8, 1, 1); */
+  position: relative;
+  height: 790px;
+
+}
+.container *{
+  position: absolute;
+  border-radius: 6px;
+  
+}
+
+.search_box{
+  padding:10px;
+  /* border: 2px solid rgb(87, 82, 82); */
+  background:rgb(170, 162, 162);
+  text-align: center;
+  top: 20px;
+ left: 10%;
+ right: 10%;
+}
+.search_box *{
+  position: relative;
+  
+}
+.applicantDetails_box {
+  padding:10px;
+  background:rgb(170, 162, 162);
+  top: 120px;
+  left: 10%;
+  right:10%;
+  /* border: 2px solid rgb(98, 36, 212); */
+}
+.applicantDetails_box *{
+  position: relative;
+  
+}
+.applicantDetails_box select{
+  height: 25px;
+}
+.applicantDetails_box .button1{
+  left: 25%;
+  bottom: 48px;
+  width: 15%;
+}
+.applicantDetails_box .button2{
+  left: 29%;
+  bottom: 48px;
+  width: 15%;
+}

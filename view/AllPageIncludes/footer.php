@@ -1,0 +1,1 @@
+<footer><img src="http://localhost/System-for-Departmnet-of-Motor-Traffic/view/images/footer.jpg"   width="100%"/></footer>   

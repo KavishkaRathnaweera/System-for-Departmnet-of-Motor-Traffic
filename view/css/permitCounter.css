@@ -1,0 +1,167 @@
+body {
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:15px;min-width: 1000px;
+}
+
+.container{
+    position: relative;
+    height:580px;
+    min-width: fit-content;
+    background:rgb(194, 188, 188);
+    /* border: 1px solid rgb(17, 12, 12); */
+}
+.container *{
+    position: absolute;
+    
+}
+.search_box{
+    height: 60px;
+    left:7.5%;
+    right: 7.5%;
+    top:20px;
+    padding:10px;
+    color: black;
+    background:rgb(170, 162, 162);
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.search_box *{
+    position: relative;
+    top: 6px;
+    
+}
+.search_box .searchform label{
+    top: 8px;
+    font-size: 20px;
+    
+}
+.search_box input[id="ID_no"]{
+    border-radius: 6px;
+    padding: 3px 8px;
+    width: 50%;
+    font-size: 12px;
+    border:none;
+}
+.search_box input[id="ID_no"]:focus{
+    background-color: rgb(214, 214, 214);
+}
+.search_box input[id="messagebar1"]{
+    text-align: center;
+    padding: 8px;
+    width: 50%;
+    font-size: 15px;
+    border:none;
+    background:transparent;
+}
+.search_box #search_btn{
+    font-size: 12px;
+    height: 24px;
+    width: 8%;
+    border-radius: 8px;
+    color: white;
+    border:  none;
+    background-color: rgb(156, 40, 40);
+}
+.search_box #search_btn:hover{
+    background-color: #3f0000;
+    cursor: pointer;
+    
+}
+
+.applicantDetails_box{
+
+    
+    height: 300px;
+    left:7.5%;
+    right: 7.5%;
+    top:120px;
+    padding: 10px 50px;
+    color: black;
+    border-radius: 10px;
+    background:rgb(170, 162, 162);
+}
+.applicantDetails_box *{
+    position: relative;
+    left:20%;
+    border: none;
+}
+.applicantDetails_box h1{
+      left:0px;
+      color:rgb(99, 12, 12)
+}
+.applicantDetails_box label{
+    color: rgb(31, 2, 2);
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    width: 15%;
+    float: left;
+}
+.applicantDetails_box input{
+    font-size: 16px;
+    color: black;
+    background-color:rgb(170, 162, 162) ;
+    border: 1px solid rgb(17, 12, 12);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.applicantDetails_box #messagebar2{
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    text-align: center;
+    background-color:transparent ;
+    border: none;
+}
+.button_box{
+    height: 80px;
+    left:7.5%;
+    right: 7.5%;
+    bottom: 40px;
+    background:rgb(194, 188, 188);
+    
+    /* border: 1px solid rgb(17, 12, 12); */
+}
+
+.button_box form{
+    width: 100%;
+}
+.button_box form *{
+    position: relative;
+    width: 10%;
+    left: 58%;
+    height: 35px;
+    font-size: 15px;
+    top: 20px;
+    color:white;
+    border:none;
+    background-color: rgb(156, 40, 40);
+    border-radius: 10px;
+    cursor: pointer; 
+}
+.button_box button:hover {
+    background-color: #3f0000;
+  }
+.button_box #emailID{
+  left: 1%;
+}
+.logout {
+    width: 10%;
+
+    background-color: rgb(202, 78, 78); 
+    color: rgb(255, 255, 255); 
+    border: 2px solid rgb(202, 78, 78);
+    position: absolute;
+    top: 20px;
+    right: 1.5%;
+
+    padding: 6px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout:hover {
+    background-color: rgb(170, 162, 162);
+    color: rgb(255, 255, 255);
+  }

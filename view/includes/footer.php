@@ -1,1 +1,0 @@
-<footer><p style="text-align:right;font-size:20px">contact us: 0716565834</p></footer>   

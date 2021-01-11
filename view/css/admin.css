@@ -1,0 +1,104 @@
+body {
+    background:rgb(194, 188, 188);color:rgb(8, 8, 8);font-family: 'Times New Roman', Times, serif;font-size:18px;text-align:left;
+}
+h1 {
+    color:rgb(63, 2, 2);font-size:38px;text-align:center;font-family: 'Times New Roman',Arial, Helvetica, sans-serif;
+}
+h1.head {
+    color:rgb(99, 12, 12);font-size:38px;text-align:center;font-family: 'Arnoldboecklin',Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color:rgb(88, 76, 76);font-size:38px;text-align:center;font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    color:black
+}
+.gh
+{color:green
+}
+
+.logout {
+  width: 10%;
+
+  background-color: rgb(202, 78, 78); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid rgb(202, 78, 78);
+  position: absolute;
+  top: 20px;
+  right: 1.5%;
+
+  padding: 6px 20px;
+  margin: 3px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: rgb(170, 162, 162);
+  color: rgb(255, 255, 255);
+}
+button {
+    width: 10%;
+    background-color: rgb(156, 40, 40);
+    color: white;
+    padding: 6px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #3f0000;
+}
+form label{
+    width: 10%;
+    float: left;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    font-family: Arial;
+}
+
+input {
+    width: 30%;
+    padding: 4px 20px;
+    margin: 6px 0;
+    border: 1px solid rgb(170, 162, 162);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text]:focus {
+    background-color: rgb(214, 214, 214);
+}
+
+
+/* ............................................................................................................. */
+.container{
+    /* border: 2px solid rgb(8, 1, 1); */
+    position: relative;
+    height: 900px;
+  
+  }
+.container *{
+    position: absolute;
+    border-radius: 6px;
+    
+  }
+  
+  .details_box {
+    padding:10px;
+    background:rgb(170, 162, 162);
+    top: 10px;
+    left: 10%;
+    right:10%;
+    /* border: 2px solid rgb(98, 36, 212); */
+  }
+  .details_box *{
+    position: relative;
+    
+  }
+  /* .details_box button{
+    left: 16.3%;
+  } */
